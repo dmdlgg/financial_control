@@ -1,13 +1,15 @@
+import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
-import { startOfMonth, endOfMonth, format } from 'date-fns';
+import { startOfMonth, endOfMonth, format, addMonths, subMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export function Dashboard() {
   const navigate = useNavigate();
-  const currentDate = new Date();
+  const [currentDate, setCurrentDate] = useState(new Date());
   const start = format(startOfMonth(currentDate), 'yyyy-MM-dd');
   const end = format(endOfMonth(currentDate), 'yyyy-MM-dd');
 
@@ -35,10 +37,19 @@ export function Dashboard() {
   return (
     <div className="p-4 sm:p-6">
       <header className="mb-6">
-        <h1 className="text-2xl font-bold text-slate-50">Visão Geral</h1>
-        <p className="text-sm text-slate-400 capitalize">
-          {format(currentDate, 'MMMM yyyy', { locale: ptBR })}
-        </p>
+        <h1 className="text-2xl font-bold text-slate-50 mb-4">Visão Geral</h1>
+        
+        <div className="flex items-center justify-between bg-slate-800/80 p-2 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
+          <button onClick={() => setCurrentDate(subMonths(currentDate, 1))} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <h2 className="text-sm font-semibold text-slate-200 capitalize tracking-wide">
+            {format(currentDate, 'MMMM yyyy', { locale: ptBR })}
+          </h2>
+          <button onClick={() => setCurrentDate(addMonths(currentDate, 1))} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
       </header>
 
       {/* Summary Cards */}
