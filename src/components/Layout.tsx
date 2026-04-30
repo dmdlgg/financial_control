@@ -11,7 +11,7 @@ const navItems = [
 
 export function Layout() {
   return (
-    <div className="flex flex-col h-[100dvh] w-full max-w-md mx-auto bg-slate-900 shadow-2xl relative overflow-hidden sm:border-x sm:border-slate-800">
+    <div className="flex flex-col h-[100dvh] w-full max-w-md mx-auto bg-white dark:bg-slate-900 shadow-2xl relative overflow-hidden sm:border-x sm:border-slate-200 dark:border-slate-800">
       <main className="flex-1 overflow-y-auto pb-20 no-scrollbar relative">
         <Outlet />
       </main>
@@ -24,7 +24,7 @@ export function Layout() {
         <Plus className="w-7 h-7" />
       </Link>
       
-      <nav className="absolute bottom-0 w-full bg-slate-900/95 backdrop-blur-md border-t border-slate-800 pb-safe">
+      <nav className="absolute bottom-0 w-full bg-white dark:bg-slate-900/95 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 pb-safe">
         <ul className="flex justify-around items-center h-16 px-2">
           {navItems.map((item) => (
             <li key={item.path} className="flex-1 h-full">
@@ -34,7 +34,7 @@ export function Layout() {
                   "flex flex-col items-center justify-center w-full h-full text-[10px] sm:text-xs font-medium gap-1 transition-all duration-200",
                   isActive 
                     ? "text-blue-500 scale-110" 
-                    : "text-slate-500 hover:text-slate-300"
+                    : "text-slate-400 dark:text-slate-500 hover:text-slate-700 dark:text-slate-300"
                 )}
               >
                 <item.icon className={cn("w-5 h-5", "sm:w-6 sm:h-6")} />

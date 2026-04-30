@@ -43,18 +43,18 @@ export function CalendarView() {
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
 
   return (
-    <div className="flex flex-col h-full bg-slate-900 pb-24">
+    <div className="flex flex-col h-full bg-white dark:bg-slate-900 pb-24">
       <header className="p-4 sm:p-6 pb-2">
-        <h1 className="text-2xl font-bold text-slate-50 mb-4">Calendário</h1>
+        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Calendário</h1>
         
-        <div className="flex items-center justify-between mb-4 bg-slate-800/80 p-2 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
-          <button onClick={prevMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+        <div className="flex items-center justify-between mb-4 bg-slate-100 dark:bg-slate-800/80 p-2 rounded-2xl border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm">
+          <button onClick={prevMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <h2 className="text-sm font-semibold text-slate-200 capitalize tracking-wide">
+          <h2 className="text-sm font-semibold text-slate-800 dark:text-slate-200 capitalize tracking-wide">
             {format(currentDate, 'MMMM yyyy', { locale: ptBR })}
           </h2>
-          <button onClick={nextMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+          <button onClick={nextMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -63,7 +63,7 @@ export function CalendarView() {
       <div className="px-4 sm:px-6 flex-1 overflow-y-auto no-scrollbar">
         <div className="grid grid-cols-7 gap-1 mb-2">
           {['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'].map(d => (
-            <div key={d} className="text-center text-[10px] font-bold text-slate-500 uppercase tracking-wider py-1">
+            <div key={d} className="text-center text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider py-1">
               {d}
             </div>
           ))}
@@ -84,9 +84,9 @@ export function CalendarView() {
                 onClick={() => setSelectedDate(day)}
                 className={cn(
                   "aspect-square flex flex-col items-center justify-start p-1.5 sm:p-2 rounded-2xl border transition-all duration-200",
-                  !isCurrentMonth ? "text-slate-600 border-transparent bg-transparent" : "bg-slate-800/30 border-slate-700/30 text-slate-300 hover:bg-slate-800/60",
+                  !isCurrentMonth ? "text-slate-600 border-transparent bg-transparent" : "bg-slate-100 dark:bg-slate-800/30 border-slate-200 dark:border-slate-700/30 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:bg-slate-800/60",
                   isSelected && "border-blue-500 bg-blue-500/10 text-blue-400 font-bold shadow-[0_0_15px_rgba(59,130,246,0.15)]",
-                  isSameDay(day, new Date()) && !isSelected && "border-slate-500 font-bold text-slate-100"
+                  isSameDay(day, new Date()) && !isSelected && "border-slate-500 font-bold text-slate-900 dark:text-slate-100"
                 )}
               >
                 <span className="text-xs sm:text-sm">{format(day, 'd')}</span>
@@ -101,13 +101,13 @@ export function CalendarView() {
 
         {/* Selected Day Details */}
         <div className="mt-8">
-          <h3 className="text-sm font-semibold text-slate-300 mb-4 capitalize">
+          <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 capitalize">
             {format(selectedDate, "EEEE, d 'de' MMMM", { locale: ptBR })}
           </h3>
           
           {selectedTransactions.length === 0 ? (
-            <div className="text-center p-8 bg-slate-800/30 rounded-3xl border border-slate-700 border-dashed">
-              <p className="text-slate-400 text-sm">Nenhuma transação neste dia.</p>
+            <div className="text-center p-8 bg-slate-100 dark:bg-slate-800/30 rounded-3xl border border-slate-200 dark:border-slate-700 border-dashed">
+              <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhuma transação neste dia.</p>
             </div>
           ) : (
             <ul className="space-y-3">
@@ -118,12 +118,12 @@ export function CalendarView() {
                 <li 
                   key={t.id} 
                   onClick={() => navigate(`/edit/${t.id}`)}
-                  className="bg-slate-800/60 p-4 rounded-3xl border border-slate-700/50 flex justify-between items-center shadow-md backdrop-blur-sm transition-transform hover:scale-[1.02] cursor-pointer"
+                  className="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex justify-between items-center shadow-md backdrop-blur-sm transition-transform hover:scale-[1.02] cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: color, boxShadow: `0 0 8px ${color}80` }} />
                     <div>
-                      <p className="text-slate-200 text-sm font-semibold flex items-center gap-2">
+                      <p className="text-slate-800 dark:text-slate-200 text-sm font-semibold flex items-center gap-2">
                         {t.description || cat?.name || 'Transação'}
                         {t.status === 'planned' && (
                           <span className="text-[9px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-500/30">
@@ -131,7 +131,7 @@ export function CalendarView() {
                           </span>
                         )}
                       </p>
-                      {t.description && cat?.name && <p className="text-xs text-slate-400 mt-0.5">{cat.name}</p>}
+                      {t.description && cat?.name && <p className="text-xs text-slate-400 dark:text-slate-500 dark:text-slate-400 mt-0.5">{cat.name}</p>}
                     </div>
                   </div>
                   <p className={cn("font-bold text-base", t.type === 'income' ? 'text-emerald-400' : 'text-red-400')}>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;
@@ -12,22 +14,13 @@
   --color-primary-800: #1e40af;
   --color-primary-900: #1e3a8a;
   
-  --color-background: #0f172a; /* slate-900 */
-  --color-surface: #1e293b; /* slate-800 */
-  --color-surface-hover: #334155; /* slate-700 */
-  
-  --color-text-primary: #f8fafc; /* slate-50 */
-  --color-text-secondary: #94a3b8; /* slate-400 */
-  
   --color-success: #10b981; /* emerald-500 */
   --color-danger: #ef4444; /* red-500 */
 }
 
 @layer base {
   html, body {
-    @apply h-full antialiased;
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+    @apply h-full antialiased bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-50 transition-colors duration-300;
   }
   
   #root {

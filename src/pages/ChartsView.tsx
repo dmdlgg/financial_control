@@ -57,18 +57,18 @@ export function ChartsView() {
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
 
   return (
-    <div className="flex flex-col h-full bg-slate-900 pb-24">
+    <div className="flex flex-col h-full bg-white dark:bg-slate-900 pb-24">
       <header className="p-4 sm:p-6 pb-2">
-        <h1 className="text-2xl font-bold text-slate-50 mb-4">Gráficos</h1>
+        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Gráficos</h1>
         
-        <div className="flex items-center justify-between mb-4 bg-slate-800/80 p-2 rounded-2xl border border-slate-700/50 backdrop-blur-sm">
-          <button onClick={prevMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+        <div className="flex items-center justify-between mb-4 bg-slate-100 dark:bg-slate-800/80 p-2 rounded-2xl border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm">
+          <button onClick={prevMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <h2 className="text-sm font-semibold text-slate-200 capitalize tracking-wide">
+          <h2 className="text-sm font-semibold text-slate-800 dark:text-slate-200 capitalize tracking-wide">
             {format(currentDate, 'MMMM yyyy', { locale: ptBR })}
           </h2>
-          <button onClick={nextMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-300 transition-colors">
+          <button onClick={nextMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -76,11 +76,11 @@ export function ChartsView() {
 
       <div className="p-4 sm:p-6 flex-1 overflow-y-auto space-y-8 no-scrollbar">
         {/* Gráfico de Categorias */}
-        <section className="bg-slate-800/60 p-5 rounded-3xl border border-slate-700/50 shadow-md backdrop-blur-sm">
-          <h2 className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">Despesas por Categoria</h2>
+        <section className="bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm">
+          <h2 className="text-xs font-bold text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Despesas por Categoria</h2>
           {pieData.length === 0 ? (
-            <div className="text-center p-8 bg-slate-900/50 rounded-2xl border border-slate-700/50 border-dashed">
-              <p className="text-slate-400 text-sm">Nenhuma despesa neste mês.</p>
+            <div className="text-center p-8 bg-white dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 border-dashed">
+              <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhuma despesa neste mês.</p>
             </div>
           ) : (
             <div className="h-64">
@@ -112,11 +112,11 @@ export function ChartsView() {
         </section>
 
         {/* Gráfico de Blocos */}
-        <section className="bg-slate-800/60 p-5 rounded-3xl border border-slate-700/50 shadow-md backdrop-blur-sm">
-          <h2 className="text-xs font-bold text-slate-400 mb-4 uppercase tracking-widest">Orçamento vs Gasto</h2>
+        <section className="bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm">
+          <h2 className="text-xs font-bold text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Orçamento vs Gasto</h2>
           {barData.length === 0 ? (
-            <div className="text-center p-8 bg-slate-900/50 rounded-2xl border border-slate-700/50 border-dashed">
-              <p className="text-slate-400 text-sm">Nenhum bloco de orçamento configurado.</p>
+            <div className="text-center p-8 bg-white dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 border-dashed">
+              <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhum bloco de orçamento configurado.</p>
             </div>
           ) : (
             <div className="h-72">
