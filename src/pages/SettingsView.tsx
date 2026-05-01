@@ -8,6 +8,11 @@ import { useThemeStore } from '../store/themeStore';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
 
 export function SettingsView() {
+    const handleDeleteBlock = async (id: string) => {
+      if (confirm('Tem certeza que deseja excluir este bloco?')) {
+        await db.blocks.delete(id);
+      }
+    };
   const blocks = useLiveQuery(() => db.blocks.toArray()) || [];
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
   const { theme, toggleTheme } = useThemeStore();
