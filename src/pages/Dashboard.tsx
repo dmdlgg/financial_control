@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
@@ -7,6 +7,7 @@ import { ptBR } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { DragHandle } from '../components/DragHandle';
+import { useDndSortable, SortableItem } from '../lib/dndkit';
 
 export function Dashboard() {
   const navigate = useNavigate();
@@ -24,19 +25,38 @@ export function Dashboard() {
   );
 
   const blocks = useLiveQuery(() => db.blocks.toArray());
-  const [dragOrder, setDragOrder] = useState<string[] | null>(null);
-  const dragItem = useRef<number | null>(null);
-  const dragOverItem = useRef<number | null>(null);
-
   // Ordena blocos pelo campo order (ou id como fallback)
-  const orderedBlocks = (blocks || []).slice().sort((a, b) => {
-    if (dragOrder) {
-      return dragOrder.indexOf(a.id) - dragOrder.indexOf(b.id);
-    }
+  const [orderedBlocks, setOrderedBlocks] = useState(() => (blocks || []).slice().sort((a, b) => {
     if (a.order != null && b.order != null) return a.order - b.order;
     if (a.order != null) return -1;
     if (b.order != null) return 1;
     return a.id.localeCompare(b.id);
+  }));
+
+  // Atualiza orderedBlocks quando blocks muda
+  React.useEffect(() => {
+    if (blocks) {
+      setOrderedBlocks(blocks.slice().sort((a, b) => {
+        if (a.order != null && b.order != null) return a.order - b.order;
+        if (a.order != null) return -1;
+        if (b.order != null) return 1;
+        return a.id.localeCompare(b.id);
+      }));
+    }
+  }, [blocks]);
+
+  const {
+    DndContext,
+    SortableContext,
+    verticalListSortingStrategy,
+    sensors,
+    handleDragEnd,
+    handleDragStart,
+  } = useDndSortable(orderedBlocks, async (newOrder) => {
+    setOrderedBlocks(newOrder);
+    await Promise.all(
+      newOrder.map((b, i) => db.blocks.update(b.id, { order: i }))
+    );
   });
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
 
@@ -100,78 +120,51 @@ export function Dashboard() {
             <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhum bloco configurado.</p>
           </div>
         ) : (
-          <div className="space-y-4">
-            {orderedBlocks.map((block, idx) => {
-              const blockExpenses = expenses.filter(e => e.blockId === block.id).reduce((acc, curr) => acc + curr.amount, 0);
-              const remaining = block.totalAmount - blockExpenses;
-              const percent = Math.min((blockExpenses / block.totalAmount) * 100, 100);
-
-              return (
-                <div
-                  key={block.id}
-                  draggable
-                  onDragStart={() => {
-                    dragItem.current = idx;
-                    setDragOrder(orderedBlocks.map(b => b.id));
-                  }}
-                  onDragEnter={() => {
-                    dragOverItem.current = idx;
-                    if (dragOrder && dragItem.current !== null && dragOverItem.current !== null && dragItem.current !== dragOverItem.current) {
-                      const newOrder = [...dragOrder];
-                      const moved = newOrder.splice(dragItem.current, 1)[0];
-                      newOrder.splice(dragOverItem.current, 0, moved);
-                      dragItem.current = dragOverItem.current;
-                      setDragOrder(newOrder);
-                    }
-                  }}
-                  onDragEnd={async () => {
-                    if (dragOrder) {
-                      await Promise.all(
-                        dragOrder.map((id, i) => {
-                          const b = orderedBlocks.find(b => b.id === id);
-                          if (b && b.order !== i) return db.blocks.update(id, { order: i });
-                          return undefined;
-                        })
-                      );
-                      setDragOrder(null);
-                    }
-                    dragItem.current = null;
-                    dragOverItem.current = null;
-                  }}
-                  onClick={() => navigate(`/block/${block.id}`)}
-                  className={cn(
-                    "bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm transition-transform hover:scale-[1.02] cursor-pointer flex items-center group",
-                    dragOrder ? "opacity-80" : ""
-                  )}
-                  style={dragOrder ? { zIndex: 10 } : {}}
-                >
-                  <DragHandle className="opacity-70 group-hover:opacity-100" />
-                  <div className="flex-1 ml-2">
-                    <div className="flex justify-between items-end mb-3">
-                      <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-lg">{block.name}</h3>
-                        <p className="text-xs text-slate-400 dark:text-slate-500 dark:text-slate-400 mt-0.5">Orçamento: R$ {block.totalAmount.toFixed(2)}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className={`text-sm font-bold ${remaining >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
-                          R$ {remaining.toFixed(2)} restam
-                        </p>
-                      </div>
-                    </div>
-                    <div className="h-2.5 w-full bg-white dark:bg-slate-900 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700/50">
+          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} onDragStart={handleDragStart}>
+            <SortableContext items={orderedBlocks.map(b => b.id)} strategy={verticalListSortingStrategy}>
+              <div className="space-y-4">
+                {orderedBlocks.map((block) => {
+                  const blockExpenses = expenses.filter(e => e.blockId === block.id).reduce((acc, curr) => acc + curr.amount, 0);
+                  const remaining = block.totalAmount - blockExpenses;
+                  const percent = Math.min((blockExpenses / block.totalAmount) * 100, 100);
+                  return (
+                    <SortableItem key={block.id} id={block.id}>
                       <div
-                        className={`h-full rounded-full transition-all duration-1000 ease-out ${percent > 90 ? 'bg-red-500' : percent > 75 ? 'bg-yellow-500' : 'bg-blue-500'}`}
-                        style={{ width: `${percent}%` }}
-                      />
-                    </div>
-                    <div className="mt-2 text-right">
-                      <span className="text-[10px] uppercase font-semibold text-slate-400 dark:text-slate-500 tracking-wider">Gasto: R$ {blockExpenses.toFixed(2)}</span>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+                        onClick={() => navigate(`/block/${block.id}`)}
+                        className={cn(
+                          "bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm transition-transform hover:scale-[1.02] cursor-pointer flex items-center group"
+                        )}
+                      >
+                        <DragHandle className="opacity-70 group-hover:opacity-100" />
+                        <div className="flex-1 ml-2">
+                          <div className="flex justify-between items-end mb-3">
+                            <div>
+                              <h3 className="font-semibold text-slate-900 dark:text-slate-100 text-lg">{block.name}</h3>
+                              <p className="text-xs text-slate-400 dark:text-slate-500 dark:text-slate-400 mt-0.5">Orçamento: R$ {block.totalAmount.toFixed(2)}</p>
+                            </div>
+                            <div className="text-right">
+                              <p className={`text-sm font-bold ${remaining >= 0 ? 'text-emerald-400' : 'text-red-400'}`}>
+                                R$ {remaining.toFixed(2)} restam
+                              </p>
+                            </div>
+                          </div>
+                          <div className="h-2.5 w-full bg-white dark:bg-slate-900 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700/50">
+                            <div
+                              className={`h-full rounded-full transition-all duration-1000 ease-out ${percent > 90 ? 'bg-red-500' : percent > 75 ? 'bg-yellow-500' : 'bg-blue-500'}`}
+                              style={{ width: `${percent}%` }}
+                            />
+                          </div>
+                          <div className="mt-2 text-right">
+                            <span className="text-[10px] uppercase font-semibold text-slate-400 dark:text-slate-500 tracking-wider">Gasto: R$ {blockExpenses.toFixed(2)}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SortableItem>
+                  );
+                })}
+              </div>
+            </SortableContext>
+          </DndContext>
         )}
       </section>
 
