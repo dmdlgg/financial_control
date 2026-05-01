@@ -1,9 +1,24 @@
-import React from 'react';
-import { DndContext, closestCenter, PointerSensor, useSensor, useSensors } from '@dnd-kit/core';
-import { arrayMove, SortableContext, useSortable, verticalListSortingStrategy } from '@dnd-kit/sortable';
+import React, { useState } from 'react';
+import {
+  DndContext,
+  PointerSensor,
+  useSensor,
+  useSensors,
+  type DragEndEvent,
+  type DragStartEvent
+} from '@dnd-kit/core';
+import {
+  arrayMove,
+  SortableContext,
+  useSortable,
+  verticalListSortingStrategy
+} from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 
-export function useDndSortable(items, onChange) {
+export function useDndSortable<T extends { id: string }>(
+  items: T[],
+  onChange: (newOrder: T[]) => void
+) {
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
@@ -12,20 +27,20 @@ export function useDndSortable(items, onChange) {
     })
   );
 
-  const [activeId, setActiveId] = React.useState(null);
+  const [activeId, setActiveId] = useState<string | null>(null);
 
-  function handleDragEnd(event) {
+  function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event;
     if (active.id !== over?.id) {
       const oldIndex = items.findIndex(i => i.id === active.id);
-      const newIndex = items.findIndex(i => i.id === over.id);
+      const newIndex = items.findIndex(i => i.id === over?.id);
       onChange(arrayMove(items, oldIndex, newIndex));
     }
     setActiveId(null);
   }
 
-  function handleDragStart(event) {
-    setActiveId(event.active.id);
+  function handleDragStart(event: DragStartEvent) {
+    setActiveId(event.active.id as string);
   }
 
   return {
@@ -40,9 +55,14 @@ export function useDndSortable(items, onChange) {
   };
 }
 
-export function SortableItem({ id, children }) {
+interface SortableItemProps {
+  id: string;
+  children: React.ReactNode;
+}
+
+export function SortableItem({ id, children }: SortableItemProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id });
-  const style = {
+  const style: React.CSSProperties = {
     transform: CSS.Transform.toString(transform),
     transition,
     opacity: isDragging ? 0.6 : 1,
