@@ -37,6 +37,10 @@ export function CalendarView() {
 
   const selectedDateStr = format(selectedDate, 'yyyy-MM-dd');
   const selectedTransactions = transactions.filter(t => t.date === selectedDateStr);
+  // Soma dos gastos (apenas despesas) do dia selecionado
+  const totalGastoDia = selectedTransactions
+    .filter(t => t.type === 'expense')
+    .reduce((acc, t) => acc + t.amount, 0);
 
   const nextMonth = () => setCurrentDate(addMonths(currentDate, 1));
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
@@ -108,7 +112,11 @@ export function CalendarView() {
           <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 capitalize">
             {format(selectedDate, "EEEE, d 'de' MMMM", { locale: ptBR })}
           </h3>
-          
+          {/* Total gasto no dia */}
+          <div className="mb-4 flex items-center gap-2">
+            <span className="text-xs font-medium text-slate-500 dark:text-slate-400">Total gasto no dia:</span>
+            <span className="text-sm font-semibold text-red-500">R$ {totalGastoDia.toFixed(2)}</span>
+          </div>
           {selectedTransactions.length === 0 ? (
             <div className="text-center p-8 bg-slate-100 dark:bg-slate-800/30 rounded-3xl border border-slate-200 dark:border-slate-700 border-dashed">
               <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhuma transação neste dia.</p>
