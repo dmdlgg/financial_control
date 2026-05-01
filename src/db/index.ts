@@ -21,6 +21,7 @@ export interface Block {
   totalAmount: number;
   period: PeriodType;
   weeklyLimit?: number;
+  order?: number;
 }
 
 export interface Category {
@@ -38,9 +39,9 @@ const db = new Dexie('ControleFinanceiroDB') as Dexie & {
 };
 
 // Schema declaration
-db.version(1).stores({
+db.version(2).stores({
   transactions: 'id, type, categoryId, date, blockId, status',
-  blocks: 'id, name, period',
+  blocks: 'id, name, period, order',
   categories: 'id, name, type'
 });
 
