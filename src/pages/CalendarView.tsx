@@ -27,7 +27,6 @@ export function CalendarView() {
   
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
   
-  // Fetch transactions for the visible grid
   const transactions = useLiveQuery(
     () => db.transactions
       .where('date')
@@ -78,14 +77,19 @@ export function CalendarView() {
             const isSelected = isSameDay(day, selectedDate);
             const isCurrentMonth = isSameMonth(day, monthStart);
 
+            const handleDoubleClick = () => {
+              navigate(`/add?date=${dateStr}`);
+            };
+
             return (
               <button
                 key={day.toString()}
                 onClick={() => setSelectedDate(day)}
+                onDoubleClick={handleDoubleClick}
                 className={cn(
                   "aspect-square flex flex-col items-center justify-start p-1.5 sm:p-2 rounded-2xl border transition-all duration-200",
                   !isCurrentMonth ? "text-slate-600 border-transparent bg-transparent" : "bg-slate-100 dark:bg-slate-800/30 border-slate-200 dark:border-slate-700/30 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:bg-slate-800/60",
-                  isSelected && "border-blue-500 bg-blue-500/10 text-blue-400 font-bold shadow-[0_0_15px_rgba(59,130,246,0.15)]",
+                  isSelected && "border-4 border-blue-900 bg-blue-500 text-white font-bold shadow-[0_0_24px_rgba(30,58,138,0.45)]",
                   isSameDay(day, new Date()) && !isSelected && "border-slate-500 font-bold text-slate-900 dark:text-slate-100"
                 )}
               >

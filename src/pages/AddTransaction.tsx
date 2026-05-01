@@ -6,9 +6,12 @@ import { format } from 'date-fns';
 import { ArrowLeft, Trash2 } from 'lucide-react';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
 
+import { useLocation } from 'react-router-dom';
+
 export function AddTransaction() {
   const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
+  const location = useLocation();
   
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
   const blocks = useLiveQuery(() => db.blocks.toArray()) || [];
@@ -21,7 +24,9 @@ export function AddTransaction() {
   const [type, setType] = useState<TransactionType>('expense');
   const [amount, setAmount] = useState('');
   const [categoryId, setCategoryId] = useState('');
-  const [date, setDate] = useState(format(new Date(), 'yyyy-MM-dd'));
+  const queryParams = new URLSearchParams(location.search);
+  const initialDate = queryParams.get('date') || format(new Date(), 'yyyy-MM-dd');
+  const [date, setDate] = useState(initialDate);
   const [blockId, setBlockId] = useState('');
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState<TransactionStatus>('completed');
