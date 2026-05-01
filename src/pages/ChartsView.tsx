@@ -57,7 +57,7 @@ export function ChartsView() {
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-900 pb-24">
+    <div className="flex flex-col h-full bg-white dark:bg-slate-900">
       <header className="p-4 sm:p-6 pb-2">
         <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Gráficos</h1>
         
@@ -74,7 +74,7 @@ export function ChartsView() {
         </div>
       </header>
 
-      <div className="p-4 sm:p-6 flex-1 overflow-y-auto space-y-8 no-scrollbar">
+      <div className="p-4 sm:p-6 flex-1 min-h-0 overflow-y-auto space-y-8 no-scrollbar">
         {/* Gráfico de Categorias */}
         <section className="bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm">
           <h2 className="text-xs font-bold text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Despesas por Categoria</h2>

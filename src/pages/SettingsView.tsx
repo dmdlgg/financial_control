@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// ...existing code...
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, type PeriodType, type TransactionType } from '../db';
 import { Plus, Trash2, Sun, Moon } from 'lucide-react';
@@ -32,11 +33,6 @@ export function SettingsView() {
     setNewBlockAmount('');
   };
 
-  const handleDeleteBlock = async (id: string) => {
-    if (confirm('Tem certeza que deseja excluir este bloco?')) {
-      await db.blocks.delete(id);
-    }
-  };
 
   const handleAddCat = async (e: React.FormEvent) => {
     e.preventDefault();
