@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { DragHandle } from '../components/DragHandle';
 import { useDndSortable, SortableItem } from '../lib/dndkit';
+import { closestCenter } from '@dnd-kit/core';
 
 export function Dashboard() {
   const navigate = useNavigate();
