@@ -7,6 +7,7 @@ import { ChartsView } from './pages/ChartsView';
 import { SettingsView } from './pages/SettingsView';
 import { AddTransaction } from './pages/AddTransaction';
 import { BlockDetails } from './pages/BlockDetails';
+import { TransactionListView } from './pages/TransactionListView';
 import { useThemeStore } from './store/themeStore';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/add" element={<AddTransaction />} />
         <Route path="/edit/:id" element={<AddTransaction />} />
         <Route path="/block/:id" element={<BlockDetails />} />
+        <Route path="/transactions" element={<TransactionListView />} />
       </Routes>
     </BrowserRouter>
   );
