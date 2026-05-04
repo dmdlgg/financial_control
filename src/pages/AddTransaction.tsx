@@ -72,7 +72,8 @@ export function AddTransaction() {
           description,
           status,
           recurrenceType,
-          recurrenceEndDate: recurrenceType === 'limited' ? recurrenceEndDate : undefined
+          recurrenceEndDate: recurrenceType === 'limited' ? recurrenceEndDate : undefined,
+          lastGeneratedDate: date
         });
         
         await db.transactions.update(id, {
