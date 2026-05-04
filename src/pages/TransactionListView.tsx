@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { db } from '../db';
-import { format, parseISO } from 'date-fns';
+import { format, parseISO, endOfMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { cn } from '../lib/utils';
 
