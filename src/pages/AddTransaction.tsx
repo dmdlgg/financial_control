@@ -60,15 +60,44 @@ export function AddTransaction() {
     if (!amount || !categoryId) return;
 
     if (id) {
-      await db.transactions.update(id, {
-        type,
-        amount: parseCurrencyInput(amount),
-        categoryId,
-        date,
-        blockId: blockId || undefined,
-        description,
-        status
-      });
+      if (!existingTransaction?.recurrenceId && isRecurring) {
+        const recurringId = crypto.randomUUID();
+        await db.recurringTransactions.add({
+          id: recurringId,
+          type,
+          amount: parseCurrencyInput(amount),
+          categoryId,
+          startDate: date,
+          blockId: blockId || undefined,
+          description,
+          status,
+          recurrenceType,
+          recurrenceEndDate: recurrenceType === 'limited' ? recurrenceEndDate : undefined
+        });
+        
+        await db.transactions.update(id, {
+          type,
+          amount: parseCurrencyInput(amount),
+          categoryId,
+          date,
+          blockId: blockId || undefined,
+          description,
+          status,
+          recurrenceId: recurringId
+        });
+
+        await processRecurringTransactions();
+      } else {
+        await db.transactions.update(id, {
+          type,
+          amount: parseCurrencyInput(amount),
+          categoryId,
+          date,
+          blockId: blockId || undefined,
+          description,
+          status
+        });
+      }
     } else {
       if (isRecurring) {
         const recurringId = crypto.randomUUID();
@@ -206,7 +235,7 @@ export function AddTransaction() {
             </div>
           </div>
 
-          {!id && (
+          {(!id || (id && !existingTransaction?.recurrenceId)) && (
             <div className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl p-4 border border-slate-200 dark:border-slate-700/50 space-y-4">
               <label className="flex items-center gap-3 cursor-pointer">
                 <input 
