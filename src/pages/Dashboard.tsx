@@ -101,14 +101,14 @@ export function Dashboard() {
         <div className="grid grid-cols-2 sm:col-span-2 gap-4">
           <button
             className="bg-slate-100 dark:bg-slate-800/80 p-4 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm text-left w-full"
-            onClick={() => navigate('/transactions?type=income')}
+            onClick={() => navigate(`/transactions?type=income&month=${format(currentDate, 'yyyy-MM')}`)}
           >
             <h2 className="text-xs font-medium text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-1 uppercase tracking-wider">Rendas</h2>
             <p className="text-xl font-semibold text-emerald-400">R$ {totalIncome.toFixed(2)}</p>
           </button>
           <button
             className="bg-slate-100 dark:bg-slate-800/80 p-4 rounded-3xl shadow-lg border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm text-left w-full"
-            onClick={() => navigate('/transactions?type=expense')}
+            onClick={() => navigate(`/transactions?type=expense&month=${format(currentDate, 'yyyy-MM')}`)}
           >
             <h2 className="text-xs font-medium text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-1 uppercase tracking-wider">Despesas</h2>
             <p className="text-xl font-semibold text-red-400">R$ {totalExpense.toFixed(2)}</p>

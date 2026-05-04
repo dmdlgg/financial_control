@@ -11,7 +11,24 @@ export function TransactionListView() {
   const params = new URLSearchParams(location.search);
   const type = params.get('type') === 'income' ? 'income' : 'expense';
 
-  const transactions = useLiveQuery(() => db.transactions.where('type').equals(type).toArray(), [type]) || [];
+  const monthParam = params.get('month'); // Expecting YYYY-MM
+  
+  const transactions = useLiveQuery(async () => {
+    let query = db.transactions.where('type').equals(type);
+    
+    if (monthParam) {
+      const start = `${monthParam}-01`;
+      const dateObj = parseISO(start);
+      const end = format(endOfMonth(dateObj), 'yyyy-MM-dd');
+      return await db.transactions
+        .where('date')
+        .between(start, end, true, true)
+        .filter(t => t.type === type)
+        .toArray();
+    }
+    
+    return await query.toArray();
+  }, [type, monthParam]) || [];
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
   const blocks = useLiveQuery(() => db.blocks.toArray()) || [];
 
@@ -32,8 +49,13 @@ export function TransactionListView() {
         <button onClick={() => navigate(-1)} className="p-2 rounded-full hover:bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors">
           Voltar
         </button>
-        <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">
-          {type === 'income' ? 'Rendas' : 'Despesas'}
+        <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50 flex flex-col">
+          <span>{type === 'income' ? 'Rendas' : 'Despesas'}</span>
+          {monthParam && (
+            <span className="text-xs text-slate-500 dark:text-slate-400 font-normal capitalize">
+              {format(parseISO(`${monthParam}-01`), 'MMMM yyyy', { locale: ptBR })}
+            </span>
+          )}
         </h1>
       </header>
       <div className="flex-1 overflow-y-auto p-4 space-y-8">
