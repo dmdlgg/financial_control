@@ -44,4 +44,24 @@ export async function processRecurringTransactions() {
       await db.recurringTransactions.update(rt.id, { lastGeneratedDate: newGeneratedDate });
     }
   }
+
+  // Cleanup potential duplicates caused by previous bug
+  const allTransactions = await db.transactions.toArray();
+  const seen = new Set();
+  const duplicatesToDelete = [];
+  
+  for (const t of allTransactions) {
+    if (t.recurrenceId) {
+      const key = `${t.recurrenceId}-${t.date}`;
+      if (seen.has(key)) {
+        duplicatesToDelete.push(t.id);
+      } else {
+        seen.add(key);
+      }
+    }
+  }
+  
+  if (duplicatesToDelete.length > 0) {
+    await db.transactions.bulkDelete(duplicatesToDelete);
+  }
 }
