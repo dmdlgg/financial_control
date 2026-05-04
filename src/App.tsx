@@ -9,11 +9,14 @@ import { AddTransaction } from './pages/AddTransaction';
 import { BlockDetails } from './pages/BlockDetails';
 import { TransactionListView } from './pages/TransactionListView';
 import { useThemeStore } from './store/themeStore';
+import { processRecurringTransactions } from './lib/recurrence';
 
 function App() {
   const theme = useThemeStore((state) => state.theme);
 
   useEffect(() => {
+    processRecurringTransactions().catch(console.error);
+
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
     } else {

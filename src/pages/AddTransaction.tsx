@@ -5,6 +5,7 @@ import { db, type TransactionType, type TransactionStatus } from '../db';
 import { format } from 'date-fns';
 import { ArrowLeft, Trash2 } from 'lucide-react';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
+import { processRecurringTransactions } from '../lib/recurrence';
 
 import { useLocation } from 'react-router-dom';
 
@@ -30,6 +31,15 @@ export function AddTransaction() {
   const [blockId, setBlockId] = useState('');
   const [description, setDescription] = useState('');
   const [status, setStatus] = useState<TransactionStatus>('completed');
+  
+  const [isRecurring, setIsRecurring] = useState(false);
+  const [recurrenceType, setRecurrenceType] = useState<'indefinite' | 'limited'>('indefinite');
+  const [recurrenceEndDate, setRecurrenceEndDate] = useState('');
+
+  const recurringRule = useLiveQuery(
+    () => existingTransaction?.recurrenceId ? db.recurringTransactions.get(existingTransaction.recurrenceId) : undefined,
+    [existingTransaction?.recurrenceId]
+  );
 
   useEffect(() => {
     if (existingTransaction) {
@@ -60,18 +70,42 @@ export function AddTransaction() {
         status
       });
     } else {
-      await db.transactions.add({
-        id: crypto.randomUUID(),
-        type,
-        amount: parseCurrencyInput(amount),
-        categoryId,
-        date,
-        blockId: blockId || undefined,
-        description,
-        status
-      });
+      if (isRecurring) {
+        const recurringId = crypto.randomUUID();
+        await db.recurringTransactions.add({
+          id: recurringId,
+          type,
+          amount: parseCurrencyInput(amount),
+          categoryId,
+          startDate: date,
+          blockId: blockId || undefined,
+          description,
+          status,
+          recurrenceType,
+          recurrenceEndDate: recurrenceType === 'limited' ? recurrenceEndDate : undefined
+        });
+        await processRecurringTransactions();
+      } else {
+        await db.transactions.add({
+          id: crypto.randomUUID(),
+          type,
+          amount: parseCurrencyInput(amount),
+          categoryId,
+          date,
+          blockId: blockId || undefined,
+          description,
+          status
+        });
+      }
     }
     navigate(-1);
+  };
+
+  const handleStopRecurrence = async () => {
+    if (existingTransaction?.recurrenceId && confirm('Deseja cancelar esta repetição? Não serão geradas novas transações no futuro.')) {
+      await db.recurringTransactions.delete(existingTransaction.recurrenceId);
+      await db.transactions.update(existingTransaction.id, { recurrenceId: undefined });
+    }
   };
 
   const handleDelete = async () => {
@@ -165,12 +199,51 @@ export function AddTransaction() {
           )}
 
           <div>
-            <label className="block text-xs font-medium text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Status</label>
+            <label className="block text-xs font-medium text-slate-400 dark:text-slate-500 mb-1.5 uppercase tracking-wide">Status</label>
             <div className="flex bg-slate-100 dark:bg-slate-800/60 rounded-xl p-1 border border-slate-200 dark:border-slate-700/50">
-              <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${status === 'completed' ? 'bg-blue-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500 dark:text-slate-400'}`} onClick={() => setStatus('completed')}>Realizado</button>
-              <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${status === 'planned' ? 'bg-purple-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500 dark:text-slate-400'}`} onClick={() => setStatus('planned')}>Planejado</button>
+              <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${status === 'completed' ? 'bg-blue-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500'}`} onClick={() => setStatus('completed')}>Realizado</button>
+              <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${status === 'planned' ? 'bg-purple-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500'}`} onClick={() => setStatus('planned')}>Planejado</button>
             </div>
           </div>
+
+          {!id && (
+            <div className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl p-4 border border-slate-200 dark:border-slate-700/50 space-y-4">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  checked={isRecurring} 
+                  onChange={e => setIsRecurring(e.target.checked)}
+                  className="w-5 h-5 rounded border-slate-300 dark:border-slate-600 text-blue-600 focus:ring-blue-500 bg-white dark:bg-slate-900"
+                />
+                <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Repetir mensalmente</span>
+              </label>
+
+              {isRecurring && (
+                <div className="space-y-4 pt-2 border-t border-slate-200 dark:border-slate-700/50">
+                  <div className="flex bg-slate-100 dark:bg-slate-800/60 rounded-xl p-1 border border-slate-200 dark:border-slate-700/50">
+                    <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${recurrenceType === 'indefinite' ? 'bg-blue-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500'}`} onClick={() => setRecurrenceType('indefinite')}>Indefinido</button>
+                    <button type="button" className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${recurrenceType === 'limited' ? 'bg-blue-500 text-white shadow-sm' : 'text-slate-400 dark:text-slate-500'}`} onClick={() => setRecurrenceType('limited')}>Com Limite</button>
+                  </div>
+                  
+                  {recurrenceType === 'limited' && (
+                    <div>
+                      <label className="block text-xs font-medium text-slate-400 dark:text-slate-500 mb-1.5 uppercase tracking-wide">Repetir até</label>
+                      <input type="date" value={recurrenceEndDate} onChange={e => setRecurrenceEndDate(e.target.value)} className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl p-3 text-slate-800 dark:text-slate-200 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all" required={recurrenceType === 'limited'} />
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          )}
+
+          {id && existingTransaction?.recurrenceId && recurringRule && (
+            <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 border border-amber-200 dark:border-amber-700/30">
+              <p className="text-xs text-amber-800 dark:text-amber-300 mb-3 font-medium">Esta é uma transação recorrente mensal.</p>
+              <button type="button" onClick={handleStopRecurrence} className="w-full py-2.5 text-xs font-semibold bg-white dark:bg-slate-800 text-red-600 dark:text-red-400 rounded-xl border border-red-200 dark:border-red-900/50 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                Parar de repetir
+              </button>
+            </div>
+          )}
 
           <button type="submit" className="w-full bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-semibold py-4 rounded-2xl text-base transition-colors mt-6 shadow-lg shadow-blue-900/20">
             {id ? 'Atualizar Transação' : 'Salvar Transação'}

@@ -108,7 +108,7 @@ export function CalendarView() {
         </div>
 
         {/* Selected Day Details */}
-        <div className="mt-8 flex-1 flex flex-col min-h-0">
+        <div className="mt-8 pb-24">
           <h3 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4 capitalize">
             {format(selectedDate, "EEEE, d 'de' MMMM", { locale: ptBR })}
           </h3>
@@ -122,7 +122,7 @@ export function CalendarView() {
               <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhuma transação neste dia.</p>
             </div>
           ) : (
-            <div className="flex-1 min-h-0 overflow-y-auto pb-4">
+            <div className="pb-4">
               <ul className="space-y-3">
                 {selectedTransactions.map(t => {
                   const cat = categories.find(c => c.id === t.categoryId);
