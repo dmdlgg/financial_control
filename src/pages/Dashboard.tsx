@@ -137,7 +137,7 @@ export function Dashboard() {
                   return (
                     <SortableItem key={block.id} id={block.id}>
                       <div
-                        onClick={() => navigate(`/block/${block.id}`)}
+                        onClick={() => navigate(`/block/${block.id}?month=${format(currentDate, 'yyyy-MM')}`)}
                         className={cn(
                           "bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm transition-transform hover:scale-[1.02] cursor-pointer flex items-center group"
                         )}

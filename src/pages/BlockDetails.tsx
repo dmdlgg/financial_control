@@ -1,19 +1,34 @@
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db';
 import { ArrowLeft } from 'lucide-react';
 import { cn } from '../lib/utils';
-import { format } from 'date-fns';
+import { format, startOfMonth, endOfMonth, parseISO } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
 export function BlockDetails() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const monthParam = params.get('month');
+
+  const targetDate = monthParam ? parseISO(`${monthParam}-01`) : new Date();
+  const start = format(startOfMonth(targetDate), 'yyyy-MM-dd');
+  const end = format(endOfMonth(targetDate), 'yyyy-MM-dd');
 
   const block = useLiveQuery(() => id ? db.blocks.get(id) : undefined, [id]);
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
   const transactions = useLiveQuery(
-    () => id ? db.transactions.where({ blockId: id }).toArray() : [],
-    [id]
+    async () => {
+      if (!id) return [];
+      return await db.transactions
+        .where('date')
+        .between(start, end, true, true)
+        .filter(t => t.blockId === id)
+        .toArray();
+    },
+    [id, start, end]
   ) || [];
 
   if (!block) return <div className="p-6 text-slate-400 dark:text-slate-500 dark:text-slate-400 flex items-center justify-center h-full">Carregando bloco...</div>;
@@ -31,7 +46,9 @@ export function BlockDetails() {
         </button>
         <div>
           <h1 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{block.name}</h1>
-          <p className="text-xs text-slate-400 dark:text-slate-500 dark:text-slate-400">Orçamento {block.period === 'monthly' ? 'Mensal' : 'Semanal'}</p>
+          <p className="text-xs text-slate-400 dark:text-slate-500 dark:text-slate-400 capitalize">
+            {format(targetDate, 'MMMM yyyy', { locale: ptBR })} • Orçamento {block.period === 'monthly' ? 'Mensal' : 'Semanal'}
+          </p>
         </div>
       </header>
 
