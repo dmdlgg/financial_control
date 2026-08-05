@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
-import { cn } from '../lib/utils';
+import { cn, formatCurrencyInput } from '../lib/utils';
 import { useMonthStore } from '../store/monthStore';
 
 export function CalendarView() {
@@ -88,12 +88,12 @@ export function CalendarView() {
 
             return (
               <button
-                key={day.toString()}
+                key={dateStr}
                 onClick={() => setSelectedDate(day)}
                 onDoubleClick={handleDoubleClick}
                 className={cn(
                   "aspect-square flex flex-col items-center justify-start p-1.5 sm:p-2 rounded-2xl border transition-all duration-200",
-                  !isCurrentMonth ? "text-text-secondary border-transparent bg-transparent" : "bg-bg-elevated border-border text-text-primary hover:bg-bg-surface",
+                  !isCurrentMonth ? "text-text-secondary border-transparent bg-transparent" : cn("bg-bg-elevated border-border text-text-primary", !isSelected && "hover:bg-bg-surface"),
                   isSelected && "border-4 border-accent bg-accent text-accent-inverse font-bold",
                   isSameDay(day, new Date()) && !isSelected && "border-border font-bold text-text-primary"
                 )}
@@ -114,7 +114,7 @@ export function CalendarView() {
           </h3>
           <div className="mb-4 flex items-center gap-2">
             <span className="text-xs font-medium text-text-secondary">Total gasto no dia:</span>
-            <span className="text-sm font-semibold text-danger">R$ {totalGastoDia.toFixed(2)}</span>
+            <span className="text-sm font-semibold text-danger">{formatCurrencyInput(Math.round(totalGastoDia * 100).toString())}</span>
           </div>
           {selectedTransactions.length === 0 ? (
             <div className="text-center p-8 bg-bg-elevated rounded-3xl border border-border border-dashed">
@@ -138,7 +138,7 @@ export function CalendarView() {
                           <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
                             {t.description || cat?.name || 'Transação'}
                             {t.status === 'planned' && (
-                              <span className="text-[9px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-500/30">
+                              <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
                                 Planejado
                               </span>
                             )}
@@ -147,7 +147,7 @@ export function CalendarView() {
                         </div>
                       </div>
                       <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                        {t.type === 'income' ? '+' : '-'} R$ {t.amount.toFixed(2)}
+                        {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
                       </p>
                     </li>
                   );
