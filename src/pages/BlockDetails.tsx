@@ -73,7 +73,7 @@ export function BlockDetails() {
             <div className="text-right">
               <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Restante</p>
               <p className={`text-lg font-bold ${remaining >= 0 ? 'text-success' : 'text-danger'}`}>
-                {formatCurrencyInput(Math.round(remaining * 100).toString())}
+                {remaining < 0 ? '-' : ''}{formatCurrencyInput(Math.round(Math.abs(remaining) * 100).toString())}
               </p>
             </div>
           </div>
