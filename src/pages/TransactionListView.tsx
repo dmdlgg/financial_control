@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { db } from '../db';
 import { format, parseISO, endOfMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { cn } from '../lib/utils';
+import { cn, formatCurrencyInput } from '../lib/utils';
 
 export function TransactionListView() {
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ export function TransactionListView() {
                       </div>
                     </div>
                     <span className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                      {t.type === 'income' ? '+' : '-'} R$ {t.amount.toFixed(2)}
+                      {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
                     </span>
                   </li>
                 );

@@ -94,7 +94,7 @@ export function BlockDetails() {
             </div>
           ) : (
             <ul className="space-y-3">
-              {transactions.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map(t => {
+              {[...transactions].sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map(t => {
                 const cat = categories.find(c => c.id === t.categoryId);
                 const color = cat?.color || (t.type === 'income' ? '#10b981' : '#ef4444');
                 return (

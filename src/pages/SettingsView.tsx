@@ -180,7 +180,7 @@ export function SettingsView() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-text-primary text-sm font-semibold">{b.name} <span className="text-text-secondary text-xs ml-2 font-normal">({b.period === 'monthly' ? 'Mensal' : 'Semanal'})</span></p>
-                    <p className="text-accent font-medium text-sm mt-0.5">R$ {b.totalAmount.toFixed(2)}</p>
+                    <p className="text-accent font-medium text-sm mt-0.5">{formatCurrencyInput(Math.round(b.totalAmount * 100).toString())}</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <button onClick={() => startEdit(b)} className="text-text-secondary hover:text-text-primary p-2 rounded-xl hover:bg-bg-surface transition-colors">
@@ -213,7 +213,7 @@ export function SettingsView() {
             </select>
           </div>
           <div>
-            <label className="block text-xs font-medium text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wide">Cor</label>
+            <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Cor</label>
             <div className="flex flex-wrap gap-2">
               {CATEGORY_COLORS.map(color => (
                 <button
@@ -226,16 +226,16 @@ export function SettingsView() {
               ))}
             </div>
           </div>
-          <button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2 mt-2">
+          <button type="submit" className="w-full bg-accent text-accent-inverse hover:opacity-90 active:opacity-80 font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2 mt-2">
             <Plus className="w-5 h-5" /> Adicionar Categoria
           </button>
         </form>
 
         <ul className="space-y-3">
           {categories.map(c => (
-            <li key={c.id} className="bg-bg-elevated border-border p-4 rounded-2xl transition-colors">
+            <li key={c.id} className="bg-bg-elevated border-border p-4 rounded-2xl transition-colors flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: c.color || (c.type === 'income' ? '#10b981' : '#ef4444'), boxShadow: `0 0 8px ${c.color || (c.type === 'income' ? '#10b981' : '#ef4444')}80` }} />
+                <div className="w-3 h-3 rounded-full" style={{ backgroundColor: c.color || (c.type === 'income' ? '#10b981' : '#ef4444') }} />
                 <p className="text-text-primary text-sm font-semibold">{c.name}</p>
               </div>
               <button onClick={() => handleDeleteCat(c.id)} className="text-danger hover:text-red-300 p-2 rounded-xl bg-danger/10 hover:bg-danger/20 transition-colors">
