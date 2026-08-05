@@ -57,18 +57,18 @@ export function ChartsView() {
   const prevMonth = () => setCurrentDate(subMonths(currentDate, 1));
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-900">
+    <div className="flex flex-col h-full bg-bg-primary">
       <header className="p-4 sm:p-6 pb-2">
-        <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-50 mb-4">Gráficos</h1>
-        
-        <div className="flex items-center justify-between mb-4 bg-slate-100 dark:bg-slate-800/80 p-2 rounded-2xl border border-slate-200 dark:border-slate-700/50 backdrop-blur-sm">
-          <button onClick={prevMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
+        <h1 className="text-2xl font-bold text-text-primary mb-4">Gráficos</h1>
+
+        <div className="flex items-center justify-between mb-4 bg-bg-elevated p-2 rounded-2xl border border-border">
+          <button onClick={prevMonth} className="p-2 hover:bg-bg-surface rounded-xl text-text-secondary transition-colors">
             <ChevronLeft className="w-5 h-5" />
           </button>
-          <h2 className="text-sm font-semibold text-slate-800 dark:text-slate-200 capitalize tracking-wide">
+          <h2 className="text-sm font-semibold text-text-primary capitalize tracking-wide">
             {format(currentDate, 'MMMM yyyy', { locale: ptBR })}
           </h2>
-          <button onClick={nextMonth} className="p-2 hover:bg-slate-700 rounded-xl text-slate-700 dark:text-slate-300 transition-colors">
+          <button onClick={nextMonth} className="p-2 hover:bg-bg-surface rounded-xl text-text-secondary transition-colors">
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
@@ -76,11 +76,11 @@ export function ChartsView() {
 
       <div className="p-4 sm:p-6 flex-1 min-h-0 overflow-y-auto space-y-8 no-scrollbar">
         {/* Gráfico de Categorias */}
-        <section className="bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm">
-          <h2 className="text-xs font-bold text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Despesas por Categoria</h2>
+        <section className="bg-bg-elevated p-5 rounded-3xl border border-border shadow-md">
+          <h2 className="text-xs font-bold text-text-secondary mb-4 uppercase tracking-widest">Despesas por Categoria</h2>
           {pieData.length === 0 ? (
-            <div className="text-center p-8 bg-white dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 border-dashed">
-              <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhuma despesa neste mês.</p>
+            <div className="text-center p-8 bg-bg-surface rounded-2xl border border-border border-dashed">
+              <p className="text-text-secondary text-sm">Nenhuma despesa neste mês.</p>
             </div>
           ) : (
             <div className="h-64">
@@ -99,12 +99,12 @@ export function ChartsView() {
                       <Cell key={`cell-${index}`} fill={entry.color} stroke="transparent" />
                     ))}
                   </Pie>
-                  <Tooltip 
+                  <Tooltip
                     formatter={(value: any) => `R$ ${Number(value).toFixed(2)}`}
-                    contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', borderRadius: '16px', color: '#f8fafc', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)' }}
-                    itemStyle={{ color: '#f8fafc', fontWeight: 600 }}
+                    contentStyle={{ backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-border)', borderRadius: '16px', color: 'var(--color-text-primary)', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)' }}
+                    itemStyle={{ color: 'var(--color-text-primary)', fontWeight: 600 }}
                   />
-                  <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
+                  <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '10px', color: 'var(--color-text-primary)' }} />
                 </PieChart>
               </ResponsiveContainer>
             </div>
@@ -112,27 +112,27 @@ export function ChartsView() {
         </section>
 
         {/* Gráfico de Blocos */}
-        <section className="bg-slate-100 dark:bg-slate-800/60 p-5 rounded-3xl border border-slate-200 dark:border-slate-700/50 shadow-md backdrop-blur-sm">
-          <h2 className="text-xs font-bold text-slate-400 dark:text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-widest">Orçamento vs Gasto</h2>
+        <section className="bg-bg-elevated p-5 rounded-3xl border border-border shadow-md">
+          <h2 className="text-xs font-bold text-text-secondary mb-4 uppercase tracking-widest">Orçamento vs Gasto</h2>
           {barData.length === 0 ? (
-            <div className="text-center p-8 bg-white dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-700/50 border-dashed">
-              <p className="text-slate-400 dark:text-slate-500 dark:text-slate-400 text-sm">Nenhum bloco de orçamento configurado.</p>
+            <div className="text-center p-8 bg-bg-surface rounded-2xl border border-border border-dashed">
+              <p className="text-text-secondary text-sm">Nenhum bloco de orçamento configurado.</p>
             </div>
           ) : (
             <div className="h-72">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={barData} margin={{ top: 10, right: 10, left: -25, bottom: 0 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#334155" vertical={false} />
-                  <XAxis dataKey="name" stroke="#94a3b8" fontSize={11} tickLine={false} axisLine={false} dy={10} />
-                  <YAxis stroke="#94a3b8" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(value) => `R$${value}`} />
-                  <Tooltip 
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" vertical={false} />
+                  <XAxis dataKey="name" stroke="var(--color-text-secondary)" fontSize={11} tickLine={false} axisLine={false} dy={10} />
+                  <YAxis stroke="var(--color-text-secondary)" fontSize={11} tickLine={false} axisLine={false} tickFormatter={(value) => `R$${value}`} />
+                  <Tooltip
                     formatter={(value: any) => `R$ ${Number(value).toFixed(2)}`}
-                    cursor={{ fill: '#334155', opacity: 0.3 }}
-                    contentStyle={{ backgroundColor: '#1e293b', borderColor: '#334155', borderRadius: '16px', color: '#f8fafc', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)' }}
-                    itemStyle={{ fontWeight: 600 }}
+                    cursor={{ fill: 'var(--color-border)', opacity: 0.5 }}
+                    contentStyle={{ backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-border)', borderRadius: '16px', color: 'var(--color-text-primary)', boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.3)' }}
+                    itemStyle={{ fontWeight: 600, color: 'var(--color-text-primary)' }}
                   />
-                  <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '15px' }} />
-                  <Bar dataKey="Orçamento" fill="#3b82f6" radius={[6, 6, 0, 0]} maxBarSize={40} />
+                  <Legend verticalAlign="bottom" height={36} iconType="circle" wrapperStyle={{ fontSize: '12px', paddingTop: '15px', color: 'var(--color-text-primary)' }} />
+                  <Bar dataKey="Orçamento" fill="var(--color-accent)" radius={[6, 6, 0, 0]} maxBarSize={40} />
                   <Bar dataKey="Gasto" fill="#ef4444" radius={[6, 6, 0, 0]} maxBarSize={40} />
                 </BarChart>
               </ResponsiveContainer>
