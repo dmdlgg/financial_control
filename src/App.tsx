@@ -13,7 +13,6 @@ import { useThemeStore } from './store/themeStore';
 import { processRecurringTransactions } from './lib/recurrence';
 
 function App() {
-  const month = useMonthStore((s) => s.currentDate);
   const theme = useThemeStore((state) => state.theme);
 
   useEffect(() => {
