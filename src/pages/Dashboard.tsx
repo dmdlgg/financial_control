@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
 import { startOfMonth, endOfMonth, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { cn, formatCurrencyInput } from '../lib/utils';
 import { DragHandle } from '../components/DragHandle';
 import { useDndSortable, SortableItem } from '../lib/dndkit';
 import { closestCenter } from '@dnd-kit/core';
@@ -30,22 +30,13 @@ export function Dashboard() {
 
   const blocks = useLiveQuery(() => db.blocks.toArray());
 
-  const [orderedBlocks, setOrderedBlocks] = useState(() => (blocks || []).slice().sort((a, b) => {
-    if (a.order != null && b.order != null) return a.order - b.order;
-    if (a.order != null) return -1;
-    if (b.order != null) return 1;
-    return a.id.localeCompare(b.id);
-  }));
-
-  useEffect(() => {
-    if (blocks) {
-      setOrderedBlocks(blocks.slice().sort((a, b) => {
-        if (a.order != null && b.order != null) return a.order - b.order;
-        if (a.order != null) return -1;
-        if (b.order != null) return 1;
-        return a.id.localeCompare(b.id);
-      }));
-    }
+  const orderedBlocks = useMemo(() => {
+    return (blocks || []).slice().sort((a, b) => {
+      if (a.order != null && b.order != null) return a.order - b.order;
+      if (a.order != null) return -1;
+      if (b.order != null) return 1;
+      return a.id.localeCompare(b.id);
+    });
   }, [blocks]);
 
   const {
@@ -56,7 +47,6 @@ export function Dashboard() {
     handleDragEnd,
     handleDragStart,
   } = useDndSortable(orderedBlocks, async (newOrder) => {
-    setOrderedBlocks(newOrder);
     await Promise.all(
       newOrder.map((b, i) => db.blocks.update(b.id, { order: i }))
     );
@@ -96,7 +86,7 @@ export function Dashboard() {
           <div className="absolute top-0 left-0 w-1.5 h-full bg-accent"></div>
           <h2 className="text-sm font-medium text-text-secondary mb-1">Saldo Atual</h2>
           <p className={`text-3xl font-bold ${balance >= 0 ? 'text-accent' : 'text-danger'}`}>
-            R$ {balance.toFixed(2)}
+            {formatCurrencyInput(Math.round(balance * 100).toString())}
           </p>
         </div>
 
@@ -106,14 +96,14 @@ export function Dashboard() {
             onClick={() => navigate(`/transactions?type=income&month=${format(currentDate, 'yyyy-MM')}`)}
           >
             <h2 className="text-xs font-medium text-text-secondary mb-1 uppercase tracking-wider">Rendas</h2>
-            <p className="text-xl font-semibold text-success">R$ {totalIncome.toFixed(2)}</p>
+            <p className="text-xl font-semibold text-success">{formatCurrencyInput(Math.round(totalIncome * 100).toString())}</p>
           </button>
           <button
             className="bg-bg-elevated p-4 rounded-3xl shadow-lg border border-border text-left w-full"
             onClick={() => navigate(`/transactions?type=expense&month=${format(currentDate, 'yyyy-MM')}`)}
           >
             <h2 className="text-xs font-medium text-text-secondary mb-1 uppercase tracking-wider">Despesas</h2>
-            <p className="text-xl font-semibold text-danger">R$ {totalExpense.toFixed(2)}</p>
+            <p className="text-xl font-semibold text-danger">{formatCurrencyInput(Math.round(totalExpense * 100).toString())}</p>
           </button>
         </div>
       </div>
@@ -148,11 +138,11 @@ export function Dashboard() {
                           <div className="flex justify-between items-end mb-3">
                             <div>
                               <h3 className="font-semibold text-text-primary text-lg">{block.name}</h3>
-                              <p className="text-xs text-text-secondary mt-0.5">Orçamento: R$ {block.totalAmount.toFixed(2)}</p>
+                              <p className="text-xs text-text-secondary mt-0.5">Orçamento: {formatCurrencyInput(Math.round(block.totalAmount * 100).toString())}</p>
                             </div>
                             <div className="text-right">
                               <p className={`text-sm font-bold ${remaining >= 0 ? 'text-success' : 'text-danger'}`}>
-                                R$ {remaining.toFixed(2)} restam
+                                {formatCurrencyInput(Math.round(remaining * 100).toString())} restam
                               </p>
                             </div>
                           </div>
@@ -163,7 +153,7 @@ export function Dashboard() {
                             />
                           </div>
                           <div className="mt-2 text-right">
-                            <span className="text-[10px] uppercase font-semibold text-text-secondary tracking-wider">Gasto: R$ {blockExpenses.toFixed(2)}</span>
+                            <span className="text-[10px] uppercase font-semibold text-text-secondary tracking-wider">Gasto: {formatCurrencyInput(Math.round(blockExpenses * 100).toString())}</span>
                           </div>
                         </div>
                       </div>
@@ -208,7 +198,7 @@ export function Dashboard() {
                     </div>
                   </div>
                   <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                    {t.type === 'income' ? '+' : '-'} R$ {t.amount.toFixed(2)}
+                    {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
                   </p>
                 </li>
               );
