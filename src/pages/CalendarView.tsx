@@ -20,6 +20,7 @@ export function CalendarView() {
   const [selectedDate, setSelectedDate] = useState(currentDate);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setSelectedDate(currentDate);
   }, [currentDate]);
 
