@@ -61,7 +61,7 @@ export function Dashboard() {
   const totalExpense = expenses.reduce((acc, curr) => acc + curr.amount, 0);
   const balance = totalIncome - totalExpense;
 
-  const recentTransactions = transactions?.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 5) || [];
+  const recentTransactions = transactions ? [...transactions].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 5) : [];
 
   return (
     <div className="p-4 sm:p-6">
@@ -189,7 +189,7 @@ export function Dashboard() {
                       <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
                         {t.description || cat?.name || 'Transação'}
                         {t.status === 'planned' && (
-                          <span className="text-[9px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-500/30">
+                          <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
                             Planejado
                           </span>
                         )}
