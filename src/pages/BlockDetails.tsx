@@ -3,7 +3,7 @@ import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db';
 import { ArrowLeft } from 'lucide-react';
-import { cn } from '../lib/utils';
+import { cn, formatCurrencyInput } from '../lib/utils';
 import { format, startOfMonth, endOfMonth, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { useMonthStore } from '../store/monthStore';
@@ -68,12 +68,12 @@ export function BlockDetails() {
           <div className="flex justify-between items-end mb-4">
             <div>
               <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Gasto</p>
-              <p className="text-2xl font-bold text-text-primary">R$ {spent.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-text-primary">{formatCurrencyInput(Math.round(spent * 100).toString())}</p>
             </div>
             <div className="text-right">
               <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Restante</p>
               <p className={`text-lg font-bold ${remaining >= 0 ? 'text-success' : 'text-danger'}`}>
-                R$ {remaining.toFixed(2)}
+                {formatCurrencyInput(Math.round(remaining * 100).toString())}
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export function BlockDetails() {
               style={{ width: `${percent}%` }}
             />
           </div>
-          <p className="text-center text-xs text-text-secondary mt-3 font-medium">Orçamento Total: R$ {block.totalAmount.toFixed(2)}</p>
+          <p className="text-center text-xs text-text-secondary mt-3 font-medium">Orçamento Total: {formatCurrencyInput(Math.round(block.totalAmount * 100).toString())}</p>
         </section>
 
         <section>
@@ -109,7 +109,7 @@ export function BlockDetails() {
                         <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
                           {t.description || cat?.name || 'Transação'}
                           {t.status === 'planned' && (
-                            <span className="text-[9px] bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-500/30">
+                            <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
                               Planejado
                             </span>
                           )}
@@ -118,7 +118,7 @@ export function BlockDetails() {
                       </div>
                     </div>
                     <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                      {t.type === 'income' ? '+' : '-'} R$ {t.amount.toFixed(2)}
+                      {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
                     </p>
                   </li>
                 );
