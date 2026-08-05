@@ -8,10 +8,12 @@ import { SettingsView } from './pages/SettingsView';
 import { AddTransaction } from './pages/AddTransaction';
 import { BlockDetails } from './pages/BlockDetails';
 import { TransactionListView } from './pages/TransactionListView';
+import { useMonthStore } from './store/monthStore';
 import { useThemeStore } from './store/themeStore';
 import { processRecurringTransactions } from './lib/recurrence';
 
 function App() {
+  const month = useMonthStore((s) => s.currentDate);
   const theme = useThemeStore((state) => state.theme);
 
   useEffect(() => {
