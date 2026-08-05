@@ -1,8 +1,8 @@
-import { useState } from 'react';
-// ...existing code...
+import { useState, useRef } from 'react';
+import { format } from 'date-fns';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, type PeriodType, type TransactionType, type Block } from '../db';
-import { Plus, Trash2, Sun, Moon, Pencil, Check, X } from 'lucide-react';
+import { Plus, Trash2, Sun, Moon, Pencil, Check, X, Download, Upload } from 'lucide-react';
 import { CATEGORY_COLORS } from '../lib/constants';
 import { useThemeStore } from '../store/themeStore';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
@@ -54,6 +54,7 @@ export function SettingsView() {
   const [newCatName, setNewCatName] = useState('');
   const [newCatType, setNewCatType] = useState<TransactionType>('expense');
   const [newCatColor, setNewCatColor] = useState(CATEGORY_COLORS[0]);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleAddBlock = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,6 +86,75 @@ export function SettingsView() {
   const handleDeleteCat = async (id: string) => {
     if (confirm('Tem certeza que deseja excluir esta categoria?')) {
       await db.categories.delete(id);
+    }
+  };
+
+  const exportData = async () => {
+    const [transactions, blocks, categories, recurringTransactions] = await Promise.all([
+      db.transactions.toArray(),
+      db.blocks.toArray(),
+      db.categories.toArray(),
+      db.recurringTransactions.toArray(),
+    ]);
+
+    const payload = {
+      version: 1,
+      exportedAt: new Date().toISOString(),
+      transactions,
+      blocks,
+      categories,
+      recurringTransactions,
+    };
+
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `controle-financeiro-backup-${format(new Date(), 'yyyy-MM-dd')}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const handleImportClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const importData = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    try {
+      const text = await file.text();
+      const data = JSON.parse(text);
+
+      if (!data.transactions || !data.blocks || !data.categories) {
+        alert('Arquivo de backup inválido.');
+        return;
+      }
+
+      if (!confirm('Isso substituirá todos os dados atuais. Deseja continuar?')) {
+        return;
+      }
+
+      await db.transaction('rw', db.transactions, db.blocks, db.categories, db.recurringTransactions, async () => {
+        await db.transactions.clear();
+        await db.blocks.clear();
+        await db.categories.clear();
+        await db.recurringTransactions.clear();
+
+        if (data.transactions.length) await db.transactions.bulkAdd(data.transactions);
+        if (data.blocks.length) await db.blocks.bulkAdd(data.blocks);
+        if (data.categories.length) await db.categories.bulkAdd(data.categories);
+        if (data.recurringTransactions?.length) await db.recurringTransactions.bulkAdd(data.recurringTransactions);
+      });
+
+      alert('Dados importados com sucesso!');
+    } catch (err) {
+      alert('Erro ao importar: ' + (err instanceof Error ? err.message : 'desconhecido'));
+    } finally {
+      if (fileInputRef.current) fileInputRef.current.value = '';
     }
   };
 
@@ -244,6 +314,37 @@ export function SettingsView() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Backup Section */}
+      <section className="mt-10">
+        <h2 className="text-lg font-semibold text-text-primary mb-4">Backup</h2>
+        <div className="bg-bg-elevated border-border p-5 rounded-3xl space-y-4 shadow-sm">
+          <p className="text-sm text-text-secondary">
+            Exporte seus dados para transferir para outro dispositivo. No novo aparelho, use Importar e selecione o arquivo.
+          </p>
+          <div className="flex gap-3">
+            <button
+              onClick={exportData}
+              className="flex-1 bg-accent text-accent-inverse hover:opacity-90 active:opacity-80 font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2"
+            >
+              <Download className="w-5 h-5" /> Exportar dados
+            </button>
+            <button
+              onClick={handleImportClick}
+              className="flex-1 bg-bg-surface text-text-primary border border-border hover:bg-bg-elevated font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2"
+            >
+              <Upload className="w-5 h-5" /> Importar dados
+            </button>
+          </div>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept="application/json"
+            onChange={importData}
+            className="hidden"
+          />
+        </div>
       </section>
     </div>
   );
