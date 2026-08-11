@@ -1,4 +1,4 @@
-import { Outlet, NavLink, Link } from 'react-router-dom';
+import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
 import { Home, CalendarDays, PieChart, Settings, Plus, Wallet } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -15,6 +15,8 @@ const navItems = [
 
 export function Layout() {
   const showBadge = useLiveQuery(hasPendingMonthEndInstallments, []);
+  const { pathname } = useLocation();
+  const isReceivables = pathname.startsWith('/receivables');
 
   return (
     <div className="flex flex-col h-[100dvh] w-full max-w-md mx-auto bg-bg-surface dark:bg-bg-primary shadow-2xl relative overflow-hidden sm:border-x sm:border-border">
@@ -22,12 +24,14 @@ export function Layout() {
         <Outlet />
       </main>
 
-      <Link
-        to="/add"
-        className="absolute bottom-20 right-4 sm:right-6 w-14 h-14 bg-accent rounded-full flex items-center justify-center shadow-lg text-accent-inverse hover:opacity-90 active:scale-95 transition-all z-50"
-      >
-        <Plus className="w-7 h-7" />
-      </Link>
+      {!isReceivables && (
+        <Link
+          to="/add"
+          className="absolute bottom-20 right-4 sm:right-6 w-14 h-14 bg-accent rounded-full flex items-center justify-center shadow-lg text-accent-inverse hover:opacity-90 active:scale-95 transition-all z-50"
+        >
+          <Plus className="w-7 h-7" />
+        </Link>
+      )}
 
       <nav className="absolute bottom-0 w-full bg-bg-surface dark:bg-bg-primary/95 backdrop-blur-md border-t border-border pb-safe">
         <ul className="flex justify-around items-center h-16 px-2">

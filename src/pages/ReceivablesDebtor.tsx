@@ -20,9 +20,9 @@ export function ReceivablesDebtor() {
         <p className="text-sm text-slate-500">{category?.name}</p>
       </header>
 
-      <div className="bg-blue-500/10 border border-blue-200 dark:border-blue-800/50 p-5 rounded-3xl mb-6">
-        <p className="text-xs text-blue-600 dark:text-blue-400 uppercase">Total do devedor</p>
-        <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">R$ {totalRemaining.toFixed(2)}</p>
+      <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
+        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total do devedor</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">R$ {totalRemaining.toFixed(2)}</p>
       </div>
 
       {debts?.length === 0 ? (

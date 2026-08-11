@@ -34,9 +34,9 @@ export function ReceivablesDashboard() {
         </div>
       )}
 
-      <div className="bg-blue-500/10 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-800/50 p-5 rounded-3xl mb-6">
-        <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wide">Total a receber</p>
-        <p className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">R$ {totalRemaining.toFixed(2)}</p>
+      <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
+        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total a receber</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">R$ {totalRemaining.toFixed(2)}</p>
       </div>
 
       <div className="flex justify-between items-center mb-4">
@@ -59,7 +59,12 @@ export function ReceivablesDashboard() {
                 className="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex items-center justify-between cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <Wallet className="w-5 h-5" style={{ color: cat.color || '#3b82f6' }} />
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                    style={{ backgroundColor: cat.color || '#3b82f6' }}
+                  >
+                    <Wallet className="w-5 h-5 text-white" />
+                  </div>
                   <div>
                     <p className="text-slate-800 dark:text-slate-200 text-sm font-semibold">{cat.name}</p>
                     <p className="text-xs text-blue-500 font-medium mt-0.5">R$ {catRemaining.toFixed(2)}</p>
