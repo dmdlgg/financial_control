@@ -50,6 +50,7 @@ function App() {
           <Route path="new-category" element={<ReceivablesNewCategory />} />
           <Route path="new-debtor" element={<ReceivablesNewDebtor />} />
           <Route path="new-debt" element={<ReceivablesNewDebt />} />
+          <Route path="new-debt/:id" element={<ReceivablesNewDebt />} />
         </Route>
         <Route path="/add" element={<AddTransaction />} />
         <Route path="/edit/:id" element={<AddTransaction />} />
