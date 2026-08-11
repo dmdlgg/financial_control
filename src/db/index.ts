@@ -47,19 +47,75 @@ export interface Category {
   color?: string;
 }
 
+export interface ReceivableCategory {
+  id: string;
+  name: string;
+  color?: string;
+  createdAt: string; // ISO date
+}
+
+export interface ReceivableDebtor {
+  id: string;
+  categoryId: string;
+  name: string;
+}
+
+export interface ReceivableDebt {
+  id: string;
+  debtorId: string;
+  description: string;
+  totalAmount: number;
+  remainingAmount: number;
+  installmentsCount: number;
+  startMonth: string; // YYYY-MM
+  createdAt: string;
+  settledAt?: string;
+}
+
+export interface ReceivableInstallment {
+  id: string;
+  debtId: string;
+  month: string; // YYYY-MM
+  number: number; // 1, 2, 3...
+  expectedAmount: number;
+  paidAmount?: number;
+  paidAt?: string; // ISO date
+  status: 'pending' | 'paid' | 'partial';
+}
+
+export interface ReceivableSettledDebt {
+  id: string;
+  categoryId: string;
+  debtorId: string;
+  description: string;
+  totalAmount: number;
+  settledAt: string;
+  installmentsCount: number;
+}
+
 const db = new Dexie('ControleFinanceiroDB') as Dexie & {
   transactions: EntityTable<Transaction, 'id'>;
   blocks: EntityTable<Block, 'id'>;
   categories: EntityTable<Category, 'id'>;
   recurringTransactions: EntityTable<RecurringTransaction, 'id'>;
+  receivableCategories: EntityTable<ReceivableCategory, 'id'>;
+  receivableDebtors: EntityTable<ReceivableDebtor, 'id'>;
+  receivableDebts: EntityTable<ReceivableDebt, 'id'>;
+  receivableInstallments: EntityTable<ReceivableInstallment, 'id'>;
+  receivableSettledDebts: EntityTable<ReceivableSettledDebt, 'id'>;
 };
 
 // Schema declaration
-db.version(3).stores({
+db.version(4).stores({
   transactions: 'id, type, categoryId, date, blockId, status, recurrenceId',
   blocks: 'id, name, period, order',
   categories: 'id, name, type',
-  recurringTransactions: 'id, type, categoryId, startDate, status, recurrenceType'
+  recurringTransactions: 'id, type, categoryId, startDate, status, recurrenceType',
+  receivableCategories: 'id, name',
+  receivableDebtors: 'id, categoryId, name',
+  receivableDebts: 'id, debtorId, settledAt',
+  receivableInstallments: 'id, debtId, month, status',
+  receivableSettledDebts: 'id, categoryId, debtorId, settledAt'
 });
 
 export { db };

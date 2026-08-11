@@ -1,15 +1,21 @@
 import { Outlet, NavLink, Link } from 'react-router-dom';
-import { Home, CalendarDays, PieChart, Settings, Plus } from 'lucide-react';
+import { Home, CalendarDays, PieChart, Settings, Plus, Wallet } from 'lucide-react';
 import { cn } from '../lib/utils';
+
+import { useLiveQuery } from 'dexie-react-hooks';
+import { hasPendingMonthEndInstallments } from '../lib/receivables';
 
 const navItems = [
   { path: '/', icon: Home, label: 'Início' },
   { path: '/calendar', icon: CalendarDays, label: 'Calendário' },
   { path: '/charts', icon: PieChart, label: 'Gráficos' },
+  { path: '/receivables', icon: Wallet, label: 'A Receber' },
   { path: '/settings', icon: Settings, label: 'Ajustes' },
 ];
 
 export function Layout() {
+  const showBadge = useLiveQuery(hasPendingMonthEndInstallments, []);
+
   return (
     <div className="flex flex-col h-[100dvh] w-full max-w-md mx-auto bg-bg-surface dark:bg-bg-primary shadow-2xl relative overflow-hidden sm:border-x sm:border-border">
       <main className="flex-1 overflow-y-auto pb-20 no-scrollbar relative">
@@ -30,7 +36,7 @@ export function Layout() {
               <NavLink
                 to={item.path}
                 className={({ isActive }) => cn(
-                  "flex flex-col items-center justify-center w-full h-full text-[10px] sm:text-xs font-medium gap-1 transition-all duration-200",
+                  "relative flex flex-col items-center justify-center w-full h-full text-[10px] sm:text-xs font-medium gap-1 transition-all duration-200",
                   isActive
                     ? "text-accent scale-110"
                     : "text-text-secondary hover:text-text-primary"
@@ -38,6 +44,9 @@ export function Layout() {
               >
                 <item.icon className={cn("w-5 h-5", "sm:w-6 sm:h-6")} />
                 <span>{item.label}</span>
+                {item.path === '/receivables' && showBadge && (
+                  <span className="absolute top-1 right-4 w-2 h-2 bg-red-500 rounded-full" />
+                )}
               </NavLink>
             </li>
           ))}
