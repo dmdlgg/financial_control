@@ -57,7 +57,11 @@ export function ReceivablesDashboard() {
               <li
                 key={cat.id}
                 onClick={() => navigate(`/receivables/category/${cat.id}`)}
-                className="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex items-center justify-between cursor-pointer"
+                className="p-4 rounded-3xl border flex items-center justify-between cursor-pointer"
+                style={{
+                  backgroundColor: cat.color ? `${cat.color}15` : '#3b82f615',
+                  borderColor: cat.color ? `${cat.color}30` : '#3b82f630'
+                }}
               >
                 <div className="flex items-center gap-3">
                   <div
@@ -68,7 +72,7 @@ export function ReceivablesDashboard() {
                   </div>
                   <div>
                     <p className="text-slate-800 dark:text-slate-200 text-sm font-semibold">{cat.name}</p>
-                    <p className="text-xs text-blue-500 font-medium mt-0.5">{formatCurrencyInput(Math.round(catRemaining * 100).toString())}</p>
+                    <p className="text-xs font-medium mt-0.5" style={{ color: cat.color || '#3b82f6' }}>{formatCurrencyInput(Math.round(catRemaining * 100).toString())}</p>
                   </div>
                 </div>
                 <ChevronRight className="w-5 h-5 text-slate-400" />
