@@ -1,13 +1,17 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import { db } from '../db';
+import { hasPendingMonthEndInstallments } from '../lib/receivables';
 import { Wallet, ChevronRight, History, Plus } from 'lucide-react';
 
 export function ReceivablesDashboard() {
   const navigate = useNavigate();
+  const [dismissedBanner, setDismissedBanner] = useState(false);
   const categories = useLiveQuery(() => db.receivableCategories.toArray()) || [];
   const debtors = useLiveQuery(() => db.receivableDebtors.toArray()) || [];
   const debts = useLiveQuery(() => db.receivableDebts.toArray()) || [];
+  const showBanner = useLiveQuery(hasPendingMonthEndInstallments, []);
 
   const totalRemaining = debts.reduce((sum, d) => sum + d.remainingAmount, 0);
 
@@ -19,6 +23,16 @@ export function ReceivablesDashboard() {
           <History className="w-5 h-5" />
         </button>
       </header>
+
+      {showBanner && !dismissedBanner && (
+        <div className="bg-amber-100 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700/30 p-4 rounded-2xl mb-6">
+          <p className="text-sm text-amber-800 dark:text-amber-300 font-medium">Há parcelas deste mês ainda não confirmadas. Já recebeu?</p>
+          <div className="flex gap-2 mt-3">
+            <button onClick={() => navigate('/receivables')} className="px-4 py-2 text-sm font-medium bg-amber-600 text-white rounded-xl hover:bg-amber-700 active:scale-95 transition-all">Ver parcelas</button>
+            <button onClick={() => setDismissedBanner(true)} className="px-4 py-2 text-sm font-medium border border-amber-300 dark:border-amber-700 text-amber-800 dark:text-amber-300 rounded-xl hover:bg-amber-200 dark:hover:bg-amber-800/40 active:scale-95 transition-all">Depois</button>
+          </div>
+        </div>
+      )}
 
       <div className="bg-blue-500/10 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-800/50 p-5 rounded-3xl mb-6">
         <p className="text-xs font-medium text-blue-600 dark:text-blue-400 uppercase tracking-wide">Total a receber</p>
