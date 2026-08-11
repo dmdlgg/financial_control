@@ -156,6 +156,9 @@ export function ReceivablesNewDebt() {
               required
               disabled={hasPaid}
             />
+            {!hasPaid && (
+              <p className="text-xs text-text-secondary mt-1.5">Digite em centavos: 180000 = R$ 1.800,00</p>
+            )}
           </div>
 
           <div>

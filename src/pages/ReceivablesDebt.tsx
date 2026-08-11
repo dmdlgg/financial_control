@@ -16,6 +16,7 @@ export function ReceivablesDebt() {
   const debt = useLiveQuery(() => (id ? db.receivableDebts.get(id) : undefined), [id]);
   const debtor = useLiveQuery(() => (debt ? db.receivableDebtors.get(debt.debtorId) : undefined), [debt]);
   const category = useLiveQuery(() => (debtor ? db.receivableCategories.get(debtor.categoryId) : undefined), [debtor]);
+  const catColor = category?.color || '#3b82f6';
   const installments = useLiveQuery(
     () => (id ? db.receivableInstallments.where({ debtId: id, month: formatMonth(currentDate) }).toArray() : []),
     [id, currentDate]
@@ -89,9 +90,12 @@ export function ReceivablesDebt() {
         )}
       </header>
 
-      <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
-        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Restante</p>
-        <p className="text-3xl font-bold text-text-primary mt-1">{debt ? formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString()) : formatCurrencyInput('0')}</p>
+      <div
+        className="p-5 rounded-3xl border mb-6"
+        style={{ backgroundColor: `${catColor}15`, borderColor: `${catColor}30` }}
+      >
+        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Restante</p>
+        <p className="text-3xl font-bold mt-1" style={{ color: catColor }}>{debt ? formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString()) : formatCurrencyInput('0')}</p>
       </div>
 
       <div className="flex items-center justify-between bg-bg-elevated p-2 rounded-2xl border border-border mb-6">
@@ -118,11 +122,12 @@ export function ReceivablesDebt() {
             return (
               <li
                 key={installment.id}
-                className={`bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex items-center justify-between ${isPaid ? 'line-through opacity-60' : ''}`}
+                className={`p-4 rounded-3xl border flex items-center justify-between ${isPaid ? 'line-through opacity-60' : ''}`}
+                style={{ backgroundColor: `${catColor}10`, borderColor: `${catColor}25` }}
               >
                 <div>
                   <p className="font-semibold text-slate-800 dark:text-slate-200">Parcela {installment.number}</p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs" style={{ color: catColor }}>
                     {formatCurrencyInput(Math.round(installment.expectedAmount * 100).toString())}
                     {!isPaid && installment.paidAmount ? ` · pago ${formatCurrencyInput(Math.round(installment.paidAmount * 100).toString())}` : ''}
                     {!isPaid && remaining > 0 ? ` · falta ${formatCurrencyInput(Math.round(remaining * 100).toString())}` : ''}
@@ -131,13 +136,8 @@ export function ReceivablesDebt() {
                 <button
                   onClick={() => openPaymentModal(installment)}
                   disabled={isPaid}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-                    isPaid
-                      ? 'bg-green-500 text-white'
-                      : isPending
-                      ? 'bg-slate-200 dark:bg-slate-700 text-slate-500 hover:bg-green-500 hover:text-white'
-                      : 'bg-yellow-500/20 text-yellow-600 hover:bg-yellow-500 hover:text-white'
-                  }`}
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-colors text-white"
+                  style={{ backgroundColor: isPaid ? '#22c55e' : isPending ? catColor : `${catColor}80` }}
                   aria-label={isPaid ? 'Pago' : 'Registrar pagamento'}
                 >
                   <Check className="w-5 h-5" />
@@ -153,7 +153,7 @@ export function ReceivablesDebt() {
           <div className="bg-bg-surface dark:bg-bg-elevated w-full max-w-sm rounded-3xl p-6 border border-border shadow-2xl">
             <h2 className="text-lg font-semibold text-text-primary mb-1">Registrar pagamento</h2>
             <p className="text-sm text-text-secondary mb-4">
-              Parcela {selectedInstallment.number} · esperado {formatCurrencyInput(Math.round(selectedInstallment.expectedAmount * 100).toString())}
+              Parcela {selectedInstallment.number} · esperado <span style={{ color: catColor }}>{formatCurrencyInput(Math.round(selectedInstallment.expectedAmount * 100).toString())}</span>
             </p>
 
             <form onSubmit={handlePayment} className="space-y-4">
@@ -170,6 +170,7 @@ export function ReceivablesDebt() {
                   placeholder="R$ 0,00"
                   autoFocus
                 />
+                <p className="text-xs text-text-secondary mt-1.5">Digite em centavos: 180000 = R$ 1.800,00</p>
               </div>
 
               <div className="flex gap-3">
@@ -182,7 +183,8 @@ export function ReceivablesDebt() {
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 py-3 rounded-2xl bg-accent text-accent-inverse font-medium hover:opacity-90 transition-colors"
+                  className="flex-1 py-3 rounded-2xl text-white font-medium hover:opacity-90 transition-colors"
+                  style={{ backgroundColor: catColor }}
                 >
                   Confirmar
                 </button>
