@@ -1,11 +1,12 @@
 import { Outlet, NavLink, Link } from 'react-router-dom';
-import { Home, CalendarDays, PieChart, Settings, Plus } from 'lucide-react';
+import { Home, CalendarDays, PieChart, Settings, Plus, Wallet } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 const navItems = [
   { path: '/', icon: Home, label: 'Início' },
   { path: '/calendar', icon: CalendarDays, label: 'Calendário' },
   { path: '/charts', icon: PieChart, label: 'Gráficos' },
+  { path: '/receivables', icon: Wallet, label: 'A Receber' },
   { path: '/settings', icon: Settings, label: 'Ajustes' },
 ];
 
