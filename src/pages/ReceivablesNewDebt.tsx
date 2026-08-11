@@ -41,7 +41,8 @@ export function ReceivablesNewDebt() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!description || !totalAmount || !installmentsCount || !debtorId) return;
+    if (!description || !totalAmount || !installmentsCount) return;
+    if (!id && !debtorId) return;
 
     const amount = parseCurrencyInput(totalAmount);
     const count = parseInt(installmentsCount, 10);
