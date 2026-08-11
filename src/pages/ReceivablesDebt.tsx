@@ -2,7 +2,7 @@ import { useMemo, useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db, type ReceivableInstallment } from '../db';
-import { ArrowLeft, Check, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft, Check, ChevronLeft, ChevronRight, Pencil } from 'lucide-react';
 import { format, subMonths, addMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
@@ -70,17 +70,28 @@ export function ReceivablesDebt() {
 
   return (
     <div className="p-4 sm:p-6 pb-24">
-      <header className="mb-6 flex items-center gap-4">
-        <button onClick={() => navigate(-1)}><ArrowLeft /></button>
-        <div>
-          <h1 className="text-2xl font-bold">{debt?.description || 'Dívida'}</h1>
-          <p className="text-sm text-slate-500">{debtor?.name} · {category?.name}</p>
+      <header className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button onClick={() => navigate(-1)}><ArrowLeft /></button>
+          <div>
+            <h1 className="text-2xl font-bold">{debt?.description || 'Dívida'}</h1>
+            <p className="text-sm text-slate-500">{debtor?.name} · {category?.name}</p>
+          </div>
         </div>
+        {id && (
+          <button
+            onClick={() => navigate(`/receivables/new-debt/${id}`)}
+            className="p-2 rounded-xl hover:bg-bg-elevated text-text-secondary transition-colors"
+            aria-label="Editar dívida"
+          >
+            <Pencil className="w-5 h-5" />
+          </button>
+        )}
       </header>
 
-      <div className="bg-blue-500/10 border border-blue-200 dark:border-blue-800/50 p-5 rounded-3xl mb-6">
-        <p className="text-xs text-blue-600 dark:text-blue-400 uppercase">Restante</p>
-        <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">R$ {debt?.remainingAmount.toFixed(2) ?? '0.00'}</p>
+      <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
+        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Restante</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">{debt ? formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString()) : formatCurrencyInput('0')}</p>
       </div>
 
       <div className="flex items-center justify-between bg-bg-elevated p-2 rounded-2xl border border-border mb-6">
@@ -112,9 +123,9 @@ export function ReceivablesDebt() {
                 <div>
                   <p className="font-semibold text-slate-800 dark:text-slate-200">Parcela {installment.number}</p>
                   <p className="text-xs text-slate-500">
-                    R$ {installment.expectedAmount.toFixed(2)}
-                    {!isPaid && installment.paidAmount ? ` · pago R$ ${installment.paidAmount.toFixed(2)}` : ''}
-                    {!isPaid && remaining > 0 ? ` · falta R$ ${remaining.toFixed(2)}` : ''}
+                    {formatCurrencyInput(Math.round(installment.expectedAmount * 100).toString())}
+                    {!isPaid && installment.paidAmount ? ` · pago ${formatCurrencyInput(Math.round(installment.paidAmount * 100).toString())}` : ''}
+                    {!isPaid && remaining > 0 ? ` · falta ${formatCurrencyInput(Math.round(remaining * 100).toString())}` : ''}
                   </p>
                 </div>
                 <button
@@ -142,7 +153,7 @@ export function ReceivablesDebt() {
           <div className="bg-bg-surface dark:bg-bg-elevated w-full max-w-sm rounded-3xl p-6 border border-border shadow-2xl">
             <h2 className="text-lg font-semibold text-text-primary mb-1">Registrar pagamento</h2>
             <p className="text-sm text-text-secondary mb-4">
-              Parcela {selectedInstallment.number} · esperado R$ {selectedInstallment.expectedAmount.toFixed(2)}
+              Parcela {selectedInstallment.number} · esperado {formatCurrencyInput(Math.round(selectedInstallment.expectedAmount * 100).toString())}
             </p>
 
             <form onSubmit={handlePayment} className="space-y-4">

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { db } from '../db';
 import { hasPendingMonthEndInstallments } from '../lib/receivables';
+import { formatCurrencyInput } from '../lib/utils';
 import { Wallet, ChevronRight, History, Plus } from 'lucide-react';
 
 export function ReceivablesDashboard() {
@@ -36,7 +37,7 @@ export function ReceivablesDashboard() {
 
       <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
         <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total a receber</p>
-        <p className="text-3xl font-bold text-text-primary mt-1">R$ {totalRemaining.toFixed(2)}</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
       <div className="flex justify-between items-center mb-4">
@@ -61,13 +62,13 @@ export function ReceivablesDashboard() {
                 <div className="flex items-center gap-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-                    style={{ backgroundColor: cat.color || '#3b82f6' }}
+                    style={{ backgroundColor: cat.color ? `${cat.color}20` : '#3b82f620' }}
                   >
-                    <Wallet className="w-5 h-5 text-white" />
+                    <Wallet className="w-5 h-5" style={{ color: cat.color || '#3b82f6' }} />
                   </div>
                   <div>
                     <p className="text-slate-800 dark:text-slate-200 text-sm font-semibold">{cat.name}</p>
-                    <p className="text-xs text-blue-500 font-medium mt-0.5">R$ {catRemaining.toFixed(2)}</p>
+                    <p className="text-xs text-blue-500 font-medium mt-0.5">{formatCurrencyInput(Math.round(catRemaining * 100).toString())}</p>
                   </div>
                 </div>
                 <ChevronRight className="w-5 h-5 text-slate-400" />

@@ -1,7 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../db';
-import { ArrowLeft, ChevronRight, Plus } from 'lucide-react';
+import { formatCurrencyInput } from '../lib/utils';
+import { ArrowLeft, ChevronRight, Plus, Pencil } from 'lucide-react';
 
 export function ReceivablesDebtor() {
   const { id } = useParams<{ id: string }>();
@@ -14,15 +15,26 @@ export function ReceivablesDebtor() {
 
   return (
     <div className="p-4 sm:p-6 pb-24">
-      <header className="mb-6">
-        <button onClick={() => navigate(-1)}><ArrowLeft /></button>
-        <h1 className="text-2xl font-bold mt-2">{debtor?.name || 'Devedor'}</h1>
-        <p className="text-sm text-slate-500">{category?.name}</p>
+      <header className="mb-6 flex items-center justify-between">
+        <div>
+          <button onClick={() => navigate(-1)}><ArrowLeft /></button>
+          <h1 className="text-2xl font-bold mt-2">{debtor?.name || 'Devedor'}</h1>
+          <p className="text-sm text-slate-500">{category?.name}</p>
+        </div>
+        {id && (
+          <button
+            onClick={() => navigate(`/receivables/new-debtor/${id}`)}
+            className="p-2 rounded-xl hover:bg-bg-elevated text-text-secondary transition-colors self-start"
+            aria-label="Editar devedor"
+          >
+            <Pencil className="w-5 h-5" />
+          </button>
+        )}
       </header>
 
       <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
         <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total do devedor</p>
-        <p className="text-3xl font-bold text-text-primary mt-1">R$ {totalRemaining.toFixed(2)}</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
       {debts?.length === 0 ? (
@@ -39,10 +51,10 @@ export function ReceivablesDebtor() {
             >
               <div>
                 <p className="font-semibold text-slate-800 dark:text-slate-200">{debt.description}</p>
-                <p className="text-xs text-slate-500">{debt.installmentsCount} parcelas · R$ {debt.remainingAmount.toFixed(2)} restantes</p>
+                <p className="text-xs text-slate-500">{debt.installmentsCount} parcelas · {formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())} restantes</p>
               </div>
               <div className="text-right">
-                <p className="text-sm font-bold text-blue-500">R$ {debt.remainingAmount.toFixed(2)}</p>
+                <p className="text-sm font-bold text-blue-500">{formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())}</p>
                 <ChevronRight className="w-5 h-5 text-slate-400 inline-block" />
               </div>
             </li>

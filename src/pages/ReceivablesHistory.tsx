@@ -1,6 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
+import { formatCurrencyInput } from '../lib/utils';
 import { ArrowLeft } from 'lucide-react';
 
 export function ReceivablesHistory() {
@@ -29,7 +30,7 @@ export function ReceivablesHistory() {
               <li key={s.id} className="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50">
                 <p className="font-semibold">{s.description}</p>
                 <p className="text-xs text-slate-500">{cat?.name} → {debtor?.name}</p>
-                <p className="text-sm text-emerald-500 font-medium mt-1">Quitado: R$ {s.totalAmount.toFixed(2)}</p>
+                <p className="text-sm text-emerald-500 font-medium mt-1">Quitado: {formatCurrencyInput(Math.round(s.totalAmount * 100).toString())}</p>
               </li>
             );
           })}

@@ -48,7 +48,9 @@ function App() {
           <Route path="debt/:id" element={<ReceivablesDebt />} />
           <Route path="history" element={<ReceivablesHistory />} />
           <Route path="new-category" element={<ReceivablesNewCategory />} />
+          <Route path="new-category/:id" element={<ReceivablesNewCategory />} />
           <Route path="new-debtor" element={<ReceivablesNewDebtor />} />
+          <Route path="new-debtor/:id" element={<ReceivablesNewDebtor />} />
           <Route path="new-debt" element={<ReceivablesNewDebt />} />
           <Route path="new-debt/:id" element={<ReceivablesNewDebt />} />
         </Route>

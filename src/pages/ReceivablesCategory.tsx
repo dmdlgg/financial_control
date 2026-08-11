@@ -1,7 +1,8 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../db';
-import { ArrowLeft, ChevronRight, User, Plus } from 'lucide-react';
+import { formatCurrencyInput } from '../lib/utils';
+import { ArrowLeft, ChevronRight, User, Plus, Pencil } from 'lucide-react';
 
 export function ReceivablesCategory() {
   const { id } = useParams<{ id: string }>();
@@ -16,14 +17,25 @@ export function ReceivablesCategory() {
 
   return (
     <div className="p-4 sm:p-6 pb-24">
-      <header className="mb-6 flex items-center gap-4">
-        <button onClick={() => navigate(-1)}><ArrowLeft /></button>
-        <h1 className="text-2xl font-bold">{category?.name || 'Categoria'}</h1>
+      <header className="mb-6 flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <button onClick={() => navigate(-1)}><ArrowLeft /></button>
+          <h1 className="text-2xl font-bold">{category?.name || 'Categoria'}</h1>
+        </div>
+        {id && (
+          <button
+            onClick={() => navigate(`/receivables/new-category/${id}`)}
+            className="p-2 rounded-xl hover:bg-bg-elevated text-text-secondary transition-colors"
+            aria-label="Editar categoria"
+          >
+            <Pencil className="w-5 h-5" />
+          </button>
+        )}
       </header>
 
       <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
         <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total da categoria</p>
-        <p className="text-3xl font-bold text-text-primary mt-1">R$ {totalRemaining.toFixed(2)}</p>
+        <p className="text-3xl font-bold text-text-primary mt-1">{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
       {debtors?.length === 0 ? (
@@ -45,7 +57,7 @@ export function ReceivablesCategory() {
                   <User className="w-5 h-5 text-slate-400" />
                   <div>
                     <p className="font-semibold text-slate-800 dark:text-slate-200">{debtor.name}</p>
-                    <p className="text-xs text-blue-500 font-medium">R$ {remaining.toFixed(2)}</p>
+                    <p className="text-xs text-blue-500 font-medium">{formatCurrencyInput(Math.round(remaining * 100).toString())}</p>
                   </div>
                 </div>
                 <ChevronRight className="w-5 h-5 text-slate-400" />
