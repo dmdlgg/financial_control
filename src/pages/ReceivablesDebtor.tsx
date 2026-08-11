@@ -11,6 +11,7 @@ export function ReceivablesDebtor() {
   const category = useLiveQuery(() => debtor ? db.receivableCategories.get(debtor.categoryId) : undefined, [debtor]);
   const debts = useLiveQuery(() => id ? db.receivableDebts.where('debtorId').equals(id).toArray() : [], [id]);
 
+  const catColor = category?.color || '#3b82f6';
   const totalRemaining = debts?.reduce((sum, d) => sum + d.remainingAmount, 0) || 0;
 
   return (
@@ -32,9 +33,12 @@ export function ReceivablesDebtor() {
         )}
       </header>
 
-      <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
-        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total do devedor</p>
-        <p className="text-3xl font-bold text-text-primary mt-1">{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
+      <div
+        className="p-5 rounded-3xl border mb-6"
+        style={{ backgroundColor: `${catColor}15`, borderColor: `${catColor}30` }}
+      >
+        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Total do devedor</p>
+        <p className="text-3xl font-bold mt-1" style={{ color: catColor }}>{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
       {debts?.length === 0 ? (
@@ -43,27 +47,43 @@ export function ReceivablesDebtor() {
         </div>
       ) : (
         <ul className="space-y-3">
-          {debts?.map(debt => (
-            <li
-              key={debt.id}
-              onClick={() => navigate(`/receivables/debt/${debt.id}`)}
-              className="bg-slate-100 dark:bg-slate-800/60 p-4 rounded-3xl border border-slate-200 dark:border-slate-700/50 flex items-center justify-between cursor-pointer"
-            >
-              <div>
-                <p className="font-semibold text-slate-800 dark:text-slate-200">{debt.description}</p>
-                <p className="text-xs text-slate-500">{debt.installmentsCount} parcelas · {formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())} restantes</p>
-              </div>
-              <div className="text-right">
-                <p className="text-sm font-bold text-blue-500">{formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())}</p>
-                <ChevronRight className="w-5 h-5 text-slate-400 inline-block" />
-              </div>
-            </li>
-          ))}
+          {debts?.map(debt => {
+            const percent = debt.totalAmount > 0
+              ? Math.min(((debt.totalAmount - debt.remainingAmount) / debt.totalAmount) * 100, 100)
+              : 0;
+            return (
+              <li
+                key={debt.id}
+                onClick={() => navigate(`/receivables/debt/${debt.id}`)}
+                className="p-4 rounded-3xl border flex flex-col cursor-pointer"
+                style={{ backgroundColor: `${catColor}10`, borderColor: `${catColor}25` }}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div>
+                    <p className="font-semibold text-slate-800 dark:text-slate-200">{debt.description}</p>
+                    <p className="text-xs text-slate-500">{debt.installmentsCount} parcelas · {formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())} restantes</p>
+                  </div>
+                  <div className="text-right flex items-center gap-2">
+                    <p className="text-sm font-bold" style={{ color: catColor }}>{formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString())}</p>
+                    <ChevronRight className="w-5 h-5 text-slate-400" />
+                  </div>
+                </div>
+                <div className="h-2 w-full bg-bg-surface rounded-full overflow-hidden border border-border">
+                  <div
+                    className="h-full rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${percent}%`, backgroundColor: catColor }}
+                  />
+                </div>
+                <p className="text-[10px] text-text-secondary mt-1.5 text-right">{percent.toFixed(0)}% pago</p>
+              </li>
+            );
+          })}
         </ul>
       )}
       <button
         onClick={() => navigate(`/receivables/new-debt?debtorId=${id}`)}
-        className="fixed bottom-24 right-4 sm:right-6 w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 active:scale-95 transition-all z-40"
+        className="fixed bottom-24 right-4 sm:right-6 w-14 h-14 text-white rounded-full flex items-center justify-center shadow-lg active:scale-95 transition-all z-40"
+        style={{ backgroundColor: catColor }}
         aria-label="Nova dívida"
       >
         <Plus className="w-7 h-7" />
