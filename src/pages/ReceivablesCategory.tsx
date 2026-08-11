@@ -1,7 +1,7 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../db';
-import { ArrowLeft, ChevronRight, User } from 'lucide-react';
+import { ArrowLeft, ChevronRight, User, Plus } from 'lucide-react';
 
 export function ReceivablesCategory() {
   const { id } = useParams<{ id: string }>();
@@ -54,6 +54,13 @@ export function ReceivablesCategory() {
           })}
         </ul>
       )}
+      <button
+        onClick={() => navigate(`/receivables/new-debtor?categoryId=${id}`)}
+        className="fixed bottom-24 right-4 sm:right-6 w-14 h-14 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 active:scale-95 transition-all z-40"
+        aria-label="Novo devedor"
+      >
+        <Plus className="w-7 h-7" />
+      </button>
     </div>
   );
 }
