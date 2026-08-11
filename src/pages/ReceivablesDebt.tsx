@@ -6,7 +6,7 @@ import { ArrowLeft, Check, ChevronLeft, ChevronRight, Pencil } from 'lucide-reac
 import { format, subMonths, addMonths } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
-import { formatMonth, recalculateFutureInstallments, settleDebtIfNeeded } from '../lib/receivables';
+import { formatMonth, getPendingMonthAmount, recalculateFutureInstallments, settleDebtIfNeeded } from '../lib/receivables';
 
 export function ReceivablesDebt() {
   const { id } = useParams<{ id: string }>();
@@ -17,10 +17,12 @@ export function ReceivablesDebt() {
   const debtor = useLiveQuery(() => (debt ? db.receivableDebtors.get(debt.debtorId) : undefined), [debt]);
   const category = useLiveQuery(() => (debtor ? db.receivableCategories.get(debtor.categoryId) : undefined), [debtor]);
   const catColor = category?.color || '#3b82f6';
-  const installments = useLiveQuery(
-    () => (id ? db.receivableInstallments.where({ debtId: id, month: formatMonth(currentDate) }).toArray() : []),
-    [id, currentDate]
+  const allInstallments = useLiveQuery(
+    () => (id ? db.receivableInstallments.where('debtId').equals(id).toArray() : []),
+    [id]
   );
+  const installments = allInstallments?.filter(i => i.month === formatMonth(currentDate)) || [];
+  const monthRemaining = getPendingMonthAmount(installments, formatMonth(currentDate));
 
   const [selectedInstallment, setSelectedInstallment] = useState<ReceivableInstallment | null>(null);
   const [paymentInput, setPaymentInput] = useState('');
@@ -94,8 +96,11 @@ export function ReceivablesDebt() {
         className="p-5 rounded-3xl border mb-6"
         style={{ backgroundColor: `${catColor}15`, borderColor: `${catColor}30` }}
       >
-        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Restante</p>
-        <p className="text-3xl font-bold mt-1" style={{ color: catColor }}>{debt ? formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString()) : formatCurrencyInput('0')}</p>
+        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Valor deste mês</p>
+        <p className="text-3xl font-bold mt-1" style={{ color: catColor }}>{formatCurrencyInput(Math.round(monthRemaining * 100).toString())}</p>
+        <p className="text-xs text-text-secondary mt-2">
+          Total restante: {debt ? formatCurrencyInput(Math.round(debt.remainingAmount * 100).toString()) : formatCurrencyInput('0')}
+        </p>
       </div>
 
       <div className="flex items-center justify-between bg-bg-elevated p-2 rounded-2xl border border-border mb-6">

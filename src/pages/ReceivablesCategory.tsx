@@ -1,19 +1,25 @@
 import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db } from '../db';
+import { formatMonth, getPendingMonthAmount } from '../lib/receivables';
 import { formatCurrencyInput } from '../lib/utils';
+import { useMonthStore } from '../store/monthStore';
 import { ArrowLeft, ChevronRight, User, Plus, Pencil } from 'lucide-react';
 
 export function ReceivablesCategory() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const currentDate = useMonthStore(state => state.currentDate);
+  const monthKey = formatMonth(currentDate);
   const category = useLiveQuery(() => id ? db.receivableCategories.get(id) : undefined, [id]);
   const debtors = useLiveQuery(() => id ? db.receivableDebtors.where('categoryId').equals(id).toArray() : [], [id]);
   const debts = useLiveQuery(() => db.receivableDebts.toArray()) || [];
+  const installments = useLiveQuery(() => db.receivableInstallments.toArray()) || [];
 
-  const totalRemaining = debts
-    .filter(d => debtors?.some(debtor => debtor.id === d.debtorId))
-    .reduce((sum, d) => sum + d.remainingAmount, 0);
+  const debtorIds = debtors?.map(d => d.id) || [];
+  const categoryDebtIds = debts.filter(d => debtorIds.includes(d.debtorId)).map(d => d.id);
+  const categoryInstallments = installments.filter(i => categoryDebtIds.includes(i.debtId));
+  const totalRemaining = getPendingMonthAmount(categoryInstallments, monthKey);
 
   const catColor = category?.color || '#3b82f6';
 
@@ -39,7 +45,7 @@ export function ReceivablesCategory() {
         className="p-5 rounded-3xl border mb-6"
         style={{ backgroundColor: `${catColor}15`, borderColor: `${catColor}30` }}
       >
-        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Total da categoria</p>
+        <p className="text-xs font-medium uppercase tracking-wide" style={{ color: catColor }}>Total da categoria este mês</p>
         <p className="text-3xl font-bold mt-1" style={{ color: catColor }}>{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
@@ -50,8 +56,8 @@ export function ReceivablesCategory() {
       ) : (
         <ul className="space-y-3">
           {debtors?.map(debtor => {
-            const debtorDebts = debts.filter(d => d.debtorId === debtor.id);
-            const remaining = debtorDebts.reduce((sum, d) => sum + d.remainingAmount, 0);
+            const debtorDebtIds = debts.filter(d => d.debtorId === debtor.id).map(d => d.id);
+            const remaining = getPendingMonthAmount(categoryInstallments.filter(i => debtorDebtIds.includes(i.debtId)), monthKey);
             return (
               <li
                 key={debtor.id}

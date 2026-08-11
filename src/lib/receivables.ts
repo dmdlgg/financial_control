@@ -1,5 +1,15 @@
 import { db, type ReceivableDebt, type ReceivableInstallment } from '../db';
 
+export function getPendingMonthAmount(installments: ReceivableInstallment[], month: string): number {
+  return installments
+    .filter(i => i.month === month && i.status !== 'paid')
+    .reduce((sum, i) => sum + (i.expectedAmount - (i.paidAmount || 0)), 0);
+}
+
+export function countPaidInstallments(installments: ReceivableInstallment[]): number {
+  return installments.filter(i => i.status === 'paid').length;
+}
+
 export function formatMonth(date: Date): string {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');

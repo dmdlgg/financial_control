@@ -2,19 +2,23 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { db } from '../db';
-import { hasPendingMonthEndInstallments } from '../lib/receivables';
+import { hasPendingMonthEndInstallments, formatMonth, getPendingMonthAmount } from '../lib/receivables';
 import { formatCurrencyInput } from '../lib/utils';
+import { useMonthStore } from '../store/monthStore';
 import { Wallet, ChevronRight, History, Plus } from 'lucide-react';
 
 export function ReceivablesDashboard() {
   const navigate = useNavigate();
+  const currentDate = useMonthStore(state => state.currentDate);
+  const monthKey = formatMonth(currentDate);
   const [dismissedBanner, setDismissedBanner] = useState(false);
   const categories = useLiveQuery(() => db.receivableCategories.toArray()) || [];
   const debtors = useLiveQuery(() => db.receivableDebtors.toArray()) || [];
   const debts = useLiveQuery(() => db.receivableDebts.toArray()) || [];
+  const installments = useLiveQuery(() => db.receivableInstallments.toArray()) || [];
   const showBanner = useLiveQuery(hasPendingMonthEndInstallments, []);
 
-  const totalRemaining = debts.reduce((sum, d) => sum + d.remainingAmount, 0);
+  const totalRemaining = getPendingMonthAmount(installments, monthKey);
 
   return (
     <div className="p-4 sm:p-6 pb-24">
@@ -36,7 +40,7 @@ export function ReceivablesDashboard() {
       )}
 
       <div className="bg-bg-elevated p-5 rounded-3xl border border-border mb-6">
-        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total a receber</p>
+        <p className="text-xs font-medium text-text-secondary uppercase tracking-wide">Total a receber este mês</p>
         <p className="text-3xl font-bold text-text-primary mt-1">{formatCurrencyInput(Math.round(totalRemaining * 100).toString())}</p>
       </div>
 
@@ -52,7 +56,8 @@ export function ReceivablesDashboard() {
         <ul className="space-y-3">
           {categories.map(cat => {
             const catDebtorIds = debtors.filter(d => d.categoryId === cat.id).map(d => d.id);
-            const catRemaining = debts.filter(d => catDebtorIds.includes(d.debtorId)).reduce((sum, d) => sum + d.remainingAmount, 0);
+            const catDebtIds = debts.filter(d => catDebtorIds.includes(d.debtorId)).map(d => d.id);
+            const catRemaining = getPendingMonthAmount(installments.filter(i => catDebtIds.includes(i.debtId)), monthKey);
             return (
               <li
                 key={cat.id}
