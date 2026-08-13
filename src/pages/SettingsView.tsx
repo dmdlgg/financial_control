@@ -90,11 +90,26 @@ export function SettingsView() {
   };
 
   const exportData = async () => {
-    const [transactions, blocks, categories, recurringTransactions] = await Promise.all([
+    const [
+      transactions,
+      blocks,
+      categories,
+      recurringTransactions,
+      receivableCategories,
+      receivableDebtors,
+      receivableDebts,
+      receivableInstallments,
+      receivableSettledDebts,
+    ] = await Promise.all([
       db.transactions.toArray(),
       db.blocks.toArray(),
       db.categories.toArray(),
       db.recurringTransactions.toArray(),
+      db.receivableCategories.toArray(),
+      db.receivableDebtors.toArray(),
+      db.receivableDebts.toArray(),
+      db.receivableInstallments.toArray(),
+      db.receivableSettledDebts.toArray(),
     ]);
 
     const payload = {
@@ -104,6 +119,11 @@ export function SettingsView() {
       blocks,
       categories,
       recurringTransactions,
+      receivableCategories,
+      receivableDebtors,
+      receivableDebts,
+      receivableInstallments,
+      receivableSettledDebts,
     };
 
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
@@ -138,16 +158,36 @@ export function SettingsView() {
         return;
       }
 
-      await db.transaction('rw', db.transactions, db.blocks, db.categories, db.recurringTransactions, async () => {
+      await db.transaction('rw', [
+        db.transactions,
+        db.blocks,
+        db.categories,
+        db.recurringTransactions,
+        db.receivableCategories,
+        db.receivableDebtors,
+        db.receivableDebts,
+        db.receivableInstallments,
+        db.receivableSettledDebts,
+      ], async () => {
         await db.transactions.clear();
         await db.blocks.clear();
         await db.categories.clear();
         await db.recurringTransactions.clear();
+        await db.receivableCategories.clear();
+        await db.receivableDebtors.clear();
+        await db.receivableDebts.clear();
+        await db.receivableInstallments.clear();
+        await db.receivableSettledDebts.clear();
 
         if (data.transactions.length) await db.transactions.bulkAdd(data.transactions);
         if (data.blocks.length) await db.blocks.bulkAdd(data.blocks);
         if (data.categories.length) await db.categories.bulkAdd(data.categories);
         if (data.recurringTransactions?.length) await db.recurringTransactions.bulkAdd(data.recurringTransactions);
+        if (data.receivableCategories?.length) await db.receivableCategories.bulkAdd(data.receivableCategories);
+        if (data.receivableDebtors?.length) await db.receivableDebtors.bulkAdd(data.receivableDebtors);
+        if (data.receivableDebts?.length) await db.receivableDebts.bulkAdd(data.receivableDebts);
+        if (data.receivableInstallments?.length) await db.receivableInstallments.bulkAdd(data.receivableInstallments);
+        if (data.receivableSettledDebts?.length) await db.receivableSettledDebts.bulkAdd(data.receivableSettledDebts);
       });
 
       alert('Dados importados com sucesso!');
