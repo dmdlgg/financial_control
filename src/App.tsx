@@ -16,6 +16,7 @@ import { ReceivablesHistory } from './pages/ReceivablesHistory';
 import { ReceivablesNewCategory } from './pages/ReceivablesNewCategory';
 import { ReceivablesNewDebtor } from './pages/ReceivablesNewDebtor';
 import { ReceivablesNewDebt } from './pages/ReceivablesNewDebt';
+import { EditRecurrence } from './pages/EditRecurrence';
 import { useThemeStore } from './store/themeStore';
 import { processRecurringTransactions } from './lib/recurrence';
 
@@ -56,6 +57,7 @@ function App() {
         </Route>
         <Route path="/add" element={<AddTransaction />} />
         <Route path="/edit/:id" element={<AddTransaction />} />
+        <Route path="/edit-recurrence/:id" element={<EditRecurrence />} />
         <Route path="/block/:id" element={<BlockDetails />} />
         <Route path="/transactions" element={<TransactionListView />} />
       </Routes>

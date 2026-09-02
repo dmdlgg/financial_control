@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, type TransactionType, type TransactionStatus } from '../db';
 import { format } from 'date-fns';
-import { ArrowLeft, Trash2 } from 'lucide-react';
+import { ArrowLeft, Trash2, Repeat } from 'lucide-react';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
 import { processRecurringTransactions } from '../lib/recurrence';
 import { useLocation } from 'react-router-dom';
@@ -266,8 +266,15 @@ export function AddTransaction() {
           )}
 
           {id && existingTransaction?.recurrenceId && recurringRule && (
-            <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 border border-amber-200 dark:border-amber-700/30">
-              <p className="text-xs text-amber-800 dark:text-amber-300 mb-3 font-medium">Esta é uma transação recorrente mensal.</p>
+            <div className="bg-amber-50 dark:bg-amber-900/10 rounded-2xl p-4 border border-amber-200 dark:border-amber-700/30 space-y-2">
+              <p className="text-xs text-amber-800 dark:text-amber-300 font-medium">Esta é uma transação recorrente mensal.</p>
+              <button
+                type="button"
+                onClick={() => navigate(`/edit-recurrence/${existingTransaction.recurrenceId}`)}
+                className="w-full py-2.5 text-xs font-semibold bg-amber-500 text-white rounded-xl hover:bg-amber-600 transition-colors flex items-center justify-center gap-2"
+              >
+                <Repeat className="w-4 h-4" /> Editar toda a recorrência
+              </button>
               <button type="button" onClick={handleStopRecurrence} className="w-full py-2.5 text-xs font-semibold bg-bg-surface text-danger rounded-xl border border-danger/20 hover:bg-danger/10 transition-colors">
                 Parar de repetir
               </button>

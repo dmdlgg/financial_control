@@ -22,7 +22,7 @@ export function useDndSortable<T extends { id: string }>(
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
-        distance: 5,
+        distance: 8,
       },
     })
   );
@@ -67,6 +67,7 @@ export function SortableItem({ id, children }: SortableItemProps) {
     transition,
     opacity: isDragging ? 0.6 : 1,
     zIndex: isDragging ? 10 : undefined,
+    touchAction: 'none',
   };
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
