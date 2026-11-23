@@ -4,12 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
 import { startOfMonth, endOfMonth, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Layers, CreditCard } from 'lucide-react';
 import { cn, formatCurrencyInput } from '../lib/utils';
 import { DragHandle } from '../components/DragHandle';
 import { useDndSortable, SortableItem } from '../lib/dndkit';
 import { closestCenter } from '@dnd-kit/core';
 import { useMonthStore } from '../store/monthStore';
+import { TransactionItem } from '../components/TransactionItem';
 
 export function Dashboard() {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ export function Dashboard() {
   );
 
   const blocks = useLiveQuery(() => db.blocks.toArray());
+  const limitedCount = useLiveQuery(() => db.recurringTransactions.where('recurrenceType').equals('limited').count()) || 0;
 
   const orderedBlocks = useMemo(() => {
     return (blocks || []).slice().sort((a, b) => {
@@ -108,9 +110,38 @@ export function Dashboard() {
         </div>
       </div>
 
+      {/* Banner / Atalho para Minhas Parcelas */}
+      <div
+        onClick={() => navigate('/installments')}
+        className="bg-bg-elevated p-4 rounded-3xl border border-border shadow-md mb-8 flex items-center justify-between cursor-pointer hover:border-accent transition-all group"
+      >
+        <div className="flex items-center gap-3.5">
+          <div className="p-3 rounded-2xl bg-accent/15 text-accent">
+            <CreditCard className="w-5 h-5" />
+          </div>
+          <div>
+            <div className="flex items-center gap-2">
+              <h2 className="font-semibold text-text-primary text-sm">Minhas Parcelas</h2>
+              {limitedCount > 0 && (
+                <span className="text-[10px] px-2 py-0.5 rounded-full bg-accent/15 text-accent font-bold border border-accent/20">
+                  {limitedCount} {limitedCount === 1 ? 'plano' : 'planos'}
+                </span>
+              )}
+            </div>
+            <p className="text-xs text-text-secondary mt-0.5">
+              Ver todas as compras parceladas organizadas por categoria
+            </p>
+          </div>
+        </div>
+        <ChevronRight className="w-5 h-5 text-text-secondary group-hover:text-text-primary transition-colors shrink-0" />
+      </div>
+
       <section>
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-semibold text-text-primary">Meus Blocos</h2>
+          <div>
+            <h2 className="text-lg font-semibold text-text-primary">Meus Blocos</h2>
+            <p className="text-xs text-text-secondary">Organização por grupos e serviços</p>
+          </div>
         </div>
 
         {!blocks || blocks.length === 0 ? (
@@ -120,41 +151,63 @@ export function Dashboard() {
         ) : (
           <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd} onDragStart={handleDragStart}>
             <SortableContext items={orderedBlocks.map(b => b.id)} strategy={verticalListSortingStrategy}>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {orderedBlocks.map((block) => {
-                  const blockExpenses = expenses.filter(e => e.blockId === block.id).reduce((acc, curr) => acc + curr.amount, 0);
-                  const remaining = block.totalAmount - blockExpenses;
-                  const percent = Math.min((blockExpenses / block.totalAmount) * 100, 100);
+                  const blockTxs = (transactions || []).filter(t => t.blockId === block.id);
+                  const blockTotal = blockTxs.filter(t => t.type === 'expense').reduce((acc, curr) => acc + curr.amount, 0);
+                  const count = blockTxs.length;
+
                   return (
                     <SortableItem key={block.id} id={block.id}>
                       <div
                         onClick={() => navigate(`/block/${block.id}?month=${format(currentDate, 'yyyy-MM')}`)}
                         className={cn(
-                          "bg-bg-elevated p-5 rounded-3xl border border-border shadow-md transition-transform hover:scale-[1.02] cursor-pointer flex items-center group"
+                          "bg-bg-elevated p-4 sm:p-5 rounded-3xl border border-border shadow-md transition-all hover:scale-[1.01] cursor-pointer flex items-center group"
                         )}
                       >
-                        <DragHandle className="opacity-70 group-hover:opacity-100" />
-                        <div className="flex-1 ml-2">
-                          <div className="flex justify-between items-end mb-3">
-                            <div>
-                              <h3 className="font-semibold text-text-primary text-lg">{block.name}</h3>
-                              <p className="text-xs text-text-secondary mt-0.5">Orçamento: {formatCurrencyInput(Math.round(block.totalAmount * 100).toString())}</p>
+                        <DragHandle className="opacity-70 group-hover:opacity-100 mr-1" />
+                        <div className="flex-1 min-w-0">
+                          <div className="flex justify-between items-center gap-3">
+                            <div className="flex items-center gap-2 min-w-0">
+                              <div className="p-2 rounded-xl bg-accent/10 text-accent">
+                                <Layers className="w-4 h-4" />
+                              </div>
+                              <div className="min-w-0">
+                                <h3 className="font-semibold text-text-primary text-base truncate">{block.name}</h3>
+                                <p className="text-xs text-text-secondary">
+                                  {count} {count === 1 ? 'item vinculado' : 'itens vinculados'} neste mês
+                                </p>
+                              </div>
                             </div>
-                            <div className="text-right">
-                              <p className={`text-sm font-bold ${remaining >= 0 ? 'text-success' : 'text-danger'}`}>
-                                {formatCurrencyInput(Math.round(remaining * 100).toString())} restam
-                              </p>
+                            <div className="text-right shrink-0 flex items-center gap-2">
+                              <div>
+                                <p className="text-xs text-text-secondary uppercase tracking-wider font-medium">Total</p>
+                                <p className="text-base font-bold text-text-primary">
+                                  {formatCurrencyInput(Math.round(blockTotal * 100).toString())}
+                                </p>
+                              </div>
+                              <ChevronRight className="w-5 h-5 text-text-secondary/50 group-hover:text-text-primary transition-colors" />
                             </div>
                           </div>
-                          <div className="h-2.5 w-full bg-bg-surface rounded-full overflow-hidden border border-border">
-                            <div
-                              className={`h-full rounded-full transition-all duration-1000 ease-out ${percent > 90 ? 'bg-danger' : percent > 75 ? 'bg-yellow-500' : 'bg-accent'}`}
-                              style={{ width: `${percent}%` }}
-                            />
-                          </div>
-                          <div className="mt-2 text-right">
-                            <span className="text-[10px] uppercase font-semibold text-text-secondary tracking-wider">Gasto: {formatCurrencyInput(Math.round(blockExpenses * 100).toString())}</span>
-                          </div>
+
+                          {/* Previews dos itens organizados no bloco */}
+                          {count > 0 && (
+                            <div className="mt-3 pt-3 border-t border-border/50 flex items-center gap-1.5 flex-wrap">
+                              {blockTxs.slice(0, 4).map(t => (
+                                <span
+                                  key={t.id}
+                                  className="text-[11px] px-2.5 py-1 rounded-xl bg-bg-surface text-text-secondary border border-border/70 truncate max-w-[140px]"
+                                >
+                                  {t.description || 'Transação'}
+                                </span>
+                              ))}
+                              {count > 4 && (
+                                <span className="text-[11px] px-2 py-1 rounded-xl bg-bg-surface text-text-secondary font-medium">
+                                  +{count - 4} mais
+                                </span>
+                              )}
+                            </div>
+                          )}
                         </div>
                       </div>
                     </SortableItem>
@@ -176,31 +229,15 @@ export function Dashboard() {
           <ul className="space-y-3">
             {recentTransactions.map(t => {
               const cat = categories.find(c => c.id === t.categoryId);
-              const color = cat?.color || (t.type === 'income' ? '#10b981' : '#ef4444');
+              const blk = blocks?.find(b => b.id === t.blockId);
               return (
-                <li
+                <TransactionItem
                   key={t.id}
+                  transaction={t}
+                  category={cat}
+                  block={blk}
                   onClick={() => navigate(`/edit/${t.id}`)}
-                  className="bg-bg-elevated p-4 rounded-3xl border border-border flex justify-between items-center shadow-md transition-transform hover:scale-[1.02] cursor-pointer"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                    <div>
-                      <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
-                        {t.description || cat?.name || 'Transação'}
-                        {t.status === 'planned' && (
-                          <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
-                            Planejado
-                          </span>
-                        )}
-                      </p>
-                      {t.description && cat?.name && <p className="text-xs text-text-secondary mt-0.5">{cat.name}</p>}
-                    </div>
-                  </div>
-                  <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                    {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
-                  </p>
-                </li>
+                />
               );
             })}
           </ul>

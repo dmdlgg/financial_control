@@ -14,6 +14,8 @@ export interface Transaction {
   description?: string;
   status: TransactionStatus;
   recurrenceId?: string;
+  installmentNumber?: number;
+  installmentTotal?: number;
 }
 
 export interface RecurringTransaction {
@@ -27,16 +29,18 @@ export interface RecurringTransaction {
   status: TransactionStatus;
   recurrenceType: 'indefinite' | 'limited';
   recurrenceEndDate?: string;
+  installmentsCount?: number;
   lastGeneratedDate?: string;
 }
 
 export interface Block {
   id: string;
   name: string;
-  totalAmount: number;
-  period: PeriodType;
+  totalAmount?: number;
+  period?: PeriodType;
   weeklyLimit?: number;
   order?: number;
+  color?: string;
 }
 
 export interface Category {

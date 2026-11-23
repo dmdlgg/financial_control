@@ -1,0 +1,5990 @@
+{
+  "version": 1,
+  "exportedAt": "2026-11-23T15:40:29.983Z",
+  "transactions": [
+    {
+      "id": "004c38bc-08e2-42fa-b9e7-81b2d5e0551c",
+      "type": "income",
+      "amount": 7.61,
+      "categoryId": "0a9c5a58-9647-45c1-a6f4-f19ca836e7db",
+      "date": "2026-05-07",
+      "description": "Não paguei ida do onibus pq fui de carona com meus pais",
+      "status": "completed"
+    },
+    {
+      "id": "01aaa3a7-410d-4bed-a7d6-e0d87e47c36b",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-04-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "01b63731-3c19-4096-ac1e-85e7b0dd814b",
+      "type": "expense",
+      "amount": 187,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Mesa",
+      "status": "completed",
+      "recurrenceId": "f72c1984-fac3-4ca6-a7b8-bb02a781ca71"
+    },
+    {
+      "id": "0280e113-b7bc-42bc-b8d2-4d6aeb56194e",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceId": "2051cbbc-41c1-4561-bba4-89fe9466b182"
+    },
+    {
+      "id": "030f39cb-2795-4e30-8386-83a8df9ce856",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "036f9f2d-2ad4-4b8f-ba24-bfe45a65ed79",
+      "type": "expense",
+      "amount": 23,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-14",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "039e1dd5-236b-4165-8ebf-ffd1f8851178",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "03eff1db-067a-432f-95d3-a21206697914",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "046b40c6-005a-43c7-bd4e-afccbef40a98",
+      "type": "expense",
+      "amount": 10.5,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-01",
+      "description": "Ubers moto pro trabalho",
+      "status": "completed"
+    },
+    {
+      "id": "04a08a89-ccc1-4108-9c03-bb7854b2f660",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Coca lata + coca mini",
+      "status": "completed"
+    },
+    {
+      "id": "05480398-3192-447d-a8d1-71882d361854",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "05ff196e-56af-4cea-bcee-a19cf39bd5a2",
+      "type": "expense",
+      "amount": 76.35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Roupas shein",
+      "status": "completed",
+      "recurrenceId": "4754c415-e520-4c0d-9e9f-431e37c20fc8"
+    },
+    {
+      "id": "0676e033-4c2b-424c-9cea-8a06fc8505e1",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-10-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "06de59c0-3997-4c4d-8f04-2391e91d9a42",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-07-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "07e7c496-970f-407d-ad02-9db9cfdb25c5",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "092a7fd3-947a-4206-974b-32dbef353f1c",
+      "type": "expense",
+      "amount": 18,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-12",
+      "description": "Pastel",
+      "status": "completed"
+    },
+    {
+      "id": "09da4a3a-d33c-4651-ba50-aaff6f8ee7ae",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "0a0f00e2-3cf5-4f81-8891-5b0265d18cf1",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "0a151d51-ba6d-4ccd-a707-6fad2a315a22",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "0abe8c6c-32f4-4bbd-9349-6baac8730ff9",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-01-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "0b337041-cafb-4389-a09d-7721530f7a6a",
+      "type": "expense",
+      "amount": 17.58,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-07",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "0b8318bf-f871-481f-b29e-83b423056b29",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "0b833456-ed67-4edf-8f81-6b0a077d5375",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "0b884ce6-dd6a-4918-ba17-8ed19d020c8f",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-08-05",
+      "description": "Gasolina pro carro",
+      "status": "completed"
+    },
+    {
+      "id": "0b8bae3b-17bb-4e85-8724-2d629d310c97",
+      "type": "expense",
+      "amount": 8.17,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-05",
+      "description": "Salgado kipao 1/2",
+      "status": "completed"
+    },
+    {
+      "id": "0e01cf9e-a1a0-46e7-a4ba-52a8828f09c6",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "0f62989f-b9c9-4d9e-b4f8-a08ec51cec89",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-10-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "0f86c3d7-a4ca-4db6-a472-f4c5e828621a",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-30",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "109182e7-2f69-4477-8df9-673daca4c006",
+      "type": "expense",
+      "amount": 18,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-15",
+      "description": "Estacionamento ",
+      "status": "completed"
+    },
+    {
+      "id": "1164fc9a-1d14-4ef8-877e-1f18bb46b62b",
+      "type": "expense",
+      "amount": 113.85,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-01",
+      "description": "Lanche com amoreco no Cowtainer",
+      "status": "completed"
+    },
+    {
+      "id": "12ae82ab-5ba0-4f23-a1d0-2a18c29d260d",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Mouspad novo",
+      "status": "completed"
+    },
+    {
+      "id": "13000123-a847-4d40-896f-19116953000d",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "14ca91d9-b62d-4a27-bb35-670a9a7d5858",
+      "type": "expense",
+      "amount": 57.48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Phantom blade zero",
+      "status": "completed",
+      "recurrenceId": "d4ea883c-9c6f-449a-a516-49ccca280c37"
+    },
+    {
+      "id": "14e38e72-e9a1-4a2e-a858-2dbd0fd7246c",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-09-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "151d51d8-dbeb-45f6-a975-a3463cf21d5d",
+      "type": "income",
+      "amount": 65.08,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-07-20",
+      "description": "Correção de gastos",
+      "status": "completed"
+    },
+    {
+      "id": "1528facc-6873-4c42-b540-e55cfb558d72",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-10-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "158c2ec0-98d5-4d01-ac98-2328e8b1b99c",
+      "type": "expense",
+      "amount": 4.7,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-17",
+      "description": "Uber moto",
+      "status": "completed"
+    },
+    {
+      "id": "1616d36c-2815-47cb-9dfc-d31196e73482",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "16580efc-f0a4-4fc1-a478-c79a1fde5286",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-04",
+      "description": "Salgado pra festa junina",
+      "status": "completed"
+    },
+    {
+      "id": "16c0c489-33ac-4a01-8615-3a0b749ec400",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "16c382a4-2954-40e6-8864-a4125ea44d34",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "16d5badf-5816-4bd4-82e6-4f6f6c1417e8",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "1777c417-dd1a-47b9-bdb5-e1720c131d30",
+      "type": "expense",
+      "amount": 59,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-10",
+      "description": "Lanche no conteiner",
+      "status": "completed"
+    },
+    {
+      "id": "178bedcd-8df3-4297-bf94-5df752098051",
+      "type": "expense",
+      "amount": 4.9,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-15",
+      "description": "Pacote de cupons do 99",
+      "status": "completed"
+    },
+    {
+      "id": "17c6a083-1b94-4ca7-b67f-42845d960420",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Coca lata",
+      "status": "completed"
+    },
+    {
+      "id": "182b9590-f7b0-4223-aa10-b818ab06d91d",
+      "type": "expense",
+      "amount": 64,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-15",
+      "description": "Elden Ring Nighreign",
+      "status": "completed"
+    },
+    {
+      "id": "19e11c67-149b-4a67-9850-5161b8c2a3a3",
+      "type": "expense",
+      "amount": 10.41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-01",
+      "description": "Presente Lorenzo AGL",
+      "status": "completed"
+    },
+    {
+      "id": "1a4e07fe-7ff3-4c28-89ee-17446b0d22f2",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-06-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "1a5d40e9-7370-4e48-9368-b8e05f9754d6",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-12-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "1b0ce20a-9931-4514-ba43-4cb6ab825d2f",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "1ba62bc6-5fde-4779-aa95-d288be437c52",
+      "type": "expense",
+      "amount": 80,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-15",
+      "description": "Control 2",
+      "status": "completed"
+    },
+    {
+      "id": "1bc4cefd-9ccd-4d3a-8e63-98e82b569f42",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "1c1fe66d-c09b-447b-9c16-6f6ed36082dc",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-16",
+      "description": "Voleizinho",
+      "status": "completed"
+    },
+    {
+      "id": "1c2d0c92-611d-4a18-8c8c-bf25730f79e4",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "1d1d1bf5-952e-42e7-b775-e27c51fb79cb",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-22",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "1d2772a5-4a5c-4408-93ff-5ae8fb1fdb9a",
+      "type": "expense",
+      "amount": 10.07,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-05",
+      "description": "Jogo backrooms",
+      "status": "completed"
+    },
+    {
+      "id": "1db479fd-616d-4432-978f-c16b09a35d3e",
+      "type": "expense",
+      "amount": 9.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-14",
+      "description": "Doce pro amoreco",
+      "status": "completed"
+    },
+    {
+      "id": "1dfe2107-cd38-4026-805c-bb30efc84163",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-25",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceId": "cdeaf488-9a3f-4577-b075-3a4b716984ae"
+    },
+    {
+      "id": "1e4ee6d8-42fe-4ad9-a553-b7c2b2fea448",
+      "type": "expense",
+      "amount": 10.85,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-09",
+      "description": "Control",
+      "status": "completed"
+    },
+    {
+      "id": "1e6e5ece-9344-43f3-a667-d466441bd4f1",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceId": "58dd319b-937b-4d98-9ac0-e0c11f1f2968"
+    },
+    {
+      "id": "1f1338b4-3b3e-497f-abc0-631765cb6c76",
+      "type": "expense",
+      "amount": 10.84,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-15",
+      "description": "Lanche pro almoço ",
+      "status": "completed"
+    },
+    {
+      "id": "1fccf6ac-c8b6-49be-b6c8-83bd6db95027",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "204af249-1363-49c4-b754-c5480caf3a80",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "210d65b6-d5f5-43af-80e6-f5fb4c051774",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-12",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "219f1833-fa7d-459c-a32b-ab23888d23a3",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "21e58182-a982-4ccd-a687-f4772adce6cd",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-03",
+      "description": "Gasolina",
+      "status": "completed"
+    },
+    {
+      "id": "21f2a128-d763-4e83-91f3-93cc5c605e67",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Clube fortnite",
+      "status": "completed"
+    },
+    {
+      "id": "21f3a3e2-b3c7-4114-918f-4652e4e37191",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-15",
+      "description": "Pedagio",
+      "status": "completed"
+    },
+    {
+      "id": "222cfc44-146a-4493-a707-4a29b0324757",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "228c2a38-9e6c-4eee-b0e3-bab5bd5db858",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "228f5a15-9935-48c3-9a16-7c6589fe89c5",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "2317d487-e1aa-40ef-a743-9826bb0ec346",
+      "type": "expense",
+      "amount": 13.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-15",
+      "description": "Coca 2L",
+      "status": "completed"
+    },
+    {
+      "id": "234e88db-670a-40c1-9074-36840fd28dd0",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "239d93c1-4982-405d-9a89-cdbb4ada9e4f",
+      "type": "expense",
+      "amount": 14,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Videos IA",
+      "status": "completed"
+    },
+    {
+      "id": "246f193d-e9ff-494f-8cfa-147efbb95600",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-01",
+      "description": "Coca pra comer com o lanche",
+      "status": "completed"
+    },
+    {
+      "id": "259df22c-17e5-4074-9550-4f53f71c17a5",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-06-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "26827943-db74-4002-9de6-275d7bf1275d",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-08-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "2765aec4-2995-418e-8ce3-313794d6a6e4",
+      "type": "expense",
+      "amount": 5.6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-15",
+      "description": "Elden Ring Nighreign parcela",
+      "status": "completed",
+      "recurrenceId": "1bb924be-492c-4e4d-93ed-77ed82afc0f3"
+    },
+    {
+      "id": "289b48bb-fe4f-4aaa-9a90-323c36ccbf1a",
+      "type": "expense",
+      "amount": 24,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-04",
+      "description": "Esfirra ",
+      "status": "completed"
+    },
+    {
+      "id": "29b3b5a6-8f98-4a13-ad9f-ee6ef74b8382",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceId": "58dd319b-937b-4d98-9ac0-e0c11f1f2968"
+    },
+    {
+      "id": "2a37ce53-4074-45d0-ab32-f6b78b5354f4",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-11-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "2a3e339d-3705-496f-90a1-64348e032a68",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-06-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "2a45adb8-d649-4cd1-9384-daab3a87b6d6",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "2a7c9ee9-f113-4e7c-b24b-9ecc44f20c3e",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-11-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "2aef2a71-fcd7-4fb3-9a52-5cd2a9b1733e",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "2c9eccbe-6d3e-480f-88c3-36f3358673ed",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-08",
+      "description": "Salgado fatec",
+      "status": "completed"
+    },
+    {
+      "id": "2ca99059-f7f1-4f7a-822f-265ce180160a",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "2d3bd1f4-6239-4f64-b6eb-fdead41724a5",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-03-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "2d59a1d8-abe2-4add-a8df-44d0c32db8cf",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "2df9bbdf-d36b-4a8b-aad1-86f4b2d7cc30",
+      "type": "expense",
+      "amount": 7,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Clube 99",
+      "status": "completed"
+    },
+    {
+      "id": "2f496487-fa7c-441d-a1a8-730836c9c095",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-05",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "2f554e2f-ea30-496f-9943-8e3f7b35e378",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "30cbe556-aa63-4681-abb3-58e5d75817bc",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "31179116-84de-44b4-ac94-5fd68be3d13e",
+      "type": "expense",
+      "amount": 34.8,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Suporte Notebook Trabalho",
+      "status": "completed"
+    },
+    {
+      "id": "31797528-9063-4bc2-a359-e30210aa0a0f",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Silent Hill Townfall",
+      "status": "completed"
+    },
+    {
+      "id": "319c4671-3e36-40d6-969a-8e9c176351da",
+      "type": "expense",
+      "amount": 15,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-01",
+      "description": "Suco pro amoreco",
+      "status": "completed"
+    },
+    {
+      "id": "31a0cba5-7231-4d1b-adaf-ec5926b77f64",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-05-01",
+      "description": "Curso A. Galego",
+      "status": "completed",
+      "recurrenceId": "3de6ae29-b51a-4e72-9cfd-1662a33be4a4"
+    },
+    {
+      "id": "32a2de83-253f-4af6-bbc8-1f2c8b8abb1c",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "3363471b-88a7-4a64-be40-4561297f2701",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "33ece8a2-2ef8-4888-adab-57e97c35ebaf",
+      "type": "expense",
+      "amount": 45,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-19",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "34ea402c-49ef-4f54-9bd3-5fe3f08f33a4",
+      "type": "expense",
+      "amount": 60,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-18",
+      "description": "Pizza e Refri",
+      "status": "completed"
+    },
+    {
+      "id": "353a6dd1-1bfb-4cde-9cd2-77be8988c6f1",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "357f72ee-2acc-4fe2-aece-9a0badba180c",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "3592bc81-03d2-4c68-bbbf-d5867a8e893b",
+      "type": "expense",
+      "amount": 57.48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Phantom blade zero",
+      "status": "completed",
+      "recurrenceId": "d4ea883c-9c6f-449a-a516-49ccca280c37"
+    },
+    {
+      "id": "35d046e4-d26d-4935-9842-bd0340d2e426",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "3699eed5-005b-4135-a9ff-16dc393d61ca",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-11-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "36e63683-0022-4c9e-95d8-442e4ee43eb3",
+      "type": "expense",
+      "amount": 12.3,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-15",
+      "description": "Sorvete",
+      "status": "completed"
+    },
+    {
+      "id": "3701d6f2-c1a6-4961-86f8-98b615a92804",
+      "type": "expense",
+      "amount": 22.97,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-01",
+      "description": "Sorvete",
+      "status": "completed"
+    },
+    {
+      "id": "3875853f-53fa-4782-b1db-cf61f0139b4b",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2027-01-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "393fc2ec-698d-424e-8263-1a00b03a59d0",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "3b5f1cc0-3c3d-479f-a19c-34b9ece11dcb",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-19",
+      "description": "Clube 99",
+      "status": "completed"
+    },
+    {
+      "id": "3bece933-a88c-4bb0-bdca-cd848813e8ee",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "3cb78a8f-2d06-42d3-8c61-5b44a2a05bc4",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-02-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "3e19b50e-1d68-4783-b3d9-9d1beab3250c",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-11-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "3e98f3b5-35be-444c-83f9-3fddec6ef238",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "40adf811-19b6-4a51-b533-de6e749f8241",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "426da158-73d9-40dc-815c-9e1525e524a0",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "42819657-2d5e-4973-85b7-4fe316044017",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-09-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "4288d0d5-8ec0-4f04-a3f3-acaadd4bac06",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-29",
+      "description": "Comidinhas para o cinema ",
+      "status": "completed"
+    },
+    {
+      "id": "42d862e2-6303-4d37-99b6-d29fd1e060df",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-12-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "447ecad8-02ee-4bbf-8845-bc6110556c55",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "44eb3613-f870-405a-ba24-c17fcb3a2567",
+      "type": "expense",
+      "amount": 32.76,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-09",
+      "description": "Rodizio 3/3",
+      "status": "completed"
+    },
+    {
+      "id": "4538af73-874d-4e2f-9ac2-d939190a4b19",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-09-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "45da873b-b13e-425d-8e60-b1a8870183e8",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-11-15",
+      "description": "Pedagio",
+      "status": "completed"
+    },
+    {
+      "id": "46e99cdd-ccc4-4539-b94b-6ff0bc2889df",
+      "type": "expense",
+      "amount": 73.79,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-01",
+      "description": "Almoço ",
+      "status": "completed"
+    },
+    {
+      "id": "475cca57-d1d2-4d4f-8228-811d2d8768c9",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "47d027fa-a0a4-4494-a78d-1513c616f9d1",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "487f8ede-1bf7-4528-bbdc-13b151bc30f3",
+      "type": "expense",
+      "amount": 32,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-12",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "48a0940e-c415-4faa-af60-7d70cea53824",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-06-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "48b0ebef-e14d-4c55-af12-90c01dff9051",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "48c04889-ccb0-40cb-af21-6c4fd538e9ab",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "48dd884d-f704-4660-be48-194fd7e20c48",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "497b19c9-2ad9-4a75-ba12-b1f5857e7879",
+      "type": "expense",
+      "amount": 2,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-13",
+      "description": "Paçoca fatec",
+      "status": "completed"
+    },
+    {
+      "id": "498b85be-55b1-4634-9e04-82f218a15d12",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceId": "58dd319b-937b-4d98-9ac0-e0c11f1f2968"
+    },
+    {
+      "id": "4a58a659-b62a-42f8-b4f5-98b732663631",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-07-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "4a790198-a7ca-4351-848f-4847cdd5317c",
+      "type": "expense",
+      "amount": 57.48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Phantom blade zero",
+      "status": "completed",
+      "recurrenceId": "d4ea883c-9c6f-449a-a516-49ccca280c37"
+    },
+    {
+      "id": "4ae98cc7-c564-491e-87a4-f7441c7bf378",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-05-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "4bd7a362-9bac-48f3-9945-0a814de4f115",
+      "type": "expense",
+      "amount": 2.17,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-07",
+      "description": "Zebu ",
+      "status": "completed"
+    },
+    {
+      "id": "4cacada2-7076-48fd-8354-dfc6d0d6aed2",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-10-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "4cc12a5c-5ad5-46ef-9820-8c67de588c56",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-22",
+      "description": "Monster",
+      "status": "completed"
+    },
+    {
+      "id": "4dd16745-f877-485a-867e-17c623bd60ae",
+      "type": "expense",
+      "amount": 31.39,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-01",
+      "description": "Zebu",
+      "status": "completed"
+    },
+    {
+      "id": "4f4a7789-9962-4ee3-b5bc-97a30e0fcd7d",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-05",
+      "description": "Fone pro Enrique",
+      "status": "completed",
+      "recurrenceId": "66c8c8dd-d3a7-4a05-b773-f7bb84d3ea20"
+    },
+    {
+      "id": "4f904be0-88c5-4ab8-a8a0-c84cf3aaae3f",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "4fdf4124-ed14-4726-9818-46c35c4d466d",
+      "type": "expense",
+      "amount": 24.67,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-05",
+      "description": "Salgado jau serve",
+      "status": "completed"
+    },
+    {
+      "id": "50066317-f37b-4e29-a878-93a5b00c0e47",
+      "type": "expense",
+      "amount": 76.35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Roupas shein",
+      "status": "completed",
+      "recurrenceId": "4754c415-e520-4c0d-9e9f-431e37c20fc8"
+    },
+    {
+      "id": "506f4467-606b-4b47-ad8e-fd259ad0041e",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-04",
+      "description": "Clube 99",
+      "status": "completed"
+    },
+    {
+      "id": "5116b8b4-40bb-43db-a5fb-134741516d54",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-02-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "514d24f0-3aed-4e57-b092-45c927b6fa6b",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-25",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceId": "cdeaf488-9a3f-4577-b075-3a4b716984ae"
+    },
+    {
+      "id": "51590907-c829-4ec7-bcef-7bdc676826c0",
+      "type": "expense",
+      "amount": 4,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-17",
+      "description": "Stickadinho",
+      "status": "completed"
+    },
+    {
+      "id": "517e0ad1-c73d-42b4-ad6a-a89a819c6509",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-09-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "51c3217d-6a95-4684-b3e1-81597c57a0a7",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-15",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "52880412-3ce5-43f3-8a2d-8b5bd01c942d",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "533e6d40-abb9-4741-b8e5-50e20ff58970",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "539cecb4-8fe6-4477-b7e9-8d5bcf1da160",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "53c5eb2c-0dc0-41eb-a877-a16e5afd6117",
+      "type": "expense",
+      "amount": 8.65,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-26",
+      "description": "Netflix",
+      "status": "completed"
+    },
+    {
+      "id": "547396bb-1a49-4ce6-b0de-46d71b873282",
+      "type": "expense",
+      "amount": 158.31,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Mouse e Teclado para Trabalhar ",
+      "status": "completed"
+    },
+    {
+      "id": "54ebc6d8-56df-4254-9c56-b1e67419bd43",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-12",
+      "description": "Pedagio",
+      "status": "completed"
+    },
+    {
+      "id": "55458701-011e-4334-af9a-c328f4455861",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "557aa2a0-0175-43ec-b04a-e6829a188700",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "55e2e372-f45d-4f9f-9816-d0c773288ac7",
+      "type": "expense",
+      "amount": 2,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-06",
+      "description": "Dinheiro pro Felipe ",
+      "status": "completed"
+    },
+    {
+      "id": "56172119-01ec-42c5-8845-a88e2c33d64e",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "5620d876-ef66-4a1d-88bf-23b9e1f6d7c3",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-03",
+      "description": "Pedagio",
+      "status": "completed"
+    },
+    {
+      "id": "567f6447-3601-4132-9f10-fcc6f3c404ec",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-16",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "56c9e182-48f2-4281-956c-1b13f76722d7",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-11-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "56f5915c-4cd7-4d34-b1c5-62e0b34f110c",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "573a8571-c337-488d-b879-1ef3f462cd7e",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "5783e1c9-f02c-415f-844a-46cd88fef740",
+      "type": "expense",
+      "amount": 37.71,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-08",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "58a1f776-ce04-4dc6-8b17-e8496c2bbcd6",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-05-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "59120690-7ff5-48ee-aae6-2a3ed7020217",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "599e1c05-3aaf-4be9-bd50-3dba32101e28",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-27",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "59b9b39a-22b2-431e-94ce-b8c205cfabb0",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-08-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "59d2a3f7-f1ef-4878-a7f1-6cb91345bb6c",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-03-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "5a052bc9-b0d8-48e6-ab3e-87651c41190a",
+      "type": "expense",
+      "amount": 11.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-09",
+      "description": "Lanchinho pré-volei",
+      "status": "completed"
+    },
+    {
+      "id": "5a4a1d4c-4b9e-4815-8f21-a771fcd5bd1e",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-06-28",
+      "description": "Carona pro Habbibs",
+      "status": "completed"
+    },
+    {
+      "id": "5a782885-11c8-465f-ab02-129d6416ebaa",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-09-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "5b69b619-3864-4cbd-b946-031005c088bc",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-01",
+      "description": "Pacote de cupons 99",
+      "status": "completed"
+    },
+    {
+      "id": "5b819286-f09d-48fb-bb88-e94071a3ecf6",
+      "type": "expense",
+      "amount": 80,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-21",
+      "description": "Oleo do carro",
+      "status": "completed",
+      "recurrenceId": "bfe84966-75b6-4307-a6e1-1ccb269400a8"
+    },
+    {
+      "id": "5b996345-9e2e-4d75-beb9-5132a33cfd51",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-11-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "5c56fe77-3a7b-4982-8f3e-5874b3e2f46e",
+      "type": "expense",
+      "amount": 2,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-15",
+      "description": "Cupons 99",
+      "status": "completed"
+    },
+    {
+      "id": "5d6cad2c-2002-491e-a6bb-b539bbb2696d",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-05",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "5e041ede-3d1a-46fc-b842-432425367d33",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "5e49e98a-1d27-4f2e-9d41-d9d9290f21d0",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-07-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "5f9766b2-64b0-46ee-a1e9-a77a659b6cc6",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "605915cb-3643-46d4-9575-c40a0f0e2abd",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "6071e3f8-f217-4d10-ab3e-2876e46967a7",
+      "type": "expense",
+      "amount": 15.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-12",
+      "description": "Padaria",
+      "status": "completed"
+    },
+    {
+      "id": "621bb42e-64b3-40c0-b3c1-3c4f0be1aa5b",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "62be5f3d-f702-4a9f-b65b-4fd95e05dd1b",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "62e7646e-d029-4222-b99f-70f2b57958bf",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-11-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "630f2874-4237-427a-8186-dcdc9a9bd0dd",
+      "type": "expense",
+      "amount": 24,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-20",
+      "description": ".",
+      "status": "completed"
+    },
+    {
+      "id": "634a2094-5b75-4df3-9084-3daf686d6c9c",
+      "type": "expense",
+      "amount": 8.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-05",
+      "description": "Coca cola do mercadinho",
+      "status": "completed"
+    },
+    {
+      "id": "664861e1-ad85-41fc-a111-481c12241776",
+      "type": "income",
+      "amount": 60,
+      "categoryId": "0a9c5a58-9647-45c1-a6f4-f19ca836e7db",
+      "date": "2026-05-01",
+      "description": "Sobra do VT",
+      "status": "completed"
+    },
+    {
+      "id": "6794a4d9-6d0c-4cac-9441-b515556d84ef",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "67d2ec12-f860-46fd-9d10-931ed57382e6",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "67f260f8-13cf-47f3-a1cc-e9d5e87f0a6c",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-07-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "6819b7eb-dc13-48ef-8f6b-496e4562a998",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-15",
+      "description": "Coca lata",
+      "status": "completed"
+    },
+    {
+      "id": "682ed22e-67d2-4072-a379-4f97acf56477",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-10",
+      "description": "Jau",
+      "status": "completed"
+    },
+    {
+      "id": "68416604-2484-4b1b-b0cc-46323d5f9515",
+      "type": "expense",
+      "amount": 55,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-12",
+      "description": "Corte de cabelo e sobrancelha",
+      "status": "completed"
+    },
+    {
+      "id": "685fa929-12ab-4afa-b51e-1e7a2e523be1",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "68ad3d2b-c04d-4a5d-b5ba-74f02d3fd053",
+      "type": "expense",
+      "amount": 64.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-12",
+      "description": "Presente de aniversário do meu Amor",
+      "status": "completed"
+    },
+    {
+      "id": "68d3568d-2bcb-433a-b454-9ca2d53c3dfa",
+      "type": "expense",
+      "amount": 9,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-04",
+      "description": "Talento",
+      "status": "completed"
+    },
+    {
+      "id": "699685cc-c93e-45b5-a9c4-b3b926fdfc0e",
+      "type": "expense",
+      "amount": 76.35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Roupas shein",
+      "status": "completed",
+      "recurrenceId": "4754c415-e520-4c0d-9e9f-431e37c20fc8"
+    },
+    {
+      "id": "6a11d209-e180-4e71-90cf-f7b057919ae8",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "6a5bd7cb-3612-4be5-b929-b3fd7e6a0357",
+      "type": "expense",
+      "amount": 80,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-21",
+      "description": "Oleo do carro",
+      "status": "completed",
+      "recurrenceId": "bfe84966-75b6-4307-a6e1-1ccb269400a8"
+    },
+    {
+      "id": "6ad40da1-4384-4479-935c-c6af553c161c",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceId": "58dd319b-937b-4d98-9ac0-e0c11f1f2968"
+    },
+    {
+      "id": "6b25637e-0fc8-4b56-9e33-fa0c09386446",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-15",
+      "description": "Cinema",
+      "status": "completed"
+    },
+    {
+      "id": "6bff65e7-4684-47b1-8f4f-5967a89c3537",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-19",
+      "description": "Pedagio",
+      "status": "completed"
+    },
+    {
+      "id": "6d7150d7-bf0c-480e-9143-5036f4b1702b",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-05-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "6d8d94eb-0f6e-467f-bb9d-25641d48d020",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "6e1e12e6-6ef5-4f0d-b0d3-56d0c4a15267",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-08-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "6e69f8af-22ab-482d-b81a-dbbc01a8bbb5",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "6ef00e38-7080-4ac5-8d36-0c2c0007adb3",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "6f54649c-05aa-4cb0-a80d-2bfe03a88edd",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-08-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "6fc425ef-f7dd-4761-befd-a7939c48a72f",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-11-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "7030d780-357d-4cd4-a3b1-2c3e6c5b44a4",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "711ed13d-7bd2-4701-ac52-0448463bfac5",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-12-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "7419e566-6908-4f17-a2e8-1af06208927e",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-01",
+      "description": "Parcela secador de cabelo",
+      "status": "completed"
+    },
+    {
+      "id": "74568ac6-fefa-464c-8753-c0795aa7090f",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-07-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "74f6eec3-1da6-4865-8c82-8910e82c35c9",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "7500a022-3912-4f6c-9317-2e4ca3961d97",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "7562f18d-c153-404b-beab-f577f129f9e7",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "75a3275b-09bb-42d8-90fe-f20231c28612",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "760699ed-0ba1-467a-8fb9-f5e62a1bbe34",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "76a81a0c-7db8-4c4b-8239-a3de307d3012",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-08",
+      "description": "Presente nathalia AGL",
+      "status": "completed"
+    },
+    {
+      "id": "79e5e4f1-69b2-4f95-aae3-783827971516",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-11-01",
+      "description": "Pedagio ",
+      "status": "completed"
+    },
+    {
+      "id": "7a191b0a-7f0d-4db9-85c1-d4f4da69c21d",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-31",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "7a811d8e-f3d7-47ad-b4ec-17efdd378f0d",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "7c8b1abd-41d2-4626-a125-808021a31d5c",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-01-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "7cd8c9c2-226e-420f-8819-cdf88ab04328",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-11-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "7cefd998-61a5-4a30-adb5-cee09050de89",
+      "type": "expense",
+      "amount": 11,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-07",
+      "description": "Lanche BK",
+      "status": "completed"
+    },
+    {
+      "id": "7d1bd671-a56c-4e8d-9050-b411f56e6507",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "7d9f3291-9e96-4ec9-bca6-abea62dd9045",
+      "type": "expense",
+      "amount": 139.5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Fone H3S QCY",
+      "status": "completed",
+      "recurrenceId": "8cc5ceba-d751-4a79-995f-e250f2cf34a5"
+    },
+    {
+      "id": "7dd8288a-f7a0-44d4-9c58-1d66942ab75b",
+      "type": "expense",
+      "amount": 19,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-16",
+      "description": "Salgado e refri no volei",
+      "status": "completed"
+    },
+    {
+      "id": "7dfc8058-7f86-45de-9175-7b2169a0bdd9",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "7e5386c3-f936-4209-b397-93a9cc1c2b29",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-02",
+      "description": "Batata e bebidas conteiner",
+      "status": "completed"
+    },
+    {
+      "id": "7efc08cb-6f66-4831-b4d0-c164f51195c1",
+      "type": "expense",
+      "amount": 57.48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Phantom blade zero",
+      "status": "completed",
+      "recurrenceId": "d4ea883c-9c6f-449a-a516-49ccca280c37"
+    },
+    {
+      "id": "7f1339ff-164a-41bd-af8c-ac96d8585a39",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "7f2a1237-8520-482e-b7ca-c339d93a7352",
+      "type": "expense",
+      "amount": 4.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-05",
+      "description": "Combo de cupons do 99",
+      "status": "completed"
+    },
+    {
+      "id": "7f77a70b-525b-41da-a707-c386acc2fd25",
+      "type": "expense",
+      "amount": 21.41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-05",
+      "description": "Magic Monkei",
+      "status": "completed"
+    },
+    {
+      "id": "812f318d-3cdf-48a5-b2e1-b480df1c6d6a",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-08-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "81725b48-cb8d-461e-8788-c0cc89f9a89e",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-07-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "81afee6c-22f9-41e4-989c-e5e0d99072b9",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "82abf29b-fbf0-4bc5-8434-444a55b2a950",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-08-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "8303e13f-1915-4fec-abe6-0a7f5837c48c",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-09",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "835f5a25-cb70-4126-909e-758b599a5623",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "83bd10a2-0fc4-403a-afe5-9bf31ba77bef",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "84bce872-13ea-4158-af4e-1a44fba88d74",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-03-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "85064167-d440-4a55-9eed-c9fad62fb3bf",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-10-01",
+      "description": "Pedagio ida e volta pra fatec",
+      "status": "completed"
+    },
+    {
+      "id": "851491ee-1e87-42b2-bd5c-e16656454231",
+      "type": "expense",
+      "amount": 11,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-12",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "851fed62-85ee-4074-b40b-9ead68626cf1",
+      "type": "expense",
+      "amount": 22.47,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-06",
+      "description": "Pizza",
+      "status": "completed"
+    },
+    {
+      "id": "854eec06-95a0-4c08-86f0-da27509cc423",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "85c38ae8-662b-4031-bf7e-7d1b81f5b5cc",
+      "type": "expense",
+      "amount": 3,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-09",
+      "description": "Diaria do volei (tirei 22 da caixinha e 3 é a diferença)",
+      "status": "completed"
+    },
+    {
+      "id": "870b89cd-640c-442c-ab23-3628e717d2f9",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "87405557-f23e-4c34-bc44-6b6c097aee0b",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-20",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "8867010c-1dd2-44d2-bdeb-1f9da5432b09",
+      "type": "expense",
+      "amount": 4,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-18",
+      "description": "Casquinha pro enrique mc donalds",
+      "status": "completed"
+    },
+    {
+      "id": "89b72979-1f08-4c9d-b9df-a2de4a6ee91f",
+      "type": "expense",
+      "amount": 54.8,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-07",
+      "description": "Capinhas pro celular",
+      "status": "completed"
+    },
+    {
+      "id": "89c47fb3-2052-438b-b272-75ecceacb8ae",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "8a59b152-a060-4fce-90e6-fb127ffd1a19",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "8a5d4a37-e897-4008-8e6b-f1ce07d6cd00",
+      "type": "expense",
+      "amount": 12,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-09",
+      "description": "Salgado fatec",
+      "status": "completed"
+    },
+    {
+      "id": "8ae888f2-f57b-4f6e-a04f-b2af8f87c3d0",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "8b6db65a-82a1-4dfd-a848-cbd8e15142d4",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "8bd09b58-ed62-43e7-b9f1-efc4a5104393",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "8bf85051-226b-41f6-b3e6-fc6639ad2eb3",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "8c1512be-da96-47e2-b63e-34297a192d57",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-27",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "8ce76894-7ef0-41c3-a0e5-f3bd40755466",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-07-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "8d6d2f50-317b-466d-92f5-d3dfd35fb2ef",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "8dd4cd62-edc2-48c4-9806-6d55ff91e0ec",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "8e335edd-6cba-4884-8458-a401c2d6ef5a",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "8ef27798-6ce1-4d6d-9b09-fcd14ec2ce3b",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "8ef4be83-adc2-4665-9c49-866a433ff06b",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "8f8b2850-a379-4bc4-ba0d-d73af8447477",
+      "type": "expense",
+      "amount": 48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-03",
+      "description": "Presente Dia dos Namorados (Livro de Fotos) ",
+      "status": "completed"
+    },
+    {
+      "id": "8fb9c6f2-da82-4272-b779-f5070495cb94",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-10-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "8ff25921-68a7-46d4-86bd-3432c9cefc61",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-25",
+      "description": "Gasolina",
+      "status": "completed"
+    },
+    {
+      "id": "90a00b2f-ebd0-4581-b4ea-80fde28923d6",
+      "type": "expense",
+      "amount": 150,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-18",
+      "description": "Presente de aniversário mamãe",
+      "status": "completed"
+    },
+    {
+      "id": "916ff1d5-7b94-4026-a86b-5b9416e63cc9",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-06",
+      "description": "Coca 1,5 pra festa junina",
+      "status": "completed"
+    },
+    {
+      "id": "9205e6d1-ac40-4b5e-916f-c4c9d4e1e2fc",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "93d9658f-ac07-41e0-8d17-76ea0b741650",
+      "type": "expense",
+      "amount": 47.14,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-02",
+      "description": "Chocolates",
+      "status": "completed"
+    },
+    {
+      "id": "94e31e7b-60f5-411c-9a26-39dccb7445de",
+      "type": "expense",
+      "amount": 2,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-16",
+      "description": "Complemento do sorvete",
+      "status": "completed"
+    },
+    {
+      "id": "955dfccc-5d61-4be8-8259-060aa24fbe6b",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-02-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "95c5d014-4544-40a4-ab5a-ebb8efd9d2af",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "95d9f3c8-8a9f-46b8-bf3d-b5a14c12a849",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "95e93d06-bbfa-438c-bdbe-206e49cbfb74",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "9664a5a6-4a53-4328-b0a1-b4d4ae12dca1",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-10-11",
+      "description": "Pedagio ida e volta",
+      "status": "completed"
+    },
+    {
+      "id": "979aebfa-cffb-4241-9102-7d85df7a2d6f",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-18",
+      "description": "Complemento do lanche",
+      "status": "completed"
+    },
+    {
+      "id": "97f00203-8767-4ff8-8dec-64a4d3ccbdfb",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-05-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "989ee988-d613-4eb1-ab8a-2eef28a2d647",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "98aa8b01-868d-4a73-912a-84b9615a5396",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "98b7d082-15e6-49d6-a163-d8043154e353",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "98f9595a-cabf-4838-8bbc-e2240b8929dc",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "99454e07-37ed-4189-ad42-52a7c2d30a42",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-25",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "994ccd48-f299-4c1f-9fdd-df178928ad18",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "996e8f7d-5e3a-41bf-b19e-ab8af8ed2865",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-02-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "997ebae3-7a40-4166-80e5-e52bceb2fc66",
+      "type": "expense",
+      "amount": 24.2,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-29",
+      "description": "Ingresso pro filme Backrooms",
+      "status": "completed"
+    },
+    {
+      "id": "99948f11-61fd-4dd7-8ac6-4cb136bc031e",
+      "type": "expense",
+      "amount": 59.24,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Ingresso pra Homem Aranha",
+      "status": "completed"
+    },
+    {
+      "id": "999768a2-c208-42da-9626-c87593038aff",
+      "type": "expense",
+      "amount": 23.45,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-16",
+      "description": "Diario",
+      "status": "completed",
+      "recurrenceId": "af948ef2-b2f0-4a5a-bd2a-f2bf1cfe9a0d"
+    },
+    {
+      "id": "9a060061-0ded-419b-a9bd-0f839d8368a0",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-06-01",
+      "description": "Curso A. Galego",
+      "status": "completed",
+      "recurrenceId": "3de6ae29-b51a-4e72-9cfd-1662a33be4a4"
+    },
+    {
+      "id": "9a107fdb-9889-4564-ad29-c3c580e432e3",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-25",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceId": "cdeaf488-9a3f-4577-b075-3a4b716984ae"
+    },
+    {
+      "id": "9b0fc7ca-4844-4d04-ab9a-368692e8054a",
+      "type": "expense",
+      "amount": 9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-05",
+      "description": "Mesas da festa junina",
+      "status": "completed"
+    },
+    {
+      "id": "9b76e87d-203b-465a-8501-2a2afc88dee9",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-12-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "9b8eeaca-a114-43ce-bfec-389eda5e1ac7",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-07-01",
+      "description": "Curso A. Galego",
+      "status": "completed",
+      "recurrenceId": "3de6ae29-b51a-4e72-9cfd-1662a33be4a4"
+    },
+    {
+      "id": "9bdd4d5a-6576-4c54-b4f3-413c8731a038",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-26",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "9be91523-c6ee-493b-9f2c-0b297a07f603",
+      "type": "expense",
+      "amount": 12,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-18",
+      "description": "Coca 2L",
+      "status": "completed"
+    },
+    {
+      "id": "9bed4222-f5fc-44c0-8ea3-3fe4de516cfe",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-06-27",
+      "description": "Carona pra Bauru",
+      "status": "completed"
+    },
+    {
+      "id": "9bf2ac8c-8216-438b-b6e4-9fe08e0e5a26",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-06-27",
+      "description": "Uber pro ap do amoreco",
+      "status": "completed"
+    },
+    {
+      "id": "9c3ad47b-41aa-4049-a835-1511861aabc8",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-03-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "9c5f6954-c302-40ef-9589-de50f69e1229",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "9c84e847-2fab-4bb7-b650-7bd492ffa00f",
+      "type": "expense",
+      "amount": 8.5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-07",
+      "description": "Cobertura sorvete",
+      "status": "completed"
+    },
+    {
+      "id": "9d118f36-2f38-4cdf-a93d-ae43b68841f4",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-05-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "9d3d8185-6ea4-454d-9044-5804b659126e",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "9d4255cf-50d2-451b-8a4b-d8ab21d7a49e",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "9eb913dd-0040-431e-ab5f-ede8a0d42437",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-12-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "9eefd5fd-90f2-4a46-bc6d-dcc8c26aeebd",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-06-28",
+      "description": "Uber pra São Manuel ",
+      "status": "completed"
+    },
+    {
+      "id": "a00bcf4c-0f96-46b6-9482-8741e92554cd",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "a050c989-71e8-4eef-a5a9-ac95122c6ba9",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-11-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "a0bf8aee-d617-4d60-bb8b-07702e89a7f8",
+      "type": "expense",
+      "amount": 18.4,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-17",
+      "description": "Pizza",
+      "status": "completed"
+    },
+    {
+      "id": "a11906cf-32c1-4441-acac-81e4d9677845",
+      "type": "expense",
+      "amount": 39.9,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-08",
+      "description": "Sushi",
+      "status": "completed"
+    },
+    {
+      "id": "a13ef5a2-fac3-4844-8887-2fe28f306d3d",
+      "type": "expense",
+      "amount": 187,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Mesa",
+      "status": "completed",
+      "recurrenceId": "f72c1984-fac3-4ca6-a7b8-bb02a781ca71"
+    },
+    {
+      "id": "a1759951-dc36-49c3-b7c4-773dca4851e9",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "a1b8ab65-21c7-4545-b3ad-09a1eb2c22e2",
+      "type": "expense",
+      "amount": 1.1,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-05",
+      "description": "Salgado kipao 2/2",
+      "status": "completed"
+    },
+    {
+      "id": "a1f4d871-50af-4db2-8e19-56b45f9c864a",
+      "type": "expense",
+      "amount": 3,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-06",
+      "description": "Paçoca na fatec",
+      "status": "completed"
+    },
+    {
+      "id": "a281f2c4-ac37-41bb-8168-dea5e2c56d70",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "a2dff4ba-ab9b-4d30-97d5-a9c9f203bbfb",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "a32be292-199d-4aeb-a0a2-66519e1ca1ae",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "a33bcdc3-d16a-41ad-8fc5-8988b7eae50b",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-10-02",
+      "description": "Pedagio ida e volta",
+      "status": "completed"
+    },
+    {
+      "id": "a3a5e57a-696c-4268-ac54-474944a6af0c",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-10-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "a3b0a29a-58b6-4090-a381-a06ccdb51b9f",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-04-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "a3b6d93e-2bd7-4384-9baf-2fc28f82f3bd",
+      "type": "expense",
+      "amount": 10.58,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-15",
+      "description": "Coca e kit kat",
+      "status": "completed"
+    },
+    {
+      "id": "a3bfbc47-2d23-4fa2-99db-19323bbf5365",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-03",
+      "description": "Presente de Dia dos Namorados (Colar)",
+      "status": "completed"
+    },
+    {
+      "id": "a3f422a4-9271-4d42-9eef-2e3fa1c3e36b",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-04",
+      "description": "Gasolina",
+      "status": "completed"
+    },
+    {
+      "id": "a3f979fd-9f26-4126-ae72-4a6ba58b4b79",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-01",
+      "description": "Gasolina",
+      "status": "completed"
+    },
+    {
+      "id": "a49a53e1-3e57-4b7a-a715-60a9713e768c",
+      "type": "expense",
+      "amount": 19,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-05",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "a4a1de0a-8f12-491a-9401-3ec1adc88188",
+      "type": "expense",
+      "amount": 23.45,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-16",
+      "description": "Diario",
+      "status": "completed",
+      "recurrenceId": "af948ef2-b2f0-4a5a-bd2a-f2bf1cfe9a0d"
+    },
+    {
+      "id": "a689606f-66f5-486c-8a51-bae9b188578f",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-19",
+      "description": "Cordas do violão",
+      "status": "completed"
+    },
+    {
+      "id": "a6f92bee-b19a-4759-84cd-7c7eba999d09",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-18",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "a7049eb9-e20a-43c7-b1db-a0a8bda0c04e",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-12-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "a77a7df4-823a-4579-ae62-7577942f9cec",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "a78b1a6d-9e51-4a29-879f-94bdc4458696",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "a7a956cb-0a59-434a-a1e0-cff8c0015b50",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-29",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "a7bec402-12df-40e6-87a9-c058023641fd",
+      "type": "expense",
+      "amount": 20,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Sandalia pra minha mãe",
+      "status": "completed"
+    },
+    {
+      "id": "a8d01415-854f-432b-b642-f04e3cee636e",
+      "type": "expense",
+      "amount": 12,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-08",
+      "description": "Talento",
+      "status": "completed"
+    },
+    {
+      "id": "a921c671-92a7-4d24-a9b8-096d66751927",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-04-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "a95325cb-0266-479d-b8b5-58a79c729a38",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "a9e7e5ac-c0ef-44f0-bd2c-a36af4af02f7",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-10-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "aa33919a-fac0-413f-8d1d-06253769d787",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-10-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "aab2a351-d201-4f9d-a959-f5f0992207b0",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-01",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceId": "cdeaf488-9a3f-4577-b075-3a4b716984ae"
+    },
+    {
+      "id": "ab803948-9fe7-4f59-9428-d2fcbe9a9ea8",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-23",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "ab80cf71-091e-42c3-8367-1c54b227d092",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-03",
+      "description": "Doritos",
+      "status": "completed"
+    },
+    {
+      "id": "afa01a06-d3b4-475e-9a48-9116be875a93",
+      "type": "expense",
+      "amount": 80,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-21",
+      "description": "Oleo do carro",
+      "status": "completed",
+      "recurrenceId": "bfe84966-75b6-4307-a6e1-1ccb269400a8"
+    },
+    {
+      "id": "b02f1f72-ad0f-405b-9374-2055ea0ec2a1",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "b130243d-a0c0-47be-bcf4-82b02b9d7e6a",
+      "type": "expense",
+      "amount": 2,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-19",
+      "description": "Uber moto",
+      "status": "completed"
+    },
+    {
+      "id": "b162b77f-9944-41eb-ad00-eef1918ff42d",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "b1ab9d43-bc98-4fa5-b26b-131a06e6898c",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceId": "2051cbbc-41c1-4561-bba4-89fe9466b182"
+    },
+    {
+      "id": "b461b2d0-1d70-4d93-aa2b-881d183aebc6",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-25",
+      "description": "Entrega do suco de melancia do amoreco",
+      "status": "completed"
+    },
+    {
+      "id": "b519a3a9-108a-4d04-91e5-6ce8ee631f4a",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "b6112974-d404-472e-a8e9-b15f6786b22d",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "b73c845e-07fe-4262-8a44-3637bbe4498c",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-01-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "b7f36d2a-7ca7-44c5-afef-4b783cc2652a",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-18",
+      "description": "Booster pokemon ",
+      "status": "completed"
+    },
+    {
+      "id": "b89551d8-3fd9-42dd-ba72-578395f4b1bb",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "b89a9528-f926-4599-ab51-88635cc37579",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "b95d90b8-c648-497f-842d-faf441e53134",
+      "type": "expense",
+      "amount": 54,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-21",
+      "description": "Zebu",
+      "status": "completed"
+    },
+    {
+      "id": "b9f98cb7-8cad-495c-b53d-fcf988981279",
+      "type": "expense",
+      "amount": 3,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-10-19",
+      "description": "O sonho de um homem ridiculo - livro",
+      "status": "completed"
+    },
+    {
+      "id": "ba3388fa-8782-476e-88fc-f434eaa798b1",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-10",
+      "description": "Pedagio pra Botucatu pra despedida do Edu",
+      "status": "completed"
+    },
+    {
+      "id": "ba671a17-82ac-4432-ba67-fb7b5dcb0960",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-06",
+      "description": "Capinha",
+      "status": "completed"
+    },
+    {
+      "id": "ba7e6bb4-b032-45f2-b88c-9c4a2056eaea",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-08-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "bab2af38-3743-4228-b510-c9199500a13a",
+      "type": "expense",
+      "amount": 19,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-14",
+      "description": "Fone",
+      "status": "completed"
+    },
+    {
+      "id": "bade5273-b694-431d-a4de-59aafe23d41e",
+      "type": "expense",
+      "amount": 12,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-16",
+      "description": "Salgado fatec",
+      "status": "completed"
+    },
+    {
+      "id": "bc9fd570-c03a-4c0a-8aaa-2fe4aa967a45",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-11-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "bd941563-b2d2-44fe-9714-464503a4bad3",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-03",
+      "description": "Pelucia",
+      "status": "completed"
+    },
+    {
+      "id": "bde8d9f5-b2c5-42d9-959d-fc80de346b04",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-04-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "be917599-43b3-4e5b-8562-a98deba18097",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-09-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "bf22e1d9-dbd7-454a-9ca3-bd38d86552d7",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-08-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "bf7c7bdd-c06f-4887-8f27-fc811d2964ee",
+      "type": "expense",
+      "amount": 27.09,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-01",
+      "description": "Lanche BK",
+      "status": "completed"
+    },
+    {
+      "id": "c0bb3416-dfb3-46c6-924e-1b54dd79dc32",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "c155eb58-8bdd-4d3e-9db6-680da5b51bb6",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceId": "869070ce-083e-43dd-a2ed-e09187864000"
+    },
+    {
+      "id": "c15626f6-2966-4520-822c-e8dbf26c4c93",
+      "type": "expense",
+      "amount": 2.04,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-05-28",
+      "description": "Motouber pro trabalho",
+      "status": "completed"
+    },
+    {
+      "id": "c1a64daf-d4e5-4409-82ee-ca6b690450e6",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-11-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "c1c29107-b362-423c-8540-9dcf3eefc497",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-08-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "c22bb580-d1b5-4e98-9ba4-1673c9dff807",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "c245a8ef-f0ea-4144-9a0b-9578d27c9595",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-05-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "c2488bca-f976-4ded-b8cf-32ea23df6a41",
+      "type": "expense",
+      "amount": 1.49,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-05-26",
+      "description": "Diferença entre a passagem do de linha e a inteira do circular ",
+      "status": "completed"
+    },
+    {
+      "id": "c37e5db8-2980-469c-824f-69bb96daa7e7",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "c3d6a084-fc69-4ed9-b156-720958ae2d17",
+      "type": "expense",
+      "amount": 10.77,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-15",
+      "description": "Takis e Trento",
+      "status": "completed"
+    },
+    {
+      "id": "c3e8b445-09bc-483e-a855-f7d54e8eb62e",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "c3eb81de-bae7-4a3b-9a4c-2cf1fc37bd28",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "c492d005-cd24-4e0a-9ac7-015b84834542",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "c4ff8060-1104-43bd-91b3-19ce0d3ebec0",
+      "type": "expense",
+      "amount": 27.43,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-08",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "c511a63a-4b23-48f1-a8f3-08a133d5e0bf",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "c6bae89a-1a55-4a56-863c-f0bc0c52730c",
+      "type": "expense",
+      "amount": 17.4,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-05",
+      "description": "Marcador de texto e de paginas",
+      "status": "completed"
+    },
+    {
+      "id": "c760c05c-1f0e-47eb-a663-958e031cd4ff",
+      "type": "expense",
+      "amount": 4.7,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-05-26",
+      "description": "Motouber pro trabalho",
+      "status": "completed"
+    },
+    {
+      "id": "c77b52b2-9a67-4772-bbd5-ca47e1ce524a",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-01-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "c7a78615-f068-4a63-9dc1-0cf1668c76e7",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "c89079bc-e946-4d9c-bc16-485387d0b1dd",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-06-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "c89cc729-7c67-4dac-adad-b5514e69de30",
+      "type": "expense",
+      "amount": 5.6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-15",
+      "description": "Elden Ring Nighreign parcela",
+      "status": "completed",
+      "recurrenceId": "1bb924be-492c-4e4d-93ed-77ed82afc0f3"
+    },
+    {
+      "id": "c8c02970-ec50-47ab-bdc5-cb54a0d35232",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-25",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceId": "cdeaf488-9a3f-4577-b075-3a4b716984ae"
+    },
+    {
+      "id": "c8dfcdf9-9268-4c1b-a491-04a68461f1f9",
+      "type": "expense",
+      "amount": 6,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-08",
+      "description": "Ubers moto pro trabalho",
+      "status": "completed"
+    },
+    {
+      "id": "c9c41c6f-ad9e-47ce-a7a3-b9a5e7f424f3",
+      "type": "expense",
+      "amount": 42,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-19",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "ca9a0978-4861-4132-aa84-8b189654cdc4",
+      "type": "expense",
+      "amount": 10.11,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-02",
+      "description": "Complemento do sorvete no ifood (33 no pix que sobrou de abril,10 no credito pra completar)",
+      "status": "completed"
+    },
+    {
+      "id": "cb10ac08-ea65-4f72-ad21-33a767f146db",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-05-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceId": "cbb814fd-f656-4adf-bbb0-41f34ada7a82"
+    },
+    {
+      "id": "cbadb9b9-06f2-4e5c-aae2-59536c61ceb2",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2026-11-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceId": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf"
+    },
+    {
+      "id": "cc286385-d23d-4930-8fc5-02e6759cfef3",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-02-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "cc9bbafd-57d4-41b1-bd11-73a36044537c",
+      "type": "expense",
+      "amount": 76.35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Roupas shein",
+      "status": "completed",
+      "recurrenceId": "4754c415-e520-4c0d-9e9f-431e37c20fc8"
+    },
+    {
+      "id": "ce0f64f8-1b0e-4911-b6ea-8713ef5ef6a4",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-03-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "ce8a7918-09a3-4072-8986-10b44b3157fa",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceId": "2051cbbc-41c1-4561-bba4-89fe9466b182"
+    },
+    {
+      "id": "cfae4c28-e97c-48c1-be3b-b72229a67bfb",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "cfc7f882-342b-4b6f-a7a1-f4267ab1bc01",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceId": "d34a861b-81f2-429e-8bd0-8de9d4a36c52"
+    },
+    {
+      "id": "d050879b-7b8e-46ed-93d0-26f89d7ed3f9",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "d0c31bed-3a4e-4789-8c25-f1fd075fd105",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "d10d1da3-3eac-4d2a-9372-52568045ea5a",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceId": "f205b4be-b487-44c5-9101-4dfa7525cd96"
+    },
+    {
+      "id": "d139c832-7ed9-45cc-9256-bca19d4fa6ee",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-05-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceId": "927315af-cac2-4eb7-82be-4598d689bd24"
+    },
+    {
+      "id": "d167d5ac-e142-4b3e-8451-a66a7fe8048c",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "d17214e9-9761-495d-87d6-d9fabc7f9a69",
+      "type": "income",
+      "amount": 1350,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2026-05-01",
+      "description": "Salário",
+      "status": "completed"
+    },
+    {
+      "id": "d32655ae-f043-40e5-bc3c-1213f9af15b6",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "d3762fce-d6a7-4ca6-8cf1-d570271a2197",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-07-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "d3fced61-8b04-474a-9386-3f9abe177dd4",
+      "type": "expense",
+      "amount": 20,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-07",
+      "description": "Camisinha",
+      "status": "completed"
+    },
+    {
+      "id": "d4cfef13-ca94-4477-bd9e-949e3f76af31",
+      "type": "expense",
+      "amount": 12,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-18",
+      "description": "Agua shopping piracicaba",
+      "status": "completed"
+    },
+    {
+      "id": "d586e655-ffbf-47a3-b9ba-4e93de3c4cd0",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "d5bb72d6-3340-403c-81d6-dd155c335863",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceId": "ad49e923-0fb4-4044-8cb1-3c12afb8c872"
+    },
+    {
+      "id": "d71df6a1-7528-4949-ac45-1673e4f12d7c",
+      "type": "expense",
+      "amount": 34,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-15",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "d7265063-a1af-4942-a847-035676c6a778",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceId": "d8e83923-26ba-42c6-9243-9ebb009662c0"
+    },
+    {
+      "id": "d7b1a377-bcbe-43c7-a2b4-7436a433637b",
+      "type": "expense",
+      "amount": 3.99,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-08-03",
+      "description": "Coca mini",
+      "status": "completed"
+    },
+    {
+      "id": "d7c635f3-71d7-45d2-b464-0b9cdaa4771c",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-03",
+      "description": "Taxa de transferência da academia ",
+      "status": "completed"
+    },
+    {
+      "id": "d898151d-9a30-46f3-bd64-ece2230e3e63",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "d89c5603-db95-4dc9-8e4f-5493d70ee599",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-01",
+      "description": "Coca no rodidio",
+      "status": "completed"
+    },
+    {
+      "id": "d8a2fd20-86f8-4f59-a854-3adaca224e7f",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "d97aa61e-35c4-44b2-91b5-51f52fc18fda",
+      "type": "expense",
+      "amount": 4.7,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-08-13",
+      "description": "Uber moto",
+      "status": "completed"
+    },
+    {
+      "id": "d98a68b4-8fd4-42f0-84d6-bc59a8392bc7",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceId": "99a80fb4-83df-4175-b0c7-72447e550352"
+    },
+    {
+      "id": "d9b0acd1-dad9-4305-b0d1-0253a5fbfbc9",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-10-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "da54a6be-a62c-4abe-ba4c-ea5f4aa280b9",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-02-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceId": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee"
+    },
+    {
+      "id": "da55a818-7ce4-40a9-972f-d35f9041f341",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-07",
+      "description": "Adaptador bluetooth",
+      "status": "completed"
+    },
+    {
+      "id": "dcca620e-7b14-4594-8072-b6c72125f2bc",
+      "type": "expense",
+      "amount": 55,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-02",
+      "description": "Corte de cabelo",
+      "status": "completed"
+    },
+    {
+      "id": "dccb9828-5859-4fdb-80c6-e89d00f87248",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-24",
+      "description": "Mc Donalds",
+      "status": "completed"
+    },
+    {
+      "id": "dd13e058-0352-495b-9f2f-ac32e5a3a475",
+      "type": "expense",
+      "amount": 13.04,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-13",
+      "description": "Sorvete",
+      "status": "completed"
+    },
+    {
+      "id": "dea1d256-4ce9-43e6-876b-9384be28a6b2",
+      "type": "expense",
+      "amount": 5.6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-15",
+      "description": "Elden Ring Nighreign parcela",
+      "status": "completed",
+      "recurrenceId": "1bb924be-492c-4e4d-93ed-77ed82afc0f3"
+    },
+    {
+      "id": "e0adac7f-2dd0-460b-a5d3-1370d5069297",
+      "type": "expense",
+      "amount": 34,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-23",
+      "description": "Rodizio de sushi pt 2",
+      "status": "completed"
+    },
+    {
+      "id": "e0ce6eb2-5a57-4f2f-9db0-b7549ad8a49c",
+      "type": "expense",
+      "amount": 29.54,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-02",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "e1c7b868-2862-453a-80e7-cfd7ee93ad47",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "e23adecd-6aa0-411e-bd63-1471b6c8dfa0",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "e2a96068-1301-46e3-8914-90e4e30c0d27",
+      "type": "expense",
+      "amount": 22.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-07",
+      "description": "Monster e batata",
+      "status": "completed"
+    },
+    {
+      "id": "e2bee35a-f8b4-477b-961e-4a27a83b7394",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "e4249b41-0bee-41ae-b6df-6f468eb32a04",
+      "type": "expense",
+      "amount": 31,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-11",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "e555885e-7e16-42bf-9e9b-a3e899bc2d87",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "e68e4a5b-19cb-4f5c-aecb-5f731ffd3675",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "e6e2b074-2c35-4299-98f7-d875bbbce536",
+      "type": "expense",
+      "amount": 139.5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Fone H3S QCY",
+      "status": "completed",
+      "recurrenceId": "8cc5ceba-d751-4a79-995f-e250f2cf34a5"
+    },
+    {
+      "id": "e78b4dc2-612f-43b2-a8a7-855414e516f7",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "date": "2027-04-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceId": "96faaed8-fc31-481b-ac96-e9150fbfef0b"
+    },
+    {
+      "id": "e7df1457-d13e-467f-aa46-ffc097bf9215",
+      "type": "expense",
+      "amount": 8,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-07-17",
+      "description": "Pedagio de volta pra sm",
+      "status": "completed"
+    },
+    {
+      "id": "e7fa0a4e-1e54-4eac-968a-45464006346f",
+      "type": "expense",
+      "amount": 10,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-13",
+      "description": "Salgado na fatec",
+      "status": "completed"
+    },
+    {
+      "id": "e9bff4a5-e909-4fec-b8b1-b4a892ffa93f",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-01-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "ec23868a-4653-4c86-907a-a8e80e642acc",
+      "type": "expense",
+      "amount": 18,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-22",
+      "description": "Salgado fatec",
+      "status": "completed"
+    },
+    {
+      "id": "ec3e9f18-c8da-44ba-b3f0-8a8499e6bf4b",
+      "type": "income",
+      "amount": 80,
+      "categoryId": "0a9c5a58-9647-45c1-a6f4-f19ca836e7db",
+      "date": "2026-06-01",
+      "description": "",
+      "status": "completed"
+    },
+    {
+      "id": "ec4a5cbd-7dae-4cce-be94-a10c9191e046",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-09-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "ec93d4a0-5fad-4170-94df-ea1bab25882e",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-09-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceId": "4453c156-921f-46a4-b518-c251e6043bd4"
+    },
+    {
+      "id": "ed4035a7-75dd-42a7-9c2e-203aa83ac6b4",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceId": "12615b21-e613-4d89-b6be-e2b741c12074"
+    },
+    {
+      "id": "ef21cb7e-7cc6-4b16-933f-ac5f89d33a65",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-12-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "ef236f31-ba46-451e-bfaf-c413b6a030a3",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-01-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceId": "8a6f4662-e8a9-418f-b79a-b294c56da670"
+    },
+    {
+      "id": "f00add3d-7702-4949-ae8e-18841a991a3a",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2027-06-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceId": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad"
+    },
+    {
+      "id": "f017350c-0d72-4383-b01f-fbb58ecf8203",
+      "type": "expense",
+      "amount": 16.5,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-11-08",
+      "description": "Coca e chocolate",
+      "status": "completed"
+    },
+    {
+      "id": "f03f8aac-98c3-4b47-9fa5-322fcab3b24a",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceId": "2051cbbc-41c1-4561-bba4-89fe9466b182"
+    },
+    {
+      "id": "f0475e63-7c9f-404a-bec1-57ff4de0c47f",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-09",
+      "description": "Rodizio 1/3",
+      "status": "completed"
+    },
+    {
+      "id": "f053ddcb-374a-41ba-9acb-984ff99e137c",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-08-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "f0cb2f87-8142-465c-999c-3f0291f221bd",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-04-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceId": "adc44d46-96b5-42fd-af9a-471392290691"
+    },
+    {
+      "id": "f112278d-40b8-4d4f-bb42-7e4f9eb0a71a",
+      "type": "expense",
+      "amount": 111.17,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-03",
+      "description": "Livros",
+      "status": "completed"
+    },
+    {
+      "id": "f127a151-0ce2-47b9-aab8-93a82f774ed4",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "date": "2026-10-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceId": "32fad871-41da-4980-a52b-8bf89f0fed75"
+    },
+    {
+      "id": "f16ced50-7fb1-4cd3-b31d-63f477481442",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-05-23",
+      "description": "Rodizio de sushi pt 1",
+      "status": "completed"
+    },
+    {
+      "id": "f2a6a336-63b4-45c1-94c9-5f3930d48527",
+      "type": "income",
+      "amount": 14,
+      "categoryId": "0a9c5a58-9647-45c1-a6f4-f19ca836e7db",
+      "date": "2026-07-06",
+      "description": "2 dias que não fui de onibus",
+      "status": "completed"
+    },
+    {
+      "id": "f311f687-38a0-43dd-9e0c-731445eeff7f",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-24",
+      "description": "Volei",
+      "status": "completed"
+    },
+    {
+      "id": "f313776a-b248-4fc0-b3a3-159392ae08f7",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-06-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "f3631653-0bcc-49c5-baec-45e6127cc353",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    },
+    {
+      "id": "f3885152-f4bb-4c6c-bf38-4bfb7a128a56",
+      "type": "expense",
+      "amount": 20,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-01",
+      "description": "Colar pro amoreco",
+      "status": "completed"
+    },
+    {
+      "id": "f39e0ebe-bbb9-49e5-a26e-a74da7a71867",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-07-04",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "f42b012e-302c-4c37-ac60-491f6bc97a0e",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-05-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceId": "58dd319b-937b-4d98-9ac0-e0c11f1f2968"
+    },
+    {
+      "id": "f5170684-966e-4d21-b163-6277ec95183d",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-06-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "f5893c81-b2d8-46ea-baf1-5ee3286a5471",
+      "type": "expense",
+      "amount": 4.7,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-09-16",
+      "description": "",
+      "status": "completed"
+    },
+    {
+      "id": "f7d6608a-2ef7-430b-a680-a60a3bbfa78d",
+      "type": "expense",
+      "amount": 38,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-06-13",
+      "description": "Lanche ",
+      "status": "completed"
+    },
+    {
+      "id": "f7d96a5b-a2a5-456b-936c-32b2d5d02532",
+      "type": "expense",
+      "amount": 9.7,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-02",
+      "description": "Chocolate boulevard",
+      "status": "completed"
+    },
+    {
+      "id": "f8aef114-f51d-493d-ac8a-b0afe28f23ee",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-06-09",
+      "description": "Rodizio 2/3",
+      "status": "completed"
+    },
+    {
+      "id": "f8ce28ba-d57f-487b-82f8-bd206034e039",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-08-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceId": "2051cbbc-41c1-4561-bba4-89fe9466b182"
+    },
+    {
+      "id": "f9e89e98-a0be-4ffb-b5c6-920363e1fe9b",
+      "type": "expense",
+      "amount": 65,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-10-22",
+      "description": "Corte de cabaleo e sobrancelha",
+      "status": "completed"
+    },
+    {
+      "id": "faf889be-7379-4e05-a99f-de9a6fed9896",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "date": "2027-09-01",
+      "description": "",
+      "status": "completed",
+      "recurrenceId": "719b5e75-83f2-49f5-ba04-d3b2b883f40f"
+    },
+    {
+      "id": "fcf59bb8-02a7-4740-8bfe-6cb78d52cec0",
+      "type": "expense",
+      "amount": 16,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "date": "2026-10-18",
+      "description": "Pedagio ida e volta botucatu ",
+      "status": "completed"
+    },
+    {
+      "id": "fe1cf3ac-2f8d-4e43-ad85-02f97a0b0051",
+      "type": "expense",
+      "amount": 18,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-10-05",
+      "description": "Salgado na fatec",
+      "status": "completed"
+    },
+    {
+      "id": "fec1ddac-2643-41bd-b6da-1cb0cbaffc73",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2027-03-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceId": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43"
+    },
+    {
+      "id": "ff84ca97-3420-4075-b6d4-339c94b759ae",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "4685d626-2249-4976-bab3-114865654822",
+      "date": "2026-09-05",
+      "description": "Lanche",
+      "status": "completed"
+    },
+    {
+      "id": "ff9475ec-344f-49fa-8f7f-4b52e467ca11",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-11-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceId": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e"
+    },
+    {
+      "id": "ffeef9a3-c494-46f9-b723-43ab1d3075a9",
+      "type": "expense",
+      "amount": 9.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-09-16",
+      "description": "Stickadinho",
+      "status": "completed"
+    },
+    {
+      "id": "fff740f9-2d37-4ca5-ae4c-dee385afa80e",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "date": "2026-07-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceId": "5de7e28a-eca0-4dcc-b792-20ee5109150b"
+    }
+  ],
+  "blocks": [],
+  "categories": [
+    {
+      "id": "0a9c5a58-9647-45c1-a6f4-f19ca836e7db",
+      "name": "Sobra do VT",
+      "type": "income",
+      "color": "#14b8a6"
+    },
+    {
+      "id": "4685d626-2249-4976-bab3-114865654822",
+      "name": "Alimentação ",
+      "type": "expense",
+      "color": "#f97316"
+    },
+    {
+      "id": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "name": "Transporte",
+      "type": "expense",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "name": "Outros",
+      "type": "expense",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "name": "Comunicação ",
+      "type": "expense",
+      "color": "#ec4899"
+    },
+    {
+      "id": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "name": "Educação ",
+      "type": "expense",
+      "color": "#ef4444"
+    },
+    {
+      "id": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "name": "Salário",
+      "type": "income",
+      "color": "#14b8a6"
+    }
+  ],
+  "recurringTransactions": [
+    {
+      "id": "12615b21-e613-4d89-b6be-e2b741c12074",
+      "type": "expense",
+      "amount": 500,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-09-19",
+      "description": "Economias",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-19"
+    },
+    {
+      "id": "1bb924be-492c-4e4d-93ed-77ed82afc0f3",
+      "type": "expense",
+      "amount": 5.6,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-07-15",
+      "description": "Elden Ring Nighreign parcela",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-10-01",
+      "lastGeneratedDate": "2026-09-15"
+    },
+    {
+      "id": "2051cbbc-41c1-4561-bba4-89fe9466b182",
+      "type": "expense",
+      "amount": 41,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-07-27",
+      "description": "Parcela instalação da multimidia",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-12-01",
+      "lastGeneratedDate": "2026-11-27"
+    },
+    {
+      "id": "32fad871-41da-4980-a52b-8bf89f0fed75",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "startDate": "2026-05-07",
+      "description": "Curso Fast Master ",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-02-01",
+      "lastGeneratedDate": "2027-01-07"
+    },
+    {
+      "id": "3de6ae29-b51a-4e72-9cfd-1662a33be4a4",
+      "type": "expense",
+      "amount": 25,
+      "categoryId": "c6e5c774-0c99-4ac2-97f0-3b4f81f6cb54",
+      "startDate": "2026-05-01",
+      "description": "Curso A. Galego",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-07-01",
+      "lastGeneratedDate": "2026-07-01"
+    },
+    {
+      "id": "4453c156-921f-46a4-b518-c251e6043bd4",
+      "type": "expense",
+      "amount": 5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-08-18",
+      "description": "Crunchyroll",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-18"
+    },
+    {
+      "id": "4754c415-e520-4c0d-9e9f-431e37c20fc8",
+      "type": "expense",
+      "amount": 76.35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-01",
+      "description": "Roupas shein",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-02-01",
+      "lastGeneratedDate": "2027-02-01"
+    },
+    {
+      "id": "58dd319b-937b-4d98-9ac0-e0c11f1f2968",
+      "type": "expense",
+      "amount": 200,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-05-01",
+      "description": "Celular papai",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-09-01",
+      "lastGeneratedDate": "2026-09-01"
+    },
+    {
+      "id": "5c6cafa7-6ed5-4a19-8bf4-401f662d2a43",
+      "type": "expense",
+      "amount": 100,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-03",
+      "description": "Academia",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-03"
+    },
+    {
+      "id": "5de7e28a-eca0-4dcc-b792-20ee5109150b",
+      "type": "expense",
+      "amount": 167,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-05-01",
+      "description": "Parcela nintendo switch",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-03-01",
+      "lastGeneratedDate": "2027-03-01"
+    },
+    {
+      "id": "66c8c8dd-d3a7-4a05-b773-f7bb84d3ea20",
+      "type": "expense",
+      "amount": 47,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-05",
+      "description": "Fone pro Enrique",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-11-01",
+      "lastGeneratedDate": "2026-10-05"
+    },
+    {
+      "id": "719b5e75-83f2-49f5-ba04-d3b2b883f40f",
+      "type": "income",
+      "amount": 3400,
+      "categoryId": "d5a280d7-e243-40d0-8f8b-9fecec957051",
+      "startDate": "2026-06-01",
+      "description": "Salário",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-01"
+    },
+    {
+      "id": "820da5e1-1b46-482d-b4e8-208bbd5fd8ee",
+      "type": "expense",
+      "amount": 50,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-01",
+      "description": "Psicóloga",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-01"
+    },
+    {
+      "id": "869070ce-083e-43dd-a2ed-e09187864000",
+      "type": "expense",
+      "amount": 53,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-05-01",
+      "description": "Parcela Kindle",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-12-01",
+      "lastGeneratedDate": "2026-12-01"
+    },
+    {
+      "id": "8a6f4662-e8a9-418f-b79a-b294c56da670",
+      "type": "expense",
+      "amount": 80.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-01",
+      "description": "Monitor",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-06-01",
+      "lastGeneratedDate": "2027-06-01"
+    },
+    {
+      "id": "8cc5ceba-d751-4a79-995f-e250f2cf34a5",
+      "type": "expense",
+      "amount": 139.5,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-01",
+      "description": "Fone H3S QCY",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-11-01",
+      "lastGeneratedDate": "2026-11-01"
+    },
+    {
+      "id": "927315af-cac2-4eb7-82be-4598d689bd24",
+      "type": "expense",
+      "amount": 72.9,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "startDate": "2026-08-01",
+      "description": "Celular - Nubank",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-05-01",
+      "lastGeneratedDate": "2027-05-01",
+      "installmentsCount": 10
+    },
+    {
+      "id": "96faaed8-fc31-481b-ac96-e9150fbfef0b",
+      "type": "expense",
+      "amount": 30,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "startDate": "2026-05-01",
+      "description": "Internet celular ",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-01"
+    },
+    {
+      "id": "99a80fb4-83df-4175-b0c7-72447e550352",
+      "type": "expense",
+      "amount": 5.73,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-08-13",
+      "description": "Lentes Metaquest",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-06-13",
+      "lastGeneratedDate": "2027-06-13",
+      "installmentsCount": 11
+    },
+    {
+      "id": "a0682c39-ace0-4f6c-8ab6-8b04dc8f5bad",
+      "type": "expense",
+      "amount": 300,
+      "categoryId": "49829c42-28f9-420b-befa-ef8d9367d37b",
+      "startDate": "2026-10-01",
+      "description": "Gasolina",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-11-01"
+    },
+    {
+      "id": "ad49e923-0fb4-4044-8cb1-3c12afb8c872",
+      "type": "expense",
+      "amount": 6.9,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-28",
+      "description": "Spotify",
+      "status": "completed",
+      "recurrenceType": "indefinite",
+      "lastGeneratedDate": "2027-10-28"
+    },
+    {
+      "id": "adc44d46-96b5-42fd-af9a-471392290691",
+      "type": "expense",
+      "amount": 40,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-23",
+      "description": "Camisas sometimes",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-04-23",
+      "lastGeneratedDate": "2027-04-23"
+    },
+    {
+      "id": "af948ef2-b2f0-4a5a-bd2a-f2bf1cfe9a0d",
+      "type": "expense",
+      "amount": 23.45,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-16",
+      "description": "Diario",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-12-16",
+      "lastGeneratedDate": "2026-12-16"
+    },
+    {
+      "id": "bfe84966-75b6-4307-a6e1-1ccb269400a8",
+      "type": "expense",
+      "amount": 80,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-21",
+      "description": "Oleo do carro",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-01-21",
+      "lastGeneratedDate": "2027-01-21"
+    },
+    {
+      "id": "cbb814fd-f656-4adf-bbb0-41f34ada7a82",
+      "type": "expense",
+      "amount": 48.66,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-01",
+      "description": "Cadeira ",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-06-01",
+      "lastGeneratedDate": "2027-06-01"
+    },
+    {
+      "id": "cdeaf488-9a3f-4577-b075-3a4b716984ae",
+      "type": "expense",
+      "amount": 35,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-06-25",
+      "description": "Conserto Switch",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-11-01",
+      "lastGeneratedDate": "2026-10-25"
+    },
+    {
+      "id": "d34a861b-81f2-429e-8bd0-8de9d4a36c52",
+      "type": "expense",
+      "amount": 54.91,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-11",
+      "description": "Amplificador ",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-06-11",
+      "lastGeneratedDate": "2027-06-11"
+    },
+    {
+      "id": "d4ea883c-9c6f-449a-a516-49ccca280c37",
+      "type": "expense",
+      "amount": 57.48,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-01",
+      "description": "Phantom blade zero",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-02-01",
+      "lastGeneratedDate": "2027-02-01"
+    },
+    {
+      "id": "d8e83923-26ba-42c6-9243-9ebb009662c0",
+      "type": "expense",
+      "amount": 121.42,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-08-06",
+      "description": "Meta Quest 3s",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-07-06",
+      "lastGeneratedDate": "2027-07-06"
+    },
+    {
+      "id": "f205b4be-b487-44c5-9101-4dfa7525cd96",
+      "type": "expense",
+      "amount": 75,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-11-11",
+      "description": "Guitarra",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-10-11",
+      "lastGeneratedDate": "2027-10-11"
+    },
+    {
+      "id": "f72c1984-fac3-4ca6-a7b8-bb02a781ca71",
+      "type": "expense",
+      "amount": 187,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-10-01",
+      "description": "Mesa",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2026-11-01",
+      "lastGeneratedDate": "2026-11-01"
+    },
+    {
+      "id": "f8a485ce-9cbc-4e58-94b2-6ada4f4c5d7e",
+      "type": "expense",
+      "amount": 33.84,
+      "categoryId": "70925e30-4a44-4ac5-8f54-c7a6c394610f",
+      "startDate": "2026-08-11",
+      "description": "Strap MetaQuest",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-07-13",
+      "lastGeneratedDate": "2027-07-11"
+    },
+    {
+      "id": "1faa460a-ae8e-4af4-8ce8-6b7e0821c9bf",
+      "type": "expense",
+      "amount": 93.57,
+      "categoryId": "a85fc76f-896b-423a-8dd4-4e33e37cd653",
+      "startDate": "2026-08-01",
+      "description": "Celular - Mercado Pago",
+      "status": "completed",
+      "recurrenceType": "limited",
+      "recurrenceEndDate": "2027-08-01",
+      "installmentsCount": 13,
+      "lastGeneratedDate": "2027-08-01"
+    }
+  ],
+  "receivableCategories": [
+    {
+      "id": "00c30d28-f67d-4266-95a8-4fc4d74ca8d4",
+      "name": "Cartão Nubank",
+      "color": "#8b5cf6",
+      "createdAt": "2026-08-11T16:59:01.314Z"
+    },
+    {
+      "id": "2e2a3f90-6e8e-461b-a0e3-c047a9b22a25",
+      "name": "Cartão Mercado Pago",
+      "color": "#3b82f6",
+      "createdAt": "2026-08-13T14:33:41.100Z"
+    }
+  ],
+  "receivableDebtors": [
+    {
+      "id": "0cb45b7e-e6d6-4e2f-b268-dc357ea37d29",
+      "categoryId": "00c30d28-f67d-4266-95a8-4fc4d74ca8d4",
+      "name": "Pai"
+    },
+    {
+      "id": "310ef801-d4bf-44f9-90a1-a1bf7a1517d3",
+      "categoryId": "2e2a3f90-6e8e-461b-a0e3-c047a9b22a25",
+      "name": "Pai"
+    },
+    {
+      "id": "4a58197c-e2eb-4316-b5fa-ccfafae3df08",
+      "categoryId": "00c30d28-f67d-4266-95a8-4fc4d74ca8d4",
+      "name": "Mãe"
+    },
+    {
+      "id": "9853639d-3bd0-49e4-bfd2-f9841ba933ba",
+      "categoryId": "2e2a3f90-6e8e-461b-a0e3-c047a9b22a25",
+      "name": "Mãe"
+    }
+  ],
+  "receivableDebts": [
+    {
+      "id": "044abe19-035d-448b-9c6d-150c62019663",
+      "debtorId": "310ef801-d4bf-44f9-90a1-a1bf7a1517d3",
+      "description": "Pedagio",
+      "totalAmount": 71,
+      "remainingAmount": 71,
+      "installmentsCount": 1,
+      "startMonth": "2026-08",
+      "createdAt": "2026-08-13T14:33:57.168Z"
+    },
+    {
+      "id": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "debtorId": "0cb45b7e-e6d6-4e2f-b268-dc357ea37d29",
+      "description": "Multimidia do Carro",
+      "totalAmount": 308.2,
+      "remainingAmount": 277.38,
+      "installmentsCount": 10,
+      "startMonth": "2026-07",
+      "createdAt": "2026-08-13T14:31:50.997Z"
+    },
+    {
+      "id": "1ba394ef-c2f7-46bd-b613-0ec93fbbf259",
+      "debtorId": "9853639d-3bd0-49e4-bfd2-f9841ba933ba",
+      "description": "Relogio",
+      "totalAmount": 44.66,
+      "remainingAmount": 0,
+      "installmentsCount": 1,
+      "startMonth": "2026-08",
+      "createdAt": "2026-08-13T14:34:32.188Z",
+      "settledAt": "2026-08-31T20:55:53.647Z"
+    },
+    {
+      "id": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "debtorId": "0cb45b7e-e6d6-4e2f-b268-dc357ea37d29",
+      "description": "Cabelo mamãe ",
+      "totalAmount": 903.48,
+      "remainingAmount": 752.9,
+      "installmentsCount": 6,
+      "startMonth": "2026-08",
+      "createdAt": "2026-08-13T14:33:02.848Z"
+    },
+    {
+      "id": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "debtorId": "0cb45b7e-e6d6-4e2f-b268-dc357ea37d29",
+      "description": "Emprestimo",
+      "totalAmount": 17070.24,
+      "remainingAmount": 15292.090000000004,
+      "installmentsCount": 48,
+      "startMonth": "2026-04",
+      "createdAt": "2026-08-13T14:33:22.448Z"
+    },
+    {
+      "id": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "debtorId": "4a58197c-e2eb-4316-b5fa-ccfafae3df08",
+      "description": "Multimidia Carro",
+      "totalAmount": 308.2,
+      "remainingAmount": 246.56,
+      "installmentsCount": 10,
+      "startMonth": "2026-07",
+      "createdAt": "2026-08-13T14:35:28.363Z"
+    },
+    {
+      "id": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "debtorId": "4a58197c-e2eb-4316-b5fa-ccfafae3df08",
+      "description": "Emprestimo",
+      "totalAmount": 1500,
+      "remainingAmount": 1350,
+      "installmentsCount": 10,
+      "startMonth": "2026-08",
+      "createdAt": "2026-08-13T14:35:48.969Z"
+    },
+    {
+      "id": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "debtorId": "4a58197c-e2eb-4316-b5fa-ccfafae3df08",
+      "description": "MetaQuest",
+      "totalAmount": 700,
+      "remainingAmount": 600,
+      "installmentsCount": 7,
+      "startMonth": "2026-08",
+      "createdAt": "2026-08-13T14:36:46.600Z"
+    }
+  ],
+  "receivableInstallments": [
+    {
+      "id": "035d6014-0305-4d35-905c-c25dc0a6f96f",
+      "debtId": "1ba394ef-c2f7-46bd-b613-0ec93fbbf259",
+      "month": "2026-08",
+      "number": 1,
+      "expectedAmount": 44.66,
+      "status": "paid",
+      "paidAmount": 44.66,
+      "paidAt": "2026-08-31T20:55:53.584Z"
+    },
+    {
+      "id": "07705993-a915-47eb-aa65-fbfdd951cf86",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2027-02",
+      "number": 7,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "0883fb0b-3f32-4203-b84b-3a7a7a7c2539",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-12",
+      "number": 21,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "0a0364d4-048f-49ca-9443-f045c49bd020",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-10",
+      "number": 4,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "0b09830e-22d6-4cc7-ae1f-3b8e66e4702f",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-08",
+      "number": 17,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "0e97ef8e-671a-438e-9301-0a4451f04994",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2027-03",
+      "number": 9,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "12724686-71e2-442c-a887-4613716f402c",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2030-01",
+      "number": 46,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "16354360-6b38-40a4-a4d9-f7632e7b749c",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-04",
+      "number": 37,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "1bf85fb7-69ca-4430-a7ae-dde6ef911007",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-06",
+      "number": 15,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "1d9853e0-0576-4e97-ac35-526c25b0ec9c",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-07",
+      "number": 40,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "1dc92d61-8a99-4299-be6c-f29c5976ccb2",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-11",
+      "number": 5,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "218629f3-6b1b-4e43-8748-45c3682ea0cd",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-04",
+      "number": 1,
+      "expectedAmount": 355.63,
+      "status": "paid",
+      "paidAmount": 355.63,
+      "paidAt": "2026-08-13T15:18:27.455Z"
+    },
+    {
+      "id": "2868725f-0993-4f0c-8b47-fde67fc36469",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-12",
+      "number": 6,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "2f456296-fc74-4144-b7eb-bd818889265a",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2027-01",
+      "number": 7,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "2f9414db-b26f-473d-be7c-f6c7d8a5101e",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-11",
+      "number": 32,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "2fbcdd62-bf18-4c7f-9487-7aa9d8a16bae",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-09",
+      "number": 18,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "345274d4-1da5-4f2c-957c-91ad85c55dc5",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-11",
+      "number": 8,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "35188c7f-e4fb-4d9d-bf33-7db84950de8b",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2026-10",
+      "number": 3,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "35f977fd-0dce-4976-a85d-a57bd8db1951",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2027-02",
+      "number": 8,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "36dfbb45-4da5-46ac-84a5-b04f85597b4f",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-07",
+      "number": 4,
+      "expectedAmount": 355.63,
+      "status": "paid",
+      "paidAmount": 355.63,
+      "paidAt": "2026-08-13T15:18:33.356Z"
+    },
+    {
+      "id": "39fa367c-8f91-40aa-b2c9-5998e95baaa9",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-09",
+      "number": 6,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "3c3f548f-8bcd-4edb-a2fc-9fe7aeff3d67",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-08",
+      "number": 5,
+      "expectedAmount": 355.63,
+      "status": "paid",
+      "paidAmount": 355.63,
+      "paidAt": "2026-08-16T16:42:35.933Z"
+    },
+    {
+      "id": "4026d8a5-e0cd-4ef1-a3c3-9f1f2be9634b",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2026-09",
+      "number": 2,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "40a6a304-5f3e-4efa-9718-17dc3bb638ad",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-12",
+      "number": 9,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "428fb6c9-f98d-4b46-ad1f-bb9eb2ecad86",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2026-12",
+      "number": 5,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "438d5724-06a2-4b61-b626-3126c37c2a16",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2026-11",
+      "number": 4,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "44529605-bff9-4830-8709-9875d1c39a67",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-06",
+      "number": 3,
+      "expectedAmount": 355.63,
+      "status": "paid",
+      "paidAmount": 355.63,
+      "paidAt": "2026-08-13T15:18:31.550Z"
+    },
+    {
+      "id": "45cbdbc0-723c-49c5-9c35-8b0e21583d1c",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-05",
+      "number": 38,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "45d78711-aa27-47aa-8046-e3379e483153",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-05",
+      "number": 14,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "471e8e36-60b8-48df-8f37-65d53d5a0abf",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2026-12",
+      "number": 5,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "4c1c485e-ea88-4af5-973d-b8d785dd0cac",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2026-09",
+      "number": 2,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "51a456b9-c1bb-4523-9056-34166e1d947d",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-07",
+      "number": 1,
+      "expectedAmount": 30.82,
+      "status": "paid",
+      "paidAmount": 30.82,
+      "paidAt": "2026-08-13T15:21:59.661Z"
+    },
+    {
+      "id": "5873d814-8c23-47dd-88e2-46db0058c374",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2027-01",
+      "number": 6,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "5accacb5-098f-4854-a0fe-5a798f5ba957",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-01",
+      "number": 22,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "5ce47723-4ef5-4352-8781-ea312d3d653c",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2030-02",
+      "number": 47,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "6aadad52-420a-4e13-a6c7-aa42764fd27d",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-06",
+      "number": 39,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "6e89b311-18d0-46dd-a4ac-5d9a11eb1d99",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-09",
+      "number": 30,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "6e8b210a-1bb4-4a64-9db7-85a994a3c472",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-01",
+      "number": 34,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "6f1c28b8-93d8-4bb8-95cc-c8eefb786eaf",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-04",
+      "number": 25,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "73dc7e8e-d5bb-4787-9638-035d459287c7",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2026-08",
+      "number": 1,
+      "expectedAmount": 100,
+      "status": "paid",
+      "paidAmount": 100,
+      "paidAt": "2026-08-31T20:55:02.720Z"
+    },
+    {
+      "id": "749a4e55-9f70-4e0c-9210-5107e036d3da",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2026-11",
+      "number": 4,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "78cb8624-fcc4-4cf9-a93a-476bc81d86bc",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2026-09",
+      "number": 2,
+      "expectedAmount": 150.57,
+      "status": "pending"
+    },
+    {
+      "id": "7d71ada0-efd7-4370-9a2a-33bafed5677b",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2026-08",
+      "number": 1,
+      "expectedAmount": 150.58,
+      "status": "paid",
+      "paidAmount": 150.58,
+      "paidAt": "2026-09-03T18:17:11.883Z"
+    },
+    {
+      "id": "7de92136-6895-4f8f-a04e-bcb8d9506968",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-05",
+      "number": 2,
+      "expectedAmount": 355.63,
+      "status": "paid",
+      "paidAmount": 355.63,
+      "paidAt": "2026-08-13T15:18:29.447Z"
+    },
+    {
+      "id": "85f083a3-167d-4b4e-a9ad-45eeba1511f8",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2026-08",
+      "number": 1,
+      "expectedAmount": 150,
+      "status": "paid",
+      "paidAmount": 150,
+      "paidAt": "2026-08-28T12:49:15.245Z"
+    },
+    {
+      "id": "860f87b5-a6f1-4df1-b0e0-528a49f57111",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-07",
+      "number": 16,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "8be35ea7-de1f-443a-ad38-2e55da9a9c30",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-08",
+      "number": 41,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "8e64e395-9230-471c-ba81-71c17aeec255",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-12",
+      "number": 45,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "8ea65cb1-9b14-4991-8d61-42d3d73b40b1",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-08",
+      "number": 2,
+      "expectedAmount": 30.82,
+      "status": "paid",
+      "paidAmount": 30.82,
+      "paidAt": "2026-08-31T20:54:55.650Z"
+    },
+    {
+      "id": "902e4327-974b-4f08-8493-fd01cddf5624",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-03",
+      "number": 24,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "909bcf42-f990-46fd-b5c7-8429ea30de35",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-10",
+      "number": 19,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "91d32d72-255a-4dc4-8c60-18973a24ed64",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-11",
+      "number": 44,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "9cd1cdf9-7d47-4418-83e8-97d42e95035b",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2030-03",
+      "number": 48,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "9d4fdf12-212a-4a9f-b538-a9df64864a51",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-02",
+      "number": 11,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "9e395a5c-e46d-4798-9dc5-b1bc937c8551",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-09",
+      "number": 3,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "9ea76c42-8623-473c-894a-e320ef0efab0",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-05",
+      "number": 26,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "9ff4701c-4d43-4b5d-a9b6-6993ebdbb599",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2027-01",
+      "number": 6,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "a21a0e02-3b70-4d82-a665-203056baff49",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-09",
+      "number": 42,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "a6a90af5-365c-419e-b5ba-73008a913b57",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-12",
+      "number": 6,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "a96dfea8-12f5-463a-a6a4-fc97f1ae786a",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2027-01",
+      "number": 7,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "acc877fd-c3ab-4741-abce-d30d4742362b",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-12",
+      "number": 33,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "ace87b98-6c98-479b-b78d-024c6800a5a8",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2027-02",
+      "number": 7,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "b753a94a-7398-40ab-9548-b2b3a44ab88e",
+      "debtId": "c131078e-97c9-49bc-976f-aaae6d1b9809",
+      "month": "2026-10",
+      "number": 3,
+      "expectedAmount": 100,
+      "status": "pending"
+    },
+    {
+      "id": "b7d2351e-30e8-45cf-8da3-44ece2c83dce",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2027-03",
+      "number": 8,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "b84e6842-0694-41d2-9768-b963718a6a9a",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-07",
+      "number": 28,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "bb9c9433-94ca-4b2e-93c1-c201c9cb22e2",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2026-10",
+      "number": 7,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "bce13d1e-3b19-40ac-8ae4-dc564444b3d9",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2026-10",
+      "number": 3,
+      "expectedAmount": 150.57,
+      "status": "pending"
+    },
+    {
+      "id": "bd4b604f-17a8-4fe0-a59f-daa949264e80",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-08",
+      "number": 29,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "bda12b39-f25e-4c1b-88e7-9aa839ef4fab",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-04",
+      "number": 13,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "bf0b595a-d57d-446c-b77c-502fd8a17f04",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-09",
+      "number": 3,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "bf8f20dc-117b-4d60-83c5-b49a0652f071",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-06",
+      "number": 27,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "c3455f9b-63db-45a5-b856-10e45911d96e",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2027-02",
+      "number": 8,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "c63a12e4-4591-446d-b41c-302191f9e522",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-10",
+      "number": 31,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "cefd67b1-0f5e-45f8-b0c4-6e20b3648a6d",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2027-05",
+      "number": 10,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "cfb4c95d-3a6f-473a-9f49-f3013b9043d2",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-02",
+      "number": 35,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "d4c9623d-bfff-4fa3-97f4-2c6e6fceb9f0",
+      "debtId": "044abe19-035d-448b-9c6d-150c62019663",
+      "month": "2026-08",
+      "number": 1,
+      "expectedAmount": 71,
+      "status": "pending"
+    },
+    {
+      "id": "d72c1431-0a77-45b9-9c1c-822208724112",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2027-04",
+      "number": 10,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "d83b2fe1-1af1-471a-8dd5-fd900c429510",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2026-11",
+      "number": 4,
+      "expectedAmount": 150.57,
+      "status": "pending"
+    },
+    {
+      "id": "da9afdc0-1e91-4a63-9abb-bddb1484d440",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2028-02",
+      "number": 23,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "dad223d2-80d9-4874-8b0e-e52de4842dbd",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-03",
+      "number": 12,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "db4d9a0e-7e6c-4a81-9c6d-67afc2c5d67d",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2027-01",
+      "number": 6,
+      "expectedAmount": 150.62,
+      "status": "pending"
+    },
+    {
+      "id": "db88c62b-c659-4e8f-9527-93e3f68f1f20",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-01",
+      "number": 10,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "dbf3f9fd-9422-49c7-b97d-76e49fac36e9",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2027-11",
+      "number": 20,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "dc12c35b-4d7c-4b23-860a-60fca2d0738c",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-07",
+      "number": 1,
+      "expectedAmount": 30.82,
+      "status": "paid",
+      "paidAmount": 30.82,
+      "paidAt": "2026-08-13T15:22:37.837Z"
+    },
+    {
+      "id": "de1c8cdc-efff-42f4-9cd8-db7c79e2e08a",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2026-11",
+      "number": 5,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "e178ae69-88db-485a-bfae-258d8a66ca50",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-10",
+      "number": 43,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    },
+    {
+      "id": "e7366730-0296-4ae9-af29-39945df4671b",
+      "debtId": "beedd5f1-c0be-4b37-a758-01b5d358bf9a",
+      "month": "2027-04",
+      "number": 9,
+      "expectedAmount": 150,
+      "status": "pending"
+    },
+    {
+      "id": "ea845411-9af4-46cc-8ecc-707d84521ace",
+      "debtId": "55e7b4ed-aa52-4ae0-9729-50bf4709eb4c",
+      "month": "2026-12",
+      "number": 5,
+      "expectedAmount": 150.57,
+      "status": "pending"
+    },
+    {
+      "id": "ec1ddb4e-3b1f-4418-b3e4-8d12fb4e1158",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2027-04",
+      "number": 10,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "ed6e7b0c-a526-447b-8dcb-dcedca8dd3a0",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-08",
+      "number": 2,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "f399af88-704b-424e-9a73-cd7593a9e28a",
+      "debtId": "8ddd42b2-f0f1-48c5-9af0-c75faab4349f",
+      "month": "2027-03",
+      "number": 9,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "f44b40a9-0a2f-4ca7-b5c7-ff6a3711c35d",
+      "debtId": "0c908d38-dd7e-4d5c-9d32-2588085528e1",
+      "month": "2026-10",
+      "number": 4,
+      "expectedAmount": 30.82,
+      "status": "pending"
+    },
+    {
+      "id": "f740e596-a37a-4eed-9f4b-abb59c5f6e3a",
+      "debtId": "60498229-906c-4a3b-90e9-5604dde685c7",
+      "month": "2029-03",
+      "number": 36,
+      "expectedAmount": 355.63,
+      "status": "pending"
+    }
+  ],
+  "receivableSettledDebts": [
+    {
+      "id": "1ba394ef-c2f7-46bd-b613-0ec93fbbf259",
+      "categoryId": "2e2a3f90-6e8e-461b-a0e3-c047a9b22a25",
+      "debtorId": "9853639d-3bd0-49e4-bfd2-f9841ba933ba",
+      "description": "Relogio",
+      "totalAmount": 44.66,
+      "settledAt": "2026-08-31T20:55:53.647Z",
+      "installmentsCount": 1
+    }
+  ]
+}

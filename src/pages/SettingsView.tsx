@@ -1,11 +1,11 @@
 import { useState, useRef } from 'react';
 import { format } from 'date-fns';
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db, type PeriodType, type TransactionType, type Block } from '../db';
-import { Plus, Trash2, Sun, Moon, Pencil, Check, X, Download, Upload } from 'lucide-react';
+import { db, type TransactionType, type Block } from '../db';
+import { Plus, Trash2, Sun, Moon, Pencil, Check, X, Download, Upload, Sparkles } from 'lucide-react';
 import { CATEGORY_COLORS } from '../lib/constants';
 import { useThemeStore } from '../store/themeStore';
-import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
+import { seedInitialData } from '../db/seed';
 
 export function SettingsView() {
     const handleDeleteBlock = async (id: string) => {
@@ -17,23 +17,17 @@ export function SettingsView() {
     const startEdit = (block: Block) => {
       setEditingBlockId(block.id);
       setEditName(block.name);
-      setEditAmount(formatCurrencyInput(block.totalAmount.toFixed(2).replace(/\D/g, '')));
-      setEditPeriod(block.period);
     };
 
     const cancelEdit = () => {
       setEditingBlockId(null);
       setEditName('');
-      setEditAmount('');
-      setEditPeriod('monthly');
     };
 
     const saveEdit = async (id: string) => {
-      if (!editName || !editAmount) return;
+      if (!editName) return;
       await db.blocks.update(id, {
         name: editName,
-        totalAmount: parseCurrencyInput(editAmount),
-        period: editPeriod,
       });
       setEditingBlockId(null);
     };
@@ -43,13 +37,9 @@ export function SettingsView() {
   const { theme, toggleTheme } = useThemeStore();
 
   const [newBlockName, setNewBlockName] = useState('');
-  const [newBlockAmount, setNewBlockAmount] = useState('');
-  const [newBlockPeriod, setNewBlockPeriod] = useState<PeriodType>('monthly');
 
   const [editingBlockId, setEditingBlockId] = useState<string | null>(null);
   const [editName, setEditName] = useState('');
-  const [editAmount, setEditAmount] = useState('');
-  const [editPeriod, setEditPeriod] = useState<PeriodType>('monthly');
 
   const [newCatName, setNewCatName] = useState('');
   const [newCatType, setNewCatType] = useState<TransactionType>('expense');
@@ -58,15 +48,12 @@ export function SettingsView() {
 
   const handleAddBlock = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newBlockName || !newBlockAmount) return;
+    if (!newBlockName) return;
     await db.blocks.add({
       id: crypto.randomUUID(),
       name: newBlockName,
-      totalAmount: parseCurrencyInput(newBlockAmount),
-      period: newBlockPeriod
     });
     setNewBlockName('');
-    setNewBlockAmount('');
   };
 
 
@@ -198,6 +185,13 @@ export function SettingsView() {
     }
   };
 
+  const handleLoadMockData = async () => {
+    if (confirm('Deseja restaurar os dados oficiais do backup JSON (506 transações)? Isso substituirá os dados atuais pelo seu arquivo de backup.')) {
+      await seedInitialData(true);
+      alert('Dados do backup oficial carregados com sucesso!');
+    }
+  };
+
   return (
     <div className="p-4 sm:p-6 pb-24 bg-bg-primary">
       <header className="mb-6 flex justify-between items-center">
@@ -209,39 +203,21 @@ export function SettingsView() {
 
       {/* Blocos Section */}
       <section className="mb-10">
-        <h2 className="text-lg font-semibold text-text-primary mb-4">Blocos de Orçamento</h2>
-        <form onSubmit={handleAddBlock} className="bg-bg-elevated border-border p-5 rounded-3xl space-y-4 shadow-sm">
+        <div className="mb-4">
+          <h2 className="text-lg font-semibold text-text-primary">Blocos Organizadores</h2>
+          <p className="text-xs text-text-secondary">Crie blocos para organizar e agrupar seus custos e serviços (ex: Streaming, Moradia, etc.)</p>
+        </div>
+        <form onSubmit={handleAddBlock} className="bg-bg-elevated border border-border p-5 rounded-3xl space-y-4 shadow-sm">
           <div>
             <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Nome do Bloco</label>
-            <input type="text" value={newBlockName} onChange={e => setNewBlockName(e.target.value)} className="w-full bg-bg-surface border-border rounded-2xl p-3 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Ex: Lazer" required />
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Valor</label>
-              <input
-                type="text"
-                inputMode="numeric"
-                value={newBlockAmount}
-                onChange={e => setNewBlockAmount(formatCurrencyInput(e.target.value))}
-                className="w-full bg-bg-surface border-border rounded-2xl p-3 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                placeholder="R$ 0,00"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Período</label>
-              <select value={newBlockPeriod} onChange={e => setNewBlockPeriod(e.target.value as PeriodType)} className="w-full bg-bg-surface border-border rounded-2xl p-3 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none">
-                <option value="monthly">Mensal</option>
-                <option value="weekly">Semanal</option>
-              </select>
-            </div>
+            <input type="text" value={newBlockName} onChange={e => setNewBlockName(e.target.value)} className="w-full bg-bg-surface border border-border rounded-2xl p-3 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all" placeholder="Ex: Streaming, Contas Fixas, etc." required />
           </div>
           <button type="submit" className="w-full bg-accent text-accent-inverse hover:opacity-90 active:opacity-80 font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2">
-            <Plus className="w-5 h-5" /> Adicionar Bloco
+            <Plus className="w-5 h-5" /> Criar Bloco
           </button>
         </form>
 
-        <ul className="space-y-3">
+        <ul className="space-y-3 mt-4">
           {blocks.map(b => (
             <li key={b.id} className="bg-bg-elevated p-4 rounded-2xl border border-border transition-colors">
               {editingBlockId === b.id ? (
@@ -253,24 +229,6 @@ export function SettingsView() {
                     className="w-full bg-bg-surface border border-border rounded-xl p-2.5 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
                     placeholder="Nome do bloco"
                   />
-                  <div className="grid grid-cols-2 gap-3">
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      value={editAmount}
-                      onChange={e => setEditAmount(formatCurrencyInput(e.target.value))}
-                      className="w-full bg-bg-surface border border-border rounded-xl p-2.5 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all"
-                      placeholder="R$ 0,00"
-                    />
-                    <select
-                      value={editPeriod}
-                      onChange={e => setEditPeriod(e.target.value as PeriodType)}
-                      className="w-full bg-bg-surface border border-border rounded-xl p-2.5 text-text-primary text-sm focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none"
-                    >
-                      <option value="monthly">Mensal</option>
-                      <option value="weekly">Semanal</option>
-                    </select>
-                  </div>
                   <div className="flex gap-2">
                     <button
                       onClick={() => saveEdit(b.id)}
@@ -289,8 +247,7 @@ export function SettingsView() {
               ) : (
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-text-primary text-sm font-semibold">{b.name} <span className="text-text-secondary text-xs ml-2 font-normal">({b.period === 'monthly' ? 'Mensal' : 'Semanal'})</span></p>
-                    <p className="text-accent font-medium text-sm mt-0.5">{formatCurrencyInput(Math.round(b.totalAmount * 100).toString())}</p>
+                    <p className="text-text-primary text-sm font-semibold">{b.name}</p>
                   </div>
                   <div className="flex items-center gap-1">
                     <button onClick={() => startEdit(b)} className="text-text-secondary hover:text-text-primary p-2 rounded-xl hover:bg-bg-surface transition-colors">
@@ -384,6 +341,23 @@ export function SettingsView() {
             onChange={importData}
             className="hidden"
           />
+        </div>
+      </section>
+
+      {/* Backup File Section */}
+      <section className="mt-10">
+        <h2 className="text-lg font-semibold text-text-primary mb-4">Dados do Backup</h2>
+        <div className="bg-bg-elevated border-border p-5 rounded-3xl space-y-4 shadow-sm">
+          <p className="text-sm text-text-secondary">
+            Restaure todos os seus dados reais a partir do arquivo de backup (categorias, histórico completo de transações, parcelamentos e contas a receber).
+          </p>
+          <button
+            type="button"
+            onClick={handleLoadMockData}
+            className="w-full bg-accent text-accent-inverse hover:opacity-90 active:opacity-80 font-semibold py-3 rounded-2xl text-sm transition-colors flex items-center justify-center gap-2"
+          >
+            <Sparkles className="w-5 h-5" /> Restaurar Dados do Backup
+          </button>
         </div>
       </section>
     </div>
