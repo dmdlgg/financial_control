@@ -4,7 +4,7 @@ import { useLiveQuery } from 'dexie-react-hooks';
 import { ArrowLeft, Trash2 } from 'lucide-react';
 import { db, type TransactionStatus } from '../db';
 import { formatCurrencyInput, parseCurrencyInput } from '../lib/utils';
-import { processRecurringTransactions } from '../lib/recurrence';
+import { processRecurringTransactions, deleteRecurringRuleAndTransactions } from '../lib/recurrence';
 
 export function EditRecurrence() {
   const navigate = useNavigate();
@@ -129,20 +129,28 @@ export function EditRecurrence() {
   };
 
   const handleDeleteRule = async () => {
-    if (!confirm('Excluir esta regra de recorrência? As transações já geradas continuarão existindo, mas não serão mais geradas novas ocorrências.')) return;
+    const deleteAll = confirm('Deseja excluir esta regra de recorrência e TODAS as transações/parcelas geradas por ela em todos os meses?\n\n(Clique em OK para excluir tudo, ou Cancelar se desejar apenas parar a repetição mantendo o histórico já criado)');
     setSaving(true);
     try {
-      await db.transaction('rw', [db.recurringTransactions, db.transactions], async () => {
-        await db.recurringTransactions.delete(recurrenceId);
-        const children = await db.transactions
-          .where('recurrenceId')
-          .equals(recurrenceId)
-          .toArray();
-        await Promise.all(
-          children.map(t => db.transactions.update(t.id, { recurrenceId: undefined }))
-        );
-      });
-      navigate(-1);
+      if (deleteAll) {
+        await deleteRecurringRuleAndTransactions(recurrenceId);
+        navigate(-1);
+      } else {
+        const justStop = confirm('Deseja parar a repetição e manter as transações já geradas como avulsas?');
+        if (justStop) {
+          await db.transaction('rw', [db.recurringTransactions, db.transactions], async () => {
+            await db.recurringTransactions.delete(recurrenceId);
+            const children = await db.transactions
+              .where('recurrenceId')
+              .equals(recurrenceId)
+              .toArray();
+            await Promise.all(
+              children.map(t => db.transactions.update(t.id, { recurrenceId: undefined }))
+            );
+          });
+          navigate(-1);
+        }
+      }
     } finally {
       setSaving(false);
     }
@@ -241,7 +249,7 @@ export function EditRecurrence() {
 
           {type === 'expense' && (
             <div>
-              <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Bloco de Orçamento (Opcional)</label>
+              <label className="block text-xs font-medium text-text-secondary mb-1.5 uppercase tracking-wide">Bloco Organizador (Opcional)</label>
               <select
                 value={blockId}
                 onChange={e => setBlockId(e.target.value)}

@@ -2,11 +2,12 @@ import { useEffect } from 'react';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db } from '../db';
-import { ArrowLeft } from 'lucide-react';
-import { cn, formatCurrencyInput } from '../lib/utils';
+import { ArrowLeft, Plus, Layers } from 'lucide-react';
+import { formatCurrencyInput } from '../lib/utils';
 import { format, startOfMonth, endOfMonth, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { useMonthStore } from '../store/monthStore';
+import { TransactionItem } from '../components/TransactionItem';
 
 export function BlockDetails() {
   const { id } = useParams<{ id: string }>();
@@ -44,83 +45,73 @@ export function BlockDetails() {
 
   if (!block) return <div className="p-6 text-text-secondary flex items-center justify-center h-full">Carregando bloco...</div>;
 
-  const expenses = transactions.filter(t => t.type === 'expense' && t.status === 'completed');
+  const expenses = transactions.filter(t => t.type === 'expense');
+  const incomes = transactions.filter(t => t.type === 'income');
   const spent = expenses.reduce((acc, curr) => acc + curr.amount, 0);
-  const remaining = block.totalAmount - spent;
-  const percent = Math.min((spent / block.totalAmount) * 100, 100);
+  const received = incomes.reduce((acc, curr) => acc + curr.amount, 0);
 
   return (
     <div className="flex flex-col h-[100dvh] w-full max-w-md mx-auto bg-bg-primary shadow-2xl sm:border-x sm:border-border">
-      <header className="p-4 flex items-center gap-4 bg-bg-primary sticky top-0 z-10 border-b border-border">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-bg-elevated text-text-secondary transition-colors">
-          <ArrowLeft className="w-6 h-6" />
-        </button>
-        <div>
-          <h1 className="text-lg font-semibold text-text-primary">{block.name}</h1>
-          <p className="text-xs text-text-secondary capitalize">
-            {format(targetDate, 'MMMM yyyy', { locale: ptBR })} • Orçamento {block.period === 'monthly' ? 'Mensal' : 'Semanal'}
-          </p>
+      <header className="p-4 flex items-center justify-between bg-bg-primary sticky top-0 z-10 border-b border-border">
+        <div className="flex items-center gap-4 min-w-0">
+          <button onClick={() => navigate(-1)} className="p-2 -ml-2 rounded-full hover:bg-bg-elevated text-text-secondary transition-colors">
+            <ArrowLeft className="w-6 h-6" />
+          </button>
+          <div className="min-w-0">
+            <h1 className="text-lg font-semibold text-text-primary truncate flex items-center gap-2">
+              <Layers className="w-5 h-5 text-accent shrink-0" />
+              {block.name}
+            </h1>
+            <p className="text-xs text-text-secondary capitalize">
+              {format(targetDate, 'MMMM yyyy', { locale: ptBR })} • Bloco Organizador
+            </p>
+          </div>
         </div>
+
+        <button
+          onClick={() => navigate(`/add?blockId=${block.id}&date=${format(targetDate, 'yyyy-MM-dd')}`)}
+          className="p-2 rounded-xl bg-accent text-accent-inverse hover:opacity-90 transition-opacity"
+          title="Adicionar transação neste bloco"
+        >
+          <Plus className="w-5 h-5" />
+        </button>
       </header>
 
       <div className="p-4 sm:p-6 flex-1 overflow-y-auto pb-24 space-y-6">
         <section className="bg-bg-elevated p-6 rounded-3xl shadow-lg border border-border">
-          <div className="flex justify-between items-end mb-4">
-            <div>
-              <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Gasto</p>
-              <p className="text-2xl font-bold text-text-primary">{formatCurrencyInput(Math.round(spent * 100).toString())}</p>
-            </div>
-            <div className="text-right">
-              <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Restante</p>
-              <p className={`text-lg font-bold ${remaining >= 0 ? 'text-success' : 'text-danger'}`}>
-                {remaining < 0 ? '-' : ''}{formatCurrencyInput(Math.round(Math.abs(remaining) * 100).toString())}
-              </p>
-            </div>
+          <p className="text-xs font-medium text-text-secondary uppercase tracking-widest mb-1">Total no Mês</p>
+          <p className="text-3xl font-bold text-text-primary">{formatCurrencyInput(Math.round(spent * 100).toString())}</p>
+          
+          <div className="mt-4 pt-4 border-t border-border/50 flex justify-between items-center text-xs text-text-secondary">
+            <span>{transactions.length} {transactions.length === 1 ? 'item organizado' : 'itens organizados'}</span>
+            {received > 0 && <span className="text-success font-medium">Entradas: +{formatCurrencyInput(Math.round(received * 100).toString())}</span>}
           </div>
-          <div className="h-3 w-full bg-bg-surface rounded-full overflow-hidden border border-border">
-            <div
-              className={`h-full rounded-full transition-all duration-1000 ease-out ${percent > 90 ? 'bg-danger' : percent > 75 ? 'bg-yellow-500' : 'bg-accent'}`}
-              style={{ width: `${percent}%` }}
-            />
-          </div>
-          <p className="text-center text-xs text-text-secondary mt-3 font-medium">Orçamento Total: {formatCurrencyInput(Math.round(block.totalAmount * 100).toString())}</p>
         </section>
 
         <section>
           <h2 className="text-lg font-semibold text-text-primary mb-4">Transações do Bloco</h2>
           {transactions.length === 0 ? (
             <div className="text-center p-8 bg-bg-elevated rounded-3xl border border-border border-dashed">
-              <p className="text-text-secondary text-sm">Nenhuma transação registrada neste bloco.</p>
+              <p className="text-text-secondary text-sm">Nenhum item adicionado a este bloco neste mês.</p>
+              <button
+                onClick={() => navigate(`/add?blockId=${block.id}&date=${format(targetDate, 'yyyy-MM-dd')}`)}
+                className="mt-4 px-4 py-2 text-xs font-semibold bg-accent text-accent-inverse rounded-xl hover:opacity-90 transition-opacity"
+              >
+                + Adicionar Item ao Bloco
+              </button>
             </div>
           ) : (
             <ul className="space-y-3">
               {[...transactions].sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map(t => {
                 const cat = categories.find(c => c.id === t.categoryId);
-                const color = cat?.color || (t.type === 'income' ? '#10b981' : '#ef4444');
                 return (
-                  <li
+                  <TransactionItem
                     key={t.id}
+                    transaction={t}
+                    category={cat}
+                    block={block}
                     onClick={() => navigate(`/edit/${t.id}`)}
-                    className="bg-bg-elevated p-4 rounded-3xl border border-border flex justify-between items-center shadow-md transition-transform hover:scale-[1.02] cursor-pointer"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                      <div>
-                        <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
-                          {t.description || cat?.name || 'Transação'}
-                          {t.status === 'planned' && (
-                            <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
-                              Planejado
-                            </span>
-                          )}
-                        </p>
-                        <p className="text-xs text-text-secondary mt-0.5">{cat?.name} • {format(new Date(t.date), 'dd/MM/yyyy')}</p>
-                      </div>
-                    </div>
-                    <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                      {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
-                    </p>
-                  </li>
+                  />
                 );
               })}
             </ul>

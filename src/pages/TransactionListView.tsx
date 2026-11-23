@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { db } from '../db';
 import { format, parseISO, endOfMonth } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { cn, formatCurrencyInput } from '../lib/utils';
+import { TransactionItem } from '../components/TransactionItem';
 
 export function TransactionListView() {
   const navigate = useNavigate();
@@ -68,22 +68,15 @@ export function TransactionListView() {
             <ul className="space-y-3">
               {grouped[date].map(t => {
                 const cat = categories.find(c => c.id === t.categoryId);
-                const block = t.blockId ? blocks.find(b => b.id === t.blockId) : null;
+                const block = t.blockId ? blocks.find(b => b.id === t.blockId) : undefined;
                 return (
-                  <li key={t.id} className="bg-bg-elevated p-4 rounded-3xl border border-border flex justify-between items-center shadow-md transition-transform hover:scale-[1.02] cursor-pointer" onClick={() => navigate(`/edit/${t.id}`)}>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold text-text-primary">{t.description || cat?.name || 'Transação'}</span>
-                        {block && <span className="ml-2 text-xs px-2 py-0.5 rounded-full bg-bg-surface text-text-secondary border border-border">{block.name}</span>}
-                      </div>
-                      <div className="text-xs text-text-secondary mt-0.5">
-                        {cat?.name}
-                      </div>
-                    </div>
-                    <span className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                      {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
-                    </span>
-                  </li>
+                  <TransactionItem
+                    key={t.id}
+                    transaction={t}
+                    category={cat}
+                    block={block}
+                    onClick={() => navigate(`/edit/${t.id}`)}
+                  />
                 );
               })}
             </ul>

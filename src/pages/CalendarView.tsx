@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import { db } from '../db';
 import { cn, formatCurrencyInput } from '../lib/utils';
 import { useMonthStore } from '../store/monthStore';
+import { TransactionItem } from '../components/TransactionItem';
 
 export function CalendarView() {
   const navigate = useNavigate();
@@ -32,6 +33,7 @@ export function CalendarView() {
   const days = eachDayOfInterval({ start: startDate, end: endDate });
 
   const categories = useLiveQuery(() => db.categories.toArray()) || [];
+  const blocks = useLiveQuery(() => db.blocks.toArray()) || [];
 
   const transactions = useLiveQuery(
     () => db.transactions
@@ -126,31 +128,15 @@ export function CalendarView() {
               <ul className="space-y-3">
                 {selectedTransactions.map(t => {
                   const cat = categories.find(c => c.id === t.categoryId);
-                  const color = cat?.color || (t.type === 'income' ? '#10b981' : '#ef4444');
+                  const blk = blocks.find(b => b.id === t.blockId);
                   return (
-                    <li
+                    <TransactionItem
                       key={t.id}
+                      transaction={t}
+                      category={cat}
+                      block={blk}
                       onClick={() => navigate(`/edit/${t.id}`)}
-                      className="bg-bg-elevated p-4 rounded-3xl border border-border flex justify-between items-center shadow-md transition-transform hover:scale-[1.02] cursor-pointer"
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: color }} />
-                        <div>
-                          <p className="text-text-primary text-sm font-semibold flex items-center gap-2">
-                            {t.description || cat?.name || 'Transação'}
-                            {t.status === 'planned' && (
-                              <span className="text-[9px] bg-purple-600 text-white px-2 py-0.5 rounded-full uppercase tracking-wider border border-purple-600">
-                                Planejado
-                              </span>
-                            )}
-                          </p>
-                          {t.description && cat?.name && <p className="text-xs text-text-secondary mt-0.5">{cat.name}</p>}
-                        </div>
-                      </div>
-                      <p className={cn("font-bold text-base", t.type === 'income' ? 'text-success' : 'text-danger')}>
-                        {t.type === 'income' ? '+' : '-'} {formatCurrencyInput(Math.round(t.amount * 100).toString())}
-                      </p>
-                    </li>
+                    />
                   );
                 })}
               </ul>

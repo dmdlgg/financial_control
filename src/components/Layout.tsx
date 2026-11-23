@@ -1,5 +1,5 @@
 import { Outlet, NavLink, Link, useLocation } from 'react-router-dom';
-import { Home, CalendarDays, PieChart, Settings, Plus, Wallet } from 'lucide-react';
+import { Home, CalendarDays, PieChart, Settings, Plus, Wallet, CreditCard } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 import { useLiveQuery } from 'dexie-react-hooks';
@@ -8,6 +8,7 @@ import { hasPendingMonthEndInstallments } from '../lib/receivables';
 const navItems = [
   { path: '/', icon: Home, label: 'Início' },
   { path: '/calendar', icon: CalendarDays, label: 'Calendário' },
+  { path: '/installments', icon: CreditCard, label: 'Parcelas' },
   { path: '/charts', icon: PieChart, label: 'Gráficos' },
   { path: '/receivables', icon: Wallet, label: 'A Receber' },
   { path: '/settings', icon: Settings, label: 'Ajustes' },

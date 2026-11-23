@@ -5,6 +5,7 @@ import { Dashboard } from './pages/Dashboard';
 import { CalendarView } from './pages/CalendarView';
 import { ChartsView } from './pages/ChartsView';
 import { SettingsView } from './pages/SettingsView';
+import { InstallmentsView } from './pages/InstallmentsView';
 import { AddTransaction } from './pages/AddTransaction';
 import { BlockDetails } from './pages/BlockDetails';
 import { TransactionListView } from './pages/TransactionListView';
@@ -19,12 +20,15 @@ import { ReceivablesNewDebt } from './pages/ReceivablesNewDebt';
 import { EditRecurrence } from './pages/EditRecurrence';
 import { useThemeStore } from './store/themeStore';
 import { processRecurringTransactions } from './lib/recurrence';
+import { seedInitialData } from './db/seed';
 
 function App() {
   const theme = useThemeStore((state) => state.theme);
 
   useEffect(() => {
-    processRecurringTransactions().catch(console.error);
+    seedInitialData()
+      .then(() => processRecurringTransactions())
+      .catch(console.error);
 
     if (theme === 'dark') {
       document.documentElement.classList.add('dark');
@@ -39,6 +43,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
           <Route path="calendar" element={<CalendarView />} />
+          <Route path="installments" element={<InstallmentsView />} />
           <Route path="charts" element={<ChartsView />} />
           <Route path="settings" element={<SettingsView />} />
         </Route>
